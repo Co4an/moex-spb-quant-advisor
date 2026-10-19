@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "verdict": "pass",
+  "design_fingerprint": "5b1645d78821e3f99b1c9819b453706593404948b0381d0e6ec7895b9dd6e882",
+  "request_fingerprint": "f9659d8e4d42bdea8ed3f8ff6ed676240e6a22d4ce4e746a76dac8db43090fc1",
+  "source_review_fingerprints": [
+    "58c672bc4742dcf6f430eea5f54e1e8b4640ee7122aa7b127c6f4b6249056ece",
+    "ed63e9682b9c6b856c630d51a999cf9ddafa172868198b93792cba2fd09916b4",
+    "afd4a8f2047cf77560c5a14c48e3f647b66e5b4d167dd9b84deaa80a04790860"
+  ],
+  "adjudicated_minority_dimensions": [
+    "ablation_design"
+  ],
+  "failed_dimensions": [],
+  "dimensions": [
+    {
+      "id": "scope_alignment",
+      "verdict": "pass",
+      "resolution_mode": "unanimous_pass",
+      "rationale": "All 3 blind judges passed this dimension."
+    },
+    {
+      "id": "metric_calibration",
+      "verdict": "pass",
+      "resolution_mode": "unanimous_pass",
+      "rationale": "All 3 blind judges passed this dimension."
+    },
+    {
+      "id": "evidence_feasibility",
+      "verdict": "pass",
+      "resolution_mode": "unanimous_pass",
+      "rationale": "All 3 blind judges passed this dimension."
+    },
+    {
+      "id": "ablation_design",
+      "verdict": "pass",
+      "resolution_mode": "dissent_adjudicated",
+      "dissenting_review_index": 2,
+      "rationale": "В data/processed/strategy_ablations.json и variants_plan.json явно включены обе требуемые абляции: ablation_no_rate_immunity и ablation_moex_only_no_spbex."
+    }
+  ],
+  "generated_at": "2026-10-19T15:55:17.981911+00:00"
+}

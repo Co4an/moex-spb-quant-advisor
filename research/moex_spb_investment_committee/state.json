@@ -1,0 +1,39 @@
+{
+  "version": 3,
+  "stage": "complete",
+  "revisions": 0,
+  "capabilities": {
+    "web_search": true,
+    "python_exec": true,
+    "native_subagents": true,
+    "docx_export": true,
+    "live_moex_spbex_api": true
+  },
+  "history": [
+    {
+      "from": "plan",
+      "to": "research",
+      "at": "2026-10-19T15:55:18.099321+00:00"
+    },
+    {
+      "from": "research",
+      "to": "analysis",
+      "at": "2026-10-19T16:03:55.821080+00:00"
+    },
+    {
+      "from": "analysis",
+      "to": "draft",
+      "at": "2026-10-19T16:06:09.983913+00:00"
+    },
+    {
+      "from": "draft",
+      "to": "review",
+      "at": "2026-10-19T16:08:15.019461+00:00"
+    },
+    {
+      "from": "review",
+      "to": "complete",
+      "at": "2026-10-19T16:11:18.450616+00:00"
+    }
+  ]
+}

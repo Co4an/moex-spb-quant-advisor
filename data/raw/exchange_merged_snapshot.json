@@ -1,0 +1,4750 @@
+{
+  "generated_at": "2026-10-19T16:30:26.308335+00:00",
+  "macro_market_pulse": {
+    "cbr_key_rate_pct": 14.0,
+    "cbr_key_rate_as_of": "19.10.2026",
+    "cbr_effective_since": "27.07.2026",
+    "cbr_cycle_peak_pct": 21.0,
+    "cbr_cycle_peak_date": "28.10.2024",
+    "cbr_cumulative_easing_bps": -700,
+    "cbr_rate_changes_2024_2026": [
+      {
+        "date": "03.01.2024",
+        "rate_pct": 16.0,
+        "change_bps": 0
+      },
+      {
+        "date": "29.07.2024",
+        "rate_pct": 18.0,
+        "change_bps": 200
+      },
+      {
+        "date": "16.09.2024",
+        "rate_pct": 19.0,
+        "change_bps": 100
+      },
+      {
+        "date": "28.10.2024",
+        "rate_pct": 21.0,
+        "change_bps": 200
+      },
+      {
+        "date": "09.06.2025",
+        "rate_pct": 20.0,
+        "change_bps": -100
+      },
+      {
+        "date": "28.07.2025",
+        "rate_pct": 18.0,
+        "change_bps": -200
+      },
+      {
+        "date": "15.09.2025",
+        "rate_pct": 17.0,
+        "change_bps": -100
+      },
+      {
+        "date": "27.10.2025",
+        "rate_pct": 16.5,
+        "change_bps": -50
+      },
+      {
+        "date": "22.12.2025",
+        "rate_pct": 16.0,
+        "change_bps": -50
+      },
+      {
+        "date": "16.02.2026",
+        "rate_pct": 15.5,
+        "change_bps": -50
+      },
+      {
+        "date": "23.03.2026",
+        "rate_pct": 15.0,
+        "change_bps": -50
+      },
+      {
+        "date": "27.04.2026",
+        "rate_pct": 14.5,
+        "change_bps": -50
+      },
+      {
+        "date": "22.06.2026",
+        "rate_pct": 14.25,
+        "change_bps": -25
+      },
+      {
+        "date": "27.07.2026",
+        "rate_pct": 14.0,
+        "change_bps": -25
+      }
+    ],
+    "cbr_scenario_rates_pct": {
+      "bear_hawkish": 16.0,
+      "base_live_cbr": 14.0,
+      "bull_easing": 11.5
+    },
+    "official_fx_rub": {
+      "USD": 82.8504,
+      "EUR": 93.2316,
+      "CNY": 12.3869
+    },
+    "imoex": 2433.13,
+    "imoex_change_pct": 0.29,
+    "rtsi": 925.15,
+    "rgbi": 111.69,
+    "moex_tqbr_turnover_bln_rub": 154.44,
+    "spbex_total_turnover_bln_rub": 6.477,
+    "spbex_shares_turnover_mln_rub": 188.42
+  },
+  "sector_indices": {
+    "IMOEX": {
+      "code": "IMOEX",
+      "name": "Индекс МосБиржи",
+      "current_value": 2433.13,
+      "change_pct": 0.29,
+      "open_value": 2454.85,
+      "volume_rub": 117608974707.0
+    },
+    "IMOEX2": {
+      "code": "IMOEX2",
+      "name": "IMOEX2 – значения индекса МосБиржи за весь торговый день, включая дополнительные сессии",
+      "current_value": 2433.13,
+      "change_pct": 0.29,
+      "open_value": 2454.85,
+      "volume_rub": 117608974707.0
+    },
+    "MOEXCH": {
+      "code": "MOEXCH",
+      "name": "Индекс МосБиржи химии и нефтехимии",
+      "current_value": 25309.69,
+      "change_pct": 3.16,
+      "open_value": 24926.97,
+      "volume_rub": 1751602990.0
+    },
+    "MOEXCN": {
+      "code": "MOEXCN",
+      "name": "Индекс МосБиржи потребительского сектора",
+      "current_value": 5339.76,
+      "change_pct": 0.11,
+      "open_value": 5378.01,
+      "volume_rub": 5464494020.0
+    },
+    "MOEXEU": {
+      "code": "MOEXEU",
+      "name": "Индекс МосБиржи электроэнергетики",
+      "current_value": 1596.16,
+      "change_pct": 0.86,
+      "open_value": 1593.44,
+      "volume_rub": 2396246150.0
+    },
+    "MOEXFN": {
+      "code": "MOEXFN",
+      "name": "Индекс МосБиржи финансов",
+      "current_value": 8658.11,
+      "change_pct": 0.42,
+      "open_value": 8646.1,
+      "volume_rub": 26782234699.0
+    },
+    "MOEXMM": {
+      "code": "MOEXMM",
+      "name": "Индекс МосБиржи металлов и добычи",
+      "current_value": 4652.42,
+      "change_pct": 0.72,
+      "open_value": 4676.82,
+      "volume_rub": 18221923541.0
+    },
+    "MOEXOG": {
+      "code": "MOEXOG",
+      "name": "Индекс МосБиржи нефти и газа",
+      "current_value": 6890.67,
+      "change_pct": 0.55,
+      "open_value": 6992.13,
+      "volume_rub": 48995761684.0
+    },
+    "MOEXTL": {
+      "code": "MOEXTL",
+      "name": "Индекс МосБиржи телекоммуникаций",
+      "current_value": 1494.66,
+      "change_pct": -0.79,
+      "open_value": 1508.33,
+      "volume_rub": 1068809555.0
+    },
+    "RGBI": {
+      "code": "RGBI",
+      "name": "Индекс Мосбиржи государственных облигаций ценовой",
+      "current_value": 111.69,
+      "change_pct": -0.17,
+      "open_value": 111.83,
+      "volume_rub": 20429186743.0
+    },
+    "RTSI": {
+      "code": "RTSI",
+      "name": "RTSI",
+      "current_value": 925.15,
+      "change_pct": 1.22,
+      "open_value": 924.84,
+      "volume_rub": 90537038984.0
+    },
+    "MOEXIT": {
+      "code": "MOEXIT",
+      "name": "MOEXIT",
+      "current_value": 1811.35,
+      "change_pct": 0.25,
+      "open_value": 1809.21,
+      "volume_rub": 19817890316.0
+    }
+  },
+  "spbex_etf_benchmarks": {
+    "TMON@": {
+      "spb_code": "TMON@",
+      "canonical_ticker": "TMON@",
+      "fullname_ru": "T-КАПИТАЛ Денежный рынок",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал Денежный рынок\"",
+      "price": 166.27,
+      "open_price": 166.27,
+      "low_price": 166.26,
+      "high_price": 166.27,
+      "change_pct": 0.0,
+      "volume_rub": 3871516143.7,
+      "volume_mln_rub": 3871.516,
+      "volume_units": 23285130,
+      "num_trades": 41776,
+      "lot_size": 1,
+      "id_securities": 10495
+    },
+    "LQDT": {
+      "spb_code": "LQDT",
+      "canonical_ticker": "LQDT",
+      "fullname_ru": "БПИФ Ликвидность",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Ликвидность\"",
+      "price": 2.1125,
+      "open_price": 2.1125,
+      "low_price": 2.1124,
+      "high_price": 2.1125,
+      "change_pct": 0.0,
+      "volume_rub": 1132142398.18,
+      "volume_mln_rub": 1132.142,
+      "volume_units": 535935716,
+      "num_trades": 33965,
+      "lot_size": 1,
+      "id_securities": 10411
+    },
+    "TGLD@": {
+      "spb_code": "TGLD@",
+      "canonical_ticker": "TGLD@",
+      "fullname_ru": "БПИФ Т-Капитал Золото",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал Золото\"",
+      "price": 13.47,
+      "open_price": 13.73,
+      "low_price": 13.46,
+      "high_price": 13.73,
+      "change_pct": -1.89,
+      "volume_rub": 365092648.0,
+      "volume_mln_rub": 365.093,
+      "volume_units": 26984617,
+      "num_trades": 110797,
+      "lot_size": 1,
+      "id_securities": 10545
+    },
+    "TRUR@": {
+      "spb_code": "TRUR@",
+      "canonical_ticker": "TRUR@",
+      "fullname_ru": "БПИФ Т-КАПИТАЛ СВП РУБ",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал - Стратегия вечного портфеля в рублях\"",
+      "price": 10.05,
+      "open_price": 9.87,
+      "low_price": 9.87,
+      "high_price": 10.12,
+      "change_pct": 1.82,
+      "volume_rub": 337192355.44,
+      "volume_mln_rub": 337.192,
+      "volume_units": 33422182,
+      "num_trades": 536584,
+      "lot_size": 1,
+      "id_securities": 10544
+    },
+    "TMOS@": {
+      "spb_code": "TMOS@",
+      "canonical_ticker": "TMOS@",
+      "fullname_ru": "БПИФ Т-КАПИТАЛ iMOEX",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал Индекс МосБиржи\"",
+      "price": 6.09,
+      "open_price": 6.15,
+      "low_price": 6.01,
+      "high_price": 6.24,
+      "change_pct": -0.98,
+      "volume_rub": 307596448.79,
+      "volume_mln_rub": 307.596,
+      "volume_units": 50167722,
+      "num_trades": 277098,
+      "lot_size": 1,
+      "id_securities": 10546
+    },
+    "TBRU@": {
+      "spb_code": "TBRU@",
+      "canonical_ticker": "TBRU@",
+      "fullname_ru": "БПИФ Т-Капитал bonds",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал Облигации\"",
+      "price": 8.54,
+      "open_price": 8.53,
+      "low_price": 8.47,
+      "high_price": 8.56,
+      "change_pct": 0.12,
+      "volume_rub": 125543003.03,
+      "volume_mln_rub": 125.543,
+      "volume_units": 14732520,
+      "num_trades": 306571,
+      "lot_size": 1,
+      "id_securities": 10547
+    },
+    "TLCB@": {
+      "spb_code": "TLCB@",
+      "canonical_ticker": "TLCB@",
+      "fullname_ru": "БПИФ Т-Капитал Локальные валютные облигации",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал Локальные валютные облигации\"",
+      "price": 11.05,
+      "open_price": 11.21,
+      "low_price": 11.05,
+      "high_price": 11.21,
+      "change_pct": -1.43,
+      "volume_rub": 70262447.28,
+      "volume_mln_rub": 70.262,
+      "volume_units": 6337679,
+      "num_trades": 63176,
+      "lot_size": 1,
+      "id_securities": 10549
+    },
+    "TOFZ@": {
+      "spb_code": "TOFZ@",
+      "canonical_ticker": "TOFZ@",
+      "fullname_ru": "БПИФ Т-Капитал ОФЗ",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал ОФЗ\"",
+      "price": 13.79,
+      "open_price": 13.84,
+      "low_price": 13.77,
+      "high_price": 13.84,
+      "change_pct": -0.36,
+      "volume_rub": 27129307.72,
+      "volume_mln_rub": 27.129,
+      "volume_units": 1967344,
+      "num_trades": 15244,
+      "lot_size": 1,
+      "id_securities": 10638
+    },
+    "TSAV": {
+      "spb_code": "TSAV",
+      "canonical_ticker": "TSAV",
+      "fullname_ru": "БПИФ Т-КАПИТАЛ Накопительный",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал Накопительный\"",
+      "price": 5.17,
+      "open_price": 5.17,
+      "low_price": 5.17,
+      "high_price": 5.18,
+      "change_pct": 0.0,
+      "volume_rub": 21889328.82,
+      "volume_mln_rub": 21.889,
+      "volume_units": 4226481,
+      "num_trades": 15490,
+      "lot_size": 1,
+      "id_securities": 11139
+    },
+    "TDIV@": {
+      "spb_code": "TDIV@",
+      "canonical_ticker": "TDIV@",
+      "fullname_ru": "БПИФ Т-Капитал акции дивидендные",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал Дивидендные акции\"",
+      "price": 10.18,
+      "open_price": 10.25,
+      "low_price": 10.15,
+      "high_price": 10.32,
+      "change_pct": -0.68,
+      "volume_rub": 14070099.66,
+      "volume_mln_rub": 14.07,
+      "volume_units": 1373806,
+      "num_trades": 10902,
+      "lot_size": 1,
+      "id_securities": 10548
+    },
+    "TRND@": {
+      "spb_code": "TRND@",
+      "canonical_ticker": "TRND@",
+      "fullname_ru": "БПИФ Т-КАПИТАЛ Трендовые акции",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал Трендовые акции\"",
+      "price": 9.07,
+      "open_price": 9.07,
+      "low_price": 9.04,
+      "high_price": 9.15,
+      "change_pct": 0.0,
+      "volume_rub": 8227715.85,
+      "volume_mln_rub": 8.228,
+      "volume_units": 904043,
+      "num_trades": 11446,
+      "lot_size": 1,
+      "id_securities": 10687
+    },
+    "TITR@": {
+      "spb_code": "TITR@",
+      "canonical_ticker": "TITR@",
+      "fullname_ru": "БПИФ Т-Капитал Акции роста",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Т-Капитал Акции роста\"",
+      "price": 4.7,
+      "open_price": 4.73,
+      "low_price": 4.67,
+      "high_price": 4.74,
+      "change_pct": -0.63,
+      "volume_rub": 3050895.42,
+      "volume_mln_rub": 3.051,
+      "volume_units": 649234,
+      "num_trades": 824,
+      "lot_size": 1,
+      "id_securities": 10550
+    },
+    "TIND": {
+      "spb_code": "TIND",
+      "canonical_ticker": "TIND",
+      "fullname_ru": "ЗКПИФ Т-Капитал Индустриальный",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи закрытого паевого инвестиционного фонда \"T-Капитал Индустриальный\"",
+      "price": 908.0,
+      "open_price": 959.0,
+      "low_price": 901.0,
+      "high_price": 959.0,
+      "change_pct": -5.32,
+      "volume_rub": 1840688.53,
+      "volume_mln_rub": 1.841,
+      "volume_units": 2028,
+      "num_trades": 172,
+      "lot_size": 1,
+      "id_securities": 11017
+    },
+    "AKMM": {
+      "spb_code": "AKMM",
+      "canonical_ticker": "AKMM",
+      "fullname_ru": "БПИФ Альфа Денежный рынок",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи биржевого паевого инвестиционного фонда рыночных финансовых инструментов \"Альфа-Капитал Денежный рынок\"",
+      "price": 179.76,
+      "open_price": 179.74,
+      "low_price": 179.74,
+      "high_price": 179.78,
+      "change_pct": 0.01,
+      "volume_rub": 1538144.3,
+      "volume_mln_rub": 1.538,
+      "volume_units": 8557,
+      "num_trades": 106,
+      "lot_size": 1,
+      "id_securities": 10410
+    },
+    "ALGOT": {
+      "spb_code": "ALGOT",
+      "canonical_ticker": "ALGOT",
+      "fullname_ru": "ИПИФ Алготех",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи интервального паевого инвестиционного фонда комбинированного \"Алготех\"",
+      "price": 130400.0,
+      "open_price": 130400.0,
+      "low_price": 130400.0,
+      "high_price": 130400.0,
+      "change_pct": 0.0,
+      "volume_rub": 130400.0,
+      "volume_mln_rub": 0.13,
+      "volume_units": 1,
+      "num_trades": 1,
+      "lot_size": 1,
+      "id_securities": 10982
+    },
+    "WIMRD2": {
+      "spb_code": "WIMRD2",
+      "canonical_ticker": "WIMRD2",
+      "fullname_ru": "ЗПИФ ВИМ РД2",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи закрытого паевого инвестиционного фонда недвижимости \"РД 2\"",
+      "price": null,
+      "open_price": null,
+      "low_price": null,
+      "high_price": null,
+      "change_pct": 0.0,
+      "volume_rub": 0.0,
+      "volume_mln_rub": 0.0,
+      "volume_units": 0,
+      "num_trades": 0,
+      "lot_size": 1,
+      "id_securities": 10884
+    },
+    "WIMN": {
+      "spb_code": "WIMN",
+      "canonical_ticker": "WIMN",
+      "fullname_ru": "ЗПИФ ВИМ Недвижимость",
+      "currency": "RUB",
+      "security_kind": "Инвестиционные паи",
+      "security_category": "Инвестиционные паи закрытого паевого инвестиционного комбинированного фонда  \"ВИМ Недвижимость\"",
+      "price": null,
+      "open_price": null,
+      "low_price": null,
+      "high_price": null,
+      "change_pct": 0.0,
+      "volume_rub": 0.0,
+      "volume_mln_rub": 0.0,
+      "volume_units": 0,
+      "num_trades": 0,
+      "lot_size": 1,
+      "id_securities": 10946
+    }
+  },
+  "core_equities_count": 31,
+  "equities": {
+    "SBER": {
+      "ticker": "SBER",
+      "spb_ticker": "SBER",
+      "short_name": "Сбербанк",
+      "isin": "RU0009029540",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 287.3,
+      "moex_price_rub": 287.3,
+      "spbex_price_rub": 287.5,
+      "cross_exchange_spread_bps": 7.0,
+      "change_day_pct": 0.0,
+      "lot_size": 1,
+      "lot_cost_rub": 287.3,
+      "issue_size": 21586948000,
+      "market_cap_bln_rub": 6204.3,
+      "moex_turnover_mln_rub": 9627.53,
+      "spbex_turnover_mln_rub": 0.968,
+      "total_turnover_mln_rub": 9628.5,
+      "spbex_liquidity_share_pct": 0.01,
+      "ytd_2026_return_pct": -3.81,
+      "return_30d_pct": 5.49,
+      "return_90d_pct": 1.2,
+      "volatility_ann_pct": 18.03,
+      "max_drawdown_2026_pct": -23.84,
+      "beta_imoex": 0.57,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 298.78
+        },
+        {
+          "date": "2026-01-19",
+          "close": 303.62
+        },
+        {
+          "date": "2026-01-30",
+          "close": 305.62
+        },
+        {
+          "date": "2026-02-10",
+          "close": 302.9
+        },
+        {
+          "date": "2026-02-23",
+          "close": 314.16
+        },
+        {
+          "date": "2026-03-06",
+          "close": 314.14
+        },
+        {
+          "date": "2026-03-19",
+          "close": 320.77
+        },
+        {
+          "date": "2026-04-01",
+          "close": 316.71
+        },
+        {
+          "date": "2026-04-12",
+          "close": 317.64
+        },
+        {
+          "date": "2026-04-23",
+          "close": 327.39
+        },
+        {
+          "date": "2026-05-04",
+          "close": 321.79
+        },
+        {
+          "date": "2026-05-17",
+          "close": 323.72
+        },
+        {
+          "date": "2026-05-28",
+          "close": 322.3
+        },
+        {
+          "date": "2026-06-08",
+          "close": 320.0
+        },
+        {
+          "date": "2026-06-19",
+          "close": 312.84
+        },
+        {
+          "date": "2026-07-02",
+          "close": 301.05
+        },
+        {
+          "date": "2026-07-13",
+          "close": 293.96
+        },
+        {
+          "date": "2026-07-24",
+          "close": 267.6
+        },
+        {
+          "date": "2026-08-06",
+          "close": 284.75
+        },
+        {
+          "date": "2026-08-19",
+          "close": 276.32
+        },
+        {
+          "date": "2026-08-30",
+          "close": 268.89
+        },
+        {
+          "date": "2026-09-10",
+          "close": 285.04
+        },
+        {
+          "date": "2026-09-23",
+          "close": 280.74
+        },
+        {
+          "date": "2026-10-04",
+          "close": 275.79
+        },
+        {
+          "date": "2026-10-15",
+          "close": 283.63
+        },
+        {
+          "date": "2026-10-19",
+          "close": 287.41
+        }
+      ]
+    },
+    "T": {
+      "ticker": "T",
+      "spb_ticker": "TCSG",
+      "short_name": "Т-Техно ао",
+      "isin": "RU000A107UL4",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 270.5,
+      "moex_price_rub": 270.5,
+      "spbex_price_rub": 270.8,
+      "cross_exchange_spread_bps": 11.1,
+      "change_day_pct": 0.02,
+      "lot_size": 1,
+      "lot_cost_rub": 270.5,
+      "issue_size": 2682747860,
+      "market_cap_bln_rub": 725.42,
+      "moex_turnover_mln_rub": 6679.01,
+      "spbex_turnover_mln_rub": 0.109,
+      "total_turnover_mln_rub": 6679.12,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": -17.23,
+      "return_30d_pct": 8.52,
+      "return_90d_pct": -2.67,
+      "volatility_ann_pct": 22.64,
+      "max_drawdown_2026_pct": -36.66,
+      "beta_imoex": 0.89,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 326.7
+        },
+        {
+          "date": "2026-01-18",
+          "close": 326.4
+        },
+        {
+          "date": "2026-01-28",
+          "close": 333.0
+        },
+        {
+          "date": "2026-02-07",
+          "close": 329.3
+        },
+        {
+          "date": "2026-02-19",
+          "close": 351.28
+        },
+        {
+          "date": "2026-03-01",
+          "close": 344.6
+        },
+        {
+          "date": "2026-03-13",
+          "close": 337.66
+        },
+        {
+          "date": "2026-03-25",
+          "close": 333.0
+        },
+        {
+          "date": "2026-04-04",
+          "close": 321.22
+        },
+        {
+          "date": "2026-04-20",
+          "close": 325.7
+        },
+        {
+          "date": "2026-04-30",
+          "close": 305.36
+        },
+        {
+          "date": "2026-05-12",
+          "close": 316.92
+        },
+        {
+          "date": "2026-05-22",
+          "close": 309.78
+        },
+        {
+          "date": "2026-06-01",
+          "close": 303.74
+        },
+        {
+          "date": "2026-06-11",
+          "close": 295.78
+        },
+        {
+          "date": "2026-06-23",
+          "close": 276.14
+        },
+        {
+          "date": "2026-07-03",
+          "close": 252.64
+        },
+        {
+          "date": "2026-07-13",
+          "close": 249.8
+        },
+        {
+          "date": "2026-07-23",
+          "close": 248.88
+        },
+        {
+          "date": "2026-08-04",
+          "close": 272.58
+        },
+        {
+          "date": "2026-08-14",
+          "close": 255.16
+        },
+        {
+          "date": "2026-08-26",
+          "close": 248.64
+        },
+        {
+          "date": "2026-09-05",
+          "close": 264.74
+        },
+        {
+          "date": "2026-09-17",
+          "close": 252.1
+        },
+        {
+          "date": "2026-09-27",
+          "close": 251.54
+        },
+        {
+          "date": "2026-10-07",
+          "close": 270.2
+        },
+        {
+          "date": "2026-10-17",
+          "close": 270.68
+        },
+        {
+          "date": "2026-10-19",
+          "close": 270.42
+        }
+      ]
+    },
+    "BSPB": {
+      "ticker": "BSPB",
+      "spb_ticker": "BSPB",
+      "short_name": "БСП ао",
+      "isin": "RU0009100945",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 256.0,
+      "moex_price_rub": 256.0,
+      "spbex_price_rub": 256.31,
+      "cross_exchange_spread_bps": 12.1,
+      "change_day_pct": -0.06,
+      "lot_size": 10,
+      "lot_cost_rub": 2560.0,
+      "issue_size": 445368521,
+      "market_cap_bln_rub": 114.1,
+      "moex_turnover_mln_rub": 189.11,
+      "spbex_turnover_mln_rub": 0.059,
+      "total_turnover_mln_rub": 189.17,
+      "spbex_liquidity_share_pct": 0.03,
+      "ytd_2026_return_pct": -17.38,
+      "return_30d_pct": -2.49,
+      "return_90d_pct": -3.29,
+      "volatility_ann_pct": 29.14,
+      "max_drawdown_2026_pct": -36.58,
+      "beta_imoex": 0.75,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 310.11
+        },
+        {
+          "date": "2026-01-19",
+          "close": 323.52
+        },
+        {
+          "date": "2026-01-30",
+          "close": 326.26
+        },
+        {
+          "date": "2026-02-10",
+          "close": 319.11
+        },
+        {
+          "date": "2026-02-23",
+          "close": 342.2
+        },
+        {
+          "date": "2026-03-06",
+          "close": 334.27
+        },
+        {
+          "date": "2026-03-19",
+          "close": 332.54
+        },
+        {
+          "date": "2026-04-01",
+          "close": 335.71
+        },
+        {
+          "date": "2026-04-12",
+          "close": 336.63
+        },
+        {
+          "date": "2026-04-23",
+          "close": 340.39
+        },
+        {
+          "date": "2026-05-04",
+          "close": 339.62
+        },
+        {
+          "date": "2026-05-17",
+          "close": 320.32
+        },
+        {
+          "date": "2026-05-28",
+          "close": 307.71
+        },
+        {
+          "date": "2026-06-08",
+          "close": 291.12
+        },
+        {
+          "date": "2026-06-19",
+          "close": 289.23
+        },
+        {
+          "date": "2026-07-02",
+          "close": 264.49
+        },
+        {
+          "date": "2026-07-13",
+          "close": 254.61
+        },
+        {
+          "date": "2026-07-24",
+          "close": 250.16
+        },
+        {
+          "date": "2026-08-06",
+          "close": 267.69
+        },
+        {
+          "date": "2026-08-19",
+          "close": 245.39
+        },
+        {
+          "date": "2026-08-30",
+          "close": 236.79
+        },
+        {
+          "date": "2026-09-10",
+          "close": 252.95
+        },
+        {
+          "date": "2026-09-23",
+          "close": 262.3
+        },
+        {
+          "date": "2026-10-04",
+          "close": 253.17
+        },
+        {
+          "date": "2026-10-15",
+          "close": 251.98
+        },
+        {
+          "date": "2026-10-19",
+          "close": 256.2
+        }
+      ]
+    },
+    "SVCB": {
+      "ticker": "SVCB",
+      "spb_ticker": "SVCB",
+      "short_name": "Совкомбанк",
+      "isin": "RU000A0ZZAC4",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 10.1,
+      "moex_price_rub": 10.1,
+      "spbex_price_rub": 10.11,
+      "cross_exchange_spread_bps": 9.9,
+      "change_day_pct": 0.05,
+      "lot_size": 100,
+      "lot_cost_rub": 1010.0,
+      "issue_size": 22516228905,
+      "market_cap_bln_rub": 227.64,
+      "moex_turnover_mln_rub": 858.67,
+      "spbex_turnover_mln_rub": 0.004,
+      "total_turnover_mln_rub": 858.67,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": -19.54,
+      "return_30d_pct": 8.36,
+      "return_90d_pct": -4.49,
+      "volatility_ann_pct": 23.5,
+      "max_drawdown_2026_pct": -36.27,
+      "beta_imoex": 0.74,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 12.565
+        },
+        {
+          "date": "2026-01-19",
+          "close": 12.525
+        },
+        {
+          "date": "2026-01-30",
+          "close": 12.595
+        },
+        {
+          "date": "2026-02-10",
+          "close": 13.23
+        },
+        {
+          "date": "2026-02-23",
+          "close": 14.115
+        },
+        {
+          "date": "2026-03-06",
+          "close": 13.505
+        },
+        {
+          "date": "2026-03-19",
+          "close": 13.28
+        },
+        {
+          "date": "2026-04-01",
+          "close": 12.84
+        },
+        {
+          "date": "2026-04-12",
+          "close": 12.295
+        },
+        {
+          "date": "2026-04-23",
+          "close": 12.735
+        },
+        {
+          "date": "2026-05-04",
+          "close": 11.94
+        },
+        {
+          "date": "2026-05-17",
+          "close": 12.13
+        },
+        {
+          "date": "2026-05-28",
+          "close": 11.885
+        },
+        {
+          "date": "2026-06-08",
+          "close": 11.535
+        },
+        {
+          "date": "2026-06-19",
+          "close": 10.575
+        },
+        {
+          "date": "2026-07-02",
+          "close": 10.73
+        },
+        {
+          "date": "2026-07-13",
+          "close": 9.83
+        },
+        {
+          "date": "2026-07-24",
+          "close": 9.91
+        },
+        {
+          "date": "2026-08-06",
+          "close": 10.49
+        },
+        {
+          "date": "2026-08-19",
+          "close": 10.205
+        },
+        {
+          "date": "2026-08-30",
+          "close": 9.775
+        },
+        {
+          "date": "2026-09-10",
+          "close": 10.22
+        },
+        {
+          "date": "2026-09-23",
+          "close": 9.675
+        },
+        {
+          "date": "2026-10-04",
+          "close": 9.565
+        },
+        {
+          "date": "2026-10-15",
+          "close": 10.04
+        },
+        {
+          "date": "2026-10-19",
+          "close": 10.11
+        }
+      ]
+    },
+    "VTBR": {
+      "ticker": "VTBR",
+      "spb_ticker": "VTBR",
+      "short_name": "ВТБ ао",
+      "isin": "RU000A0JP5V6",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 56.055,
+      "moex_price_rub": 56.055,
+      "spbex_price_rub": 56.11,
+      "cross_exchange_spread_bps": 9.8,
+      "change_day_pct": 0.01,
+      "lot_size": 1,
+      "lot_cost_rub": 56.05,
+      "issue_size": 12927766416,
+      "market_cap_bln_rub": 724.99,
+      "moex_turnover_mln_rub": 5753.54,
+      "spbex_turnover_mln_rub": 0.352,
+      "total_turnover_mln_rub": 5753.9,
+      "spbex_liquidity_share_pct": 0.01,
+      "ytd_2026_return_pct": -21.62,
+      "return_30d_pct": 6.68,
+      "return_90d_pct": -1.53,
+      "volatility_ann_pct": 32.5,
+      "max_drawdown_2026_pct": -48.98,
+      "beta_imoex": 0.81,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 71.55
+        },
+        {
+          "date": "2026-01-19",
+          "close": 71.91
+        },
+        {
+          "date": "2026-01-30",
+          "close": 77.47
+        },
+        {
+          "date": "2026-02-10",
+          "close": 83.48
+        },
+        {
+          "date": "2026-02-23",
+          "close": 88.51
+        },
+        {
+          "date": "2026-03-06",
+          "close": 86.02
+        },
+        {
+          "date": "2026-03-19",
+          "close": 85.965
+        },
+        {
+          "date": "2026-04-01",
+          "close": 88.135
+        },
+        {
+          "date": "2026-04-12",
+          "close": 90.84
+        },
+        {
+          "date": "2026-04-23",
+          "close": 94.02
+        },
+        {
+          "date": "2026-05-04",
+          "close": 89.91
+        },
+        {
+          "date": "2026-05-17",
+          "close": 90.58
+        },
+        {
+          "date": "2026-05-28",
+          "close": 79.0
+        },
+        {
+          "date": "2026-06-08",
+          "close": 74.705
+        },
+        {
+          "date": "2026-06-19",
+          "close": 75.435
+        },
+        {
+          "date": "2026-07-02",
+          "close": 71.17
+        },
+        {
+          "date": "2026-07-13",
+          "close": 64.56
+        },
+        {
+          "date": "2026-07-24",
+          "close": 59.3
+        },
+        {
+          "date": "2026-08-06",
+          "close": 55.75
+        },
+        {
+          "date": "2026-08-19",
+          "close": 53.88
+        },
+        {
+          "date": "2026-08-30",
+          "close": 50.39
+        },
+        {
+          "date": "2026-09-10",
+          "close": 52.165
+        },
+        {
+          "date": "2026-09-23",
+          "close": 51.78
+        },
+        {
+          "date": "2026-10-04",
+          "close": 52.02
+        },
+        {
+          "date": "2026-10-15",
+          "close": 54.6
+        },
+        {
+          "date": "2026-10-19",
+          "close": 56.08
+        }
+      ]
+    },
+    "MOEX": {
+      "ticker": "MOEX",
+      "spb_ticker": "MOEX",
+      "short_name": "МосБиржа",
+      "isin": "RU000A0JR4A1",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 154.8,
+      "moex_price_rub": 154.8,
+      "spbex_price_rub": 154.72,
+      "cross_exchange_spread_bps": -5.2,
+      "change_day_pct": -0.03,
+      "lot_size": 10,
+      "lot_cost_rub": 1548.0,
+      "issue_size": 2276401458,
+      "market_cap_bln_rub": 352.82,
+      "moex_turnover_mln_rub": 846.32,
+      "spbex_turnover_mln_rub": 0.003,
+      "total_turnover_mln_rub": 846.33,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": -9.84,
+      "return_30d_pct": 5.05,
+      "return_90d_pct": -1.85,
+      "volatility_ann_pct": 21.95,
+      "max_drawdown_2026_pct": -28.5,
+      "beta_imoex": 0.66,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 171.92
+        },
+        {
+          "date": "2026-01-19",
+          "close": 176.98
+        },
+        {
+          "date": "2026-01-30",
+          "close": 181.98
+        },
+        {
+          "date": "2026-02-10",
+          "close": 178.57
+        },
+        {
+          "date": "2026-02-23",
+          "close": 181.92
+        },
+        {
+          "date": "2026-03-06",
+          "close": 176.3
+        },
+        {
+          "date": "2026-03-19",
+          "close": 174.08
+        },
+        {
+          "date": "2026-04-01",
+          "close": 169.34
+        },
+        {
+          "date": "2026-04-12",
+          "close": 168.96
+        },
+        {
+          "date": "2026-04-23",
+          "close": 176.47
+        },
+        {
+          "date": "2026-05-04",
+          "close": 167.17
+        },
+        {
+          "date": "2026-05-17",
+          "close": 170.02
+        },
+        {
+          "date": "2026-05-28",
+          "close": 175.12
+        },
+        {
+          "date": "2026-06-08",
+          "close": 174.36
+        },
+        {
+          "date": "2026-06-19",
+          "close": 170.53
+        },
+        {
+          "date": "2026-07-02",
+          "close": 167.26
+        },
+        {
+          "date": "2026-07-13",
+          "close": 146.18
+        },
+        {
+          "date": "2026-07-24",
+          "close": 156.4
+        },
+        {
+          "date": "2026-08-06",
+          "close": 160.14
+        },
+        {
+          "date": "2026-08-19",
+          "close": 155.56
+        },
+        {
+          "date": "2026-08-30",
+          "close": 151.38
+        },
+        {
+          "date": "2026-09-10",
+          "close": 151.5
+        },
+        {
+          "date": "2026-09-23",
+          "close": 150.57
+        },
+        {
+          "date": "2026-10-04",
+          "close": 150.94
+        },
+        {
+          "date": "2026-10-15",
+          "close": 153.51
+        },
+        {
+          "date": "2026-10-19",
+          "close": 155.0
+        }
+      ]
+    },
+    "SPBE": {
+      "ticker": "SPBE",
+      "spb_ticker": "SPBE",
+      "short_name": "СПБ Биржа",
+      "isin": "RU000A0JQ9P9",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 172.9,
+      "moex_price_rub": 172.9,
+      "spbex_price_rub": 172.7,
+      "cross_exchange_spread_bps": -11.6,
+      "change_day_pct": 0.06,
+      "lot_size": 1,
+      "lot_cost_rub": 172.9,
+      "issue_size": 132843907,
+      "market_cap_bln_rub": 22.97,
+      "moex_turnover_mln_rub": 1126.45,
+      "spbex_turnover_mln_rub": 163.292,
+      "total_turnover_mln_rub": 1289.75,
+      "spbex_liquidity_share_pct": 12.66,
+      "ytd_2026_return_pct": -30.62,
+      "return_30d_pct": 23.94,
+      "return_90d_pct": 34.45,
+      "volatility_ann_pct": 43.35,
+      "max_drawdown_2026_pct": -62.15,
+      "beta_imoex": 1.47,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 249.2
+        },
+        {
+          "date": "2026-01-19",
+          "close": 253.8
+        },
+        {
+          "date": "2026-01-30",
+          "close": 257.3
+        },
+        {
+          "date": "2026-02-10",
+          "close": 247.3
+        },
+        {
+          "date": "2026-02-23",
+          "close": 255.7
+        },
+        {
+          "date": "2026-03-06",
+          "close": 232.8
+        },
+        {
+          "date": "2026-03-19",
+          "close": 238.6
+        },
+        {
+          "date": "2026-04-01",
+          "close": 240.5
+        },
+        {
+          "date": "2026-04-12",
+          "close": 227.4
+        },
+        {
+          "date": "2026-04-23",
+          "close": 221.0
+        },
+        {
+          "date": "2026-05-04",
+          "close": 194.0
+        },
+        {
+          "date": "2026-05-17",
+          "close": 205.2
+        },
+        {
+          "date": "2026-05-28",
+          "close": 195.9
+        },
+        {
+          "date": "2026-06-08",
+          "close": 190.3
+        },
+        {
+          "date": "2026-06-19",
+          "close": 182.0
+        },
+        {
+          "date": "2026-07-02",
+          "close": 129.9
+        },
+        {
+          "date": "2026-07-13",
+          "close": 125.7
+        },
+        {
+          "date": "2026-07-24",
+          "close": 117.5
+        },
+        {
+          "date": "2026-08-06",
+          "close": 126.8
+        },
+        {
+          "date": "2026-08-19",
+          "close": 120.9
+        },
+        {
+          "date": "2026-08-30",
+          "close": 127.5
+        },
+        {
+          "date": "2026-09-10",
+          "close": 140.7
+        },
+        {
+          "date": "2026-09-23",
+          "close": 142.5
+        },
+        {
+          "date": "2026-10-04",
+          "close": 140.2
+        },
+        {
+          "date": "2026-10-15",
+          "close": 166.3
+        },
+        {
+          "date": "2026-10-19",
+          "close": 172.9
+        }
+      ]
+    },
+    "LKOH": {
+      "ticker": "LKOH",
+      "spb_ticker": "LKOH",
+      "short_name": "ЛУКОЙЛ",
+      "isin": "RU0009024277",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 6024.0,
+      "moex_price_rub": 6024.0,
+      "spbex_price_rub": 6030.0,
+      "cross_exchange_spread_bps": 10.0,
+      "change_day_pct": -0.01,
+      "lot_size": 1,
+      "lot_cost_rub": 6024.0,
+      "issue_size": 692865762,
+      "market_cap_bln_rub": 4174.17,
+      "moex_turnover_mln_rub": 5696.88,
+      "spbex_turnover_mln_rub": 0.836,
+      "total_turnover_mln_rub": 5697.71,
+      "spbex_liquidity_share_pct": 0.01,
+      "ytd_2026_return_pct": 2.61,
+      "return_30d_pct": 13.69,
+      "return_90d_pct": 29.18,
+      "volatility_ann_pct": 30.41,
+      "max_drawdown_2026_pct": -32.04,
+      "beta_imoex": 1.16,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 5871.5
+        },
+        {
+          "date": "2026-01-19",
+          "close": 5405.5
+        },
+        {
+          "date": "2026-01-30",
+          "close": 5298.5
+        },
+        {
+          "date": "2026-02-10",
+          "close": 5119.5
+        },
+        {
+          "date": "2026-02-23",
+          "close": 5211.0
+        },
+        {
+          "date": "2026-03-06",
+          "close": 5636.0
+        },
+        {
+          "date": "2026-03-19",
+          "close": 5790.0
+        },
+        {
+          "date": "2026-04-01",
+          "close": 5494.0
+        },
+        {
+          "date": "2026-04-12",
+          "close": 5551.5
+        },
+        {
+          "date": "2026-04-23",
+          "close": 5490.0
+        },
+        {
+          "date": "2026-05-04",
+          "close": 5217.0
+        },
+        {
+          "date": "2026-05-17",
+          "close": 5137.0
+        },
+        {
+          "date": "2026-05-28",
+          "close": 4977.5
+        },
+        {
+          "date": "2026-06-08",
+          "close": 4760.0
+        },
+        {
+          "date": "2026-06-19",
+          "close": 4377.0
+        },
+        {
+          "date": "2026-07-02",
+          "close": 4263.0
+        },
+        {
+          "date": "2026-07-13",
+          "close": 4452.5
+        },
+        {
+          "date": "2026-07-24",
+          "close": 4717.0
+        },
+        {
+          "date": "2026-08-06",
+          "close": 4651.5
+        },
+        {
+          "date": "2026-08-19",
+          "close": 4269.0
+        },
+        {
+          "date": "2026-08-30",
+          "close": 4638.0
+        },
+        {
+          "date": "2026-09-10",
+          "close": 5321.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 5434.5
+        },
+        {
+          "date": "2026-10-04",
+          "close": 5541.5
+        },
+        {
+          "date": "2026-10-15",
+          "close": 6006.0
+        },
+        {
+          "date": "2026-10-19",
+          "close": 6025.0
+        }
+      ]
+    },
+    "ROSN": {
+      "ticker": "ROSN",
+      "spb_ticker": "ROSN",
+      "short_name": "Роснефть",
+      "isin": "RU000A0J2Q06",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 381.15,
+      "moex_price_rub": 381.15,
+      "spbex_price_rub": 380.8,
+      "cross_exchange_spread_bps": -9.2,
+      "change_day_pct": 0.03,
+      "lot_size": 1,
+      "lot_cost_rub": 381.15,
+      "issue_size": 10598177817,
+      "market_cap_bln_rub": 4037.38,
+      "moex_turnover_mln_rub": 10118.41,
+      "spbex_turnover_mln_rub": 0.551,
+      "total_turnover_mln_rub": 10118.96,
+      "spbex_liquidity_share_pct": 0.01,
+      "ytd_2026_return_pct": -5.38,
+      "return_30d_pct": 8.15,
+      "return_90d_pct": 10.26,
+      "volatility_ann_pct": 32.71,
+      "max_drawdown_2026_pct": -42.87,
+      "beta_imoex": 1.17,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 402.6
+        },
+        {
+          "date": "2026-01-19",
+          "close": 392.1
+        },
+        {
+          "date": "2026-01-30",
+          "close": 407.75
+        },
+        {
+          "date": "2026-02-10",
+          "close": 389.55
+        },
+        {
+          "date": "2026-02-23",
+          "close": 397.2
+        },
+        {
+          "date": "2026-03-06",
+          "close": 467.5
+        },
+        {
+          "date": "2026-03-19",
+          "close": 512.0
+        },
+        {
+          "date": "2026-04-01",
+          "close": 467.4
+        },
+        {
+          "date": "2026-04-12",
+          "close": 459.3
+        },
+        {
+          "date": "2026-04-23",
+          "close": 441.9
+        },
+        {
+          "date": "2026-05-04",
+          "close": 421.4
+        },
+        {
+          "date": "2026-05-17",
+          "close": 408.4
+        },
+        {
+          "date": "2026-05-28",
+          "close": 389.1
+        },
+        {
+          "date": "2026-06-08",
+          "close": 383.5
+        },
+        {
+          "date": "2026-06-19",
+          "close": 326.4
+        },
+        {
+          "date": "2026-07-02",
+          "close": 309.7
+        },
+        {
+          "date": "2026-07-13",
+          "close": 327.45
+        },
+        {
+          "date": "2026-07-24",
+          "close": 352.3
+        },
+        {
+          "date": "2026-08-06",
+          "close": 354.65
+        },
+        {
+          "date": "2026-08-19",
+          "close": 315.35
+        },
+        {
+          "date": "2026-08-30",
+          "close": 309.15
+        },
+        {
+          "date": "2026-09-10",
+          "close": 357.7
+        },
+        {
+          "date": "2026-09-23",
+          "close": 366.9
+        },
+        {
+          "date": "2026-10-04",
+          "close": 343.05
+        },
+        {
+          "date": "2026-10-15",
+          "close": 368.9
+        },
+        {
+          "date": "2026-10-19",
+          "close": 380.95
+        }
+      ]
+    },
+    "TATN": {
+      "ticker": "TATN",
+      "spb_ticker": "TATN",
+      "short_name": "Татнфт 3ао",
+      "isin": "RU0009033591",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 618.9,
+      "moex_price_rub": 618.9,
+      "spbex_price_rub": 620.0,
+      "cross_exchange_spread_bps": 17.8,
+      "change_day_pct": 0.02,
+      "lot_size": 1,
+      "lot_cost_rub": 618.9,
+      "issue_size": 2178690700,
+      "market_cap_bln_rub": 1349.48,
+      "moex_turnover_mln_rub": 1726.7,
+      "spbex_turnover_mln_rub": 0.15,
+      "total_turnover_mln_rub": 1726.85,
+      "spbex_liquidity_share_pct": 0.01,
+      "ytd_2026_return_pct": 7.37,
+      "return_30d_pct": -1.31,
+      "return_90d_pct": 9.34,
+      "volatility_ann_pct": 33.38,
+      "max_drawdown_2026_pct": -39.49,
+      "beta_imoex": 1.25,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 576.9
+        },
+        {
+          "date": "2026-01-19",
+          "close": 555.5
+        },
+        {
+          "date": "2026-01-30",
+          "close": 574.1
+        },
+        {
+          "date": "2026-02-10",
+          "close": 542.2
+        },
+        {
+          "date": "2026-02-23",
+          "close": 543.5
+        },
+        {
+          "date": "2026-03-06",
+          "close": 642.9
+        },
+        {
+          "date": "2026-03-19",
+          "close": 653.2
+        },
+        {
+          "date": "2026-04-01",
+          "close": 651.3
+        },
+        {
+          "date": "2026-04-12",
+          "close": 629.5
+        },
+        {
+          "date": "2026-04-23",
+          "close": 601.5
+        },
+        {
+          "date": "2026-05-04",
+          "close": 578.8
+        },
+        {
+          "date": "2026-05-17",
+          "close": 604.2
+        },
+        {
+          "date": "2026-05-28",
+          "close": 609.1
+        },
+        {
+          "date": "2026-06-08",
+          "close": 594.8
+        },
+        {
+          "date": "2026-06-19",
+          "close": 535.3
+        },
+        {
+          "date": "2026-07-02",
+          "close": 461.4
+        },
+        {
+          "date": "2026-07-13",
+          "close": 479.0
+        },
+        {
+          "date": "2026-07-24",
+          "close": 516.1
+        },
+        {
+          "date": "2026-08-06",
+          "close": 541.4
+        },
+        {
+          "date": "2026-08-19",
+          "close": 527.1
+        },
+        {
+          "date": "2026-08-30",
+          "close": 560.7
+        },
+        {
+          "date": "2026-09-10",
+          "close": 629.8
+        },
+        {
+          "date": "2026-09-23",
+          "close": 638.5
+        },
+        {
+          "date": "2026-10-04",
+          "close": 642.8
+        },
+        {
+          "date": "2026-10-15",
+          "close": 628.4
+        },
+        {
+          "date": "2026-10-19",
+          "close": 619.4
+        }
+      ]
+    },
+    "NVTK": {
+      "ticker": "NVTK",
+      "spb_ticker": "NVTK",
+      "short_name": "Новатэк ао",
+      "isin": "RU000A0DKVS5",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 1134.4,
+      "moex_price_rub": 1134.4,
+      "spbex_price_rub": 1133.4,
+      "cross_exchange_spread_bps": -8.8,
+      "change_day_pct": 0.01,
+      "lot_size": 1,
+      "lot_cost_rub": 1134.4,
+      "issue_size": 3036306000,
+      "market_cap_bln_rub": 3445.6,
+      "moex_turnover_mln_rub": 7146.92,
+      "spbex_turnover_mln_rub": 0.485,
+      "total_turnover_mln_rub": 7147.4,
+      "spbex_liquidity_share_pct": 0.01,
+      "ytd_2026_return_pct": -3.32,
+      "return_30d_pct": 10.16,
+      "return_90d_pct": 11.01,
+      "volatility_ann_pct": 31.54,
+      "max_drawdown_2026_pct": -38.86,
+      "beta_imoex": 1.26,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 1174.0
+        },
+        {
+          "date": "2026-01-19",
+          "close": 1194.2
+        },
+        {
+          "date": "2026-01-30",
+          "close": 1178.0
+        },
+        {
+          "date": "2026-02-10",
+          "close": 1145.9
+        },
+        {
+          "date": "2026-02-23",
+          "close": 1200.7
+        },
+        {
+          "date": "2026-03-06",
+          "close": 1345.0
+        },
+        {
+          "date": "2026-03-19",
+          "close": 1412.0
+        },
+        {
+          "date": "2026-04-01",
+          "close": 1263.5
+        },
+        {
+          "date": "2026-04-12",
+          "close": 1223.0
+        },
+        {
+          "date": "2026-04-23",
+          "close": 1210.5
+        },
+        {
+          "date": "2026-05-04",
+          "close": 1125.7
+        },
+        {
+          "date": "2026-05-17",
+          "close": 1133.5
+        },
+        {
+          "date": "2026-05-28",
+          "close": 1067.6
+        },
+        {
+          "date": "2026-06-08",
+          "close": 1056.6
+        },
+        {
+          "date": "2026-06-19",
+          "close": 978.4
+        },
+        {
+          "date": "2026-07-02",
+          "close": 923.0
+        },
+        {
+          "date": "2026-07-13",
+          "close": 962.6
+        },
+        {
+          "date": "2026-07-24",
+          "close": 1019.0
+        },
+        {
+          "date": "2026-08-06",
+          "close": 1032.2
+        },
+        {
+          "date": "2026-08-19",
+          "close": 950.3
+        },
+        {
+          "date": "2026-08-30",
+          "close": 937.0
+        },
+        {
+          "date": "2026-09-10",
+          "close": 1042.4
+        },
+        {
+          "date": "2026-09-23",
+          "close": 1080.6
+        },
+        {
+          "date": "2026-10-04",
+          "close": 1055.5
+        },
+        {
+          "date": "2026-10-15",
+          "close": 1078.6
+        },
+        {
+          "date": "2026-10-19",
+          "close": 1135.0
+        }
+      ]
+    },
+    "GAZP": {
+      "ticker": "GAZP",
+      "spb_ticker": "GAZP",
+      "short_name": "ГАЗПРОМ ао",
+      "isin": "RU0007661625",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 109.11,
+      "moex_price_rub": 109.11,
+      "spbex_price_rub": 109.08,
+      "cross_exchange_spread_bps": -2.7,
+      "change_day_pct": -0.01,
+      "lot_size": 10,
+      "lot_cost_rub": 1091.1,
+      "issue_size": 23673512900,
+      "market_cap_bln_rub": 2584.91,
+      "moex_turnover_mln_rub": 19875.38,
+      "spbex_turnover_mln_rub": 3.768,
+      "total_turnover_mln_rub": 19879.15,
+      "spbex_liquidity_share_pct": 0.02,
+      "ytd_2026_return_pct": -11.74,
+      "return_30d_pct": 13.29,
+      "return_90d_pct": 19.11,
+      "volatility_ann_pct": 27.84,
+      "max_drawdown_2026_pct": -43.22,
+      "beta_imoex": 1.16,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 123.72
+        },
+        {
+          "date": "2026-01-19",
+          "close": 123.14
+        },
+        {
+          "date": "2026-01-30",
+          "close": 127.6
+        },
+        {
+          "date": "2026-02-10",
+          "close": 122.95
+        },
+        {
+          "date": "2026-02-23",
+          "close": 127.87
+        },
+        {
+          "date": "2026-03-06",
+          "close": 132.17
+        },
+        {
+          "date": "2026-03-19",
+          "close": 130.74
+        },
+        {
+          "date": "2026-04-01",
+          "close": 134.95
+        },
+        {
+          "date": "2026-04-12",
+          "close": 131.3
+        },
+        {
+          "date": "2026-04-23",
+          "close": 125.17
+        },
+        {
+          "date": "2026-05-04",
+          "close": 118.97
+        },
+        {
+          "date": "2026-05-17",
+          "close": 121.26
+        },
+        {
+          "date": "2026-05-28",
+          "close": 115.7
+        },
+        {
+          "date": "2026-06-08",
+          "close": 113.49
+        },
+        {
+          "date": "2026-06-19",
+          "close": 104.49
+        },
+        {
+          "date": "2026-07-02",
+          "close": 97.05
+        },
+        {
+          "date": "2026-07-13",
+          "close": 94.41
+        },
+        {
+          "date": "2026-07-24",
+          "close": 93.22
+        },
+        {
+          "date": "2026-08-06",
+          "close": 93.19
+        },
+        {
+          "date": "2026-08-19",
+          "close": 84.86
+        },
+        {
+          "date": "2026-08-30",
+          "close": 86.19
+        },
+        {
+          "date": "2026-09-10",
+          "close": 93.5
+        },
+        {
+          "date": "2026-09-23",
+          "close": 102.6
+        },
+        {
+          "date": "2026-10-04",
+          "close": 96.88
+        },
+        {
+          "date": "2026-10-15",
+          "close": 104.58
+        },
+        {
+          "date": "2026-10-19",
+          "close": 109.2
+        }
+      ]
+    },
+    "SNGS": {
+      "ticker": "SNGS",
+      "spb_ticker": "SNGS",
+      "short_name": "Сургнфгз",
+      "isin": "RU0008926258",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 17.085,
+      "moex_price_rub": 17.085,
+      "spbex_price_rub": 17.07,
+      "cross_exchange_spread_bps": -8.8,
+      "change_day_pct": -0.06,
+      "lot_size": 100,
+      "lot_cost_rub": 1708.5,
+      "issue_size": 35725994705,
+      "market_cap_bln_rub": 611.99,
+      "moex_turnover_mln_rub": 1883.09,
+      "spbex_turnover_mln_rub": 0.78,
+      "total_turnover_mln_rub": 1883.87,
+      "spbex_liquidity_share_pct": 0.04,
+      "ytd_2026_return_pct": -21.18,
+      "return_30d_pct": 12.67,
+      "return_90d_pct": 1.12,
+      "volatility_ann_pct": 29.91,
+      "max_drawdown_2026_pct": -43.93,
+      "beta_imoex": 1.18,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 21.72
+        },
+        {
+          "date": "2026-01-19",
+          "close": 22.16
+        },
+        {
+          "date": "2026-01-30",
+          "close": 22.04
+        },
+        {
+          "date": "2026-02-10",
+          "close": 21.39
+        },
+        {
+          "date": "2026-02-23",
+          "close": 21.81
+        },
+        {
+          "date": "2026-03-06",
+          "close": 23.24
+        },
+        {
+          "date": "2026-03-19",
+          "close": 22.74
+        },
+        {
+          "date": "2026-04-01",
+          "close": 21.3
+        },
+        {
+          "date": "2026-04-12",
+          "close": 20.995
+        },
+        {
+          "date": "2026-04-23",
+          "close": 20.625
+        },
+        {
+          "date": "2026-05-04",
+          "close": 19.58
+        },
+        {
+          "date": "2026-05-17",
+          "close": 19.425
+        },
+        {
+          "date": "2026-05-28",
+          "close": 18.815
+        },
+        {
+          "date": "2026-06-08",
+          "close": 18.77
+        },
+        {
+          "date": "2026-06-19",
+          "close": 17.365
+        },
+        {
+          "date": "2026-07-02",
+          "close": 15.725
+        },
+        {
+          "date": "2026-07-13",
+          "close": 15.5
+        },
+        {
+          "date": "2026-07-24",
+          "close": 14.49
+        },
+        {
+          "date": "2026-08-06",
+          "close": 16.495
+        },
+        {
+          "date": "2026-08-19",
+          "close": 15.69
+        },
+        {
+          "date": "2026-08-30",
+          "close": 14.93
+        },
+        {
+          "date": "2026-09-10",
+          "close": 16.695
+        },
+        {
+          "date": "2026-09-23",
+          "close": 15.845
+        },
+        {
+          "date": "2026-10-04",
+          "close": 15.125
+        },
+        {
+          "date": "2026-10-15",
+          "close": 16.5
+        },
+        {
+          "date": "2026-10-19",
+          "close": 17.12
+        }
+      ]
+    },
+    "SNGSP": {
+      "ticker": "SNGSP",
+      "spb_ticker": "SNGSP",
+      "short_name": "Сургнфгз-п",
+      "isin": "RU0009029524",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 40.965,
+      "moex_price_rub": 40.965,
+      "spbex_price_rub": 41.0,
+      "cross_exchange_spread_bps": 8.5,
+      "change_day_pct": 0.02,
+      "lot_size": 10,
+      "lot_cost_rub": 409.65,
+      "issue_size": 7701998235,
+      "market_cap_bln_rub": 315.47,
+      "moex_turnover_mln_rub": 835.38,
+      "spbex_turnover_mln_rub": 0.145,
+      "total_turnover_mln_rub": 835.52,
+      "spbex_liquidity_share_pct": 0.02,
+      "ytd_2026_return_pct": -4.84,
+      "return_30d_pct": 1.3,
+      "return_90d_pct": -3.51,
+      "volatility_ann_pct": 23.76,
+      "max_drawdown_2026_pct": -28.12,
+      "beta_imoex": 0.55,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 43.045
+        },
+        {
+          "date": "2026-01-19",
+          "close": 42.835
+        },
+        {
+          "date": "2026-01-30",
+          "close": 43.99
+        },
+        {
+          "date": "2026-02-10",
+          "close": 43.33
+        },
+        {
+          "date": "2026-02-23",
+          "close": 42.54
+        },
+        {
+          "date": "2026-03-06",
+          "close": 47.695
+        },
+        {
+          "date": "2026-03-19",
+          "close": 49.345
+        },
+        {
+          "date": "2026-04-01",
+          "close": 42.735
+        },
+        {
+          "date": "2026-04-12",
+          "close": 42.43
+        },
+        {
+          "date": "2026-04-23",
+          "close": 44.125
+        },
+        {
+          "date": "2026-05-04",
+          "close": 41.9
+        },
+        {
+          "date": "2026-05-17",
+          "close": 40.13
+        },
+        {
+          "date": "2026-05-28",
+          "close": 40.5
+        },
+        {
+          "date": "2026-06-08",
+          "close": 40.54
+        },
+        {
+          "date": "2026-06-19",
+          "close": 40.095
+        },
+        {
+          "date": "2026-07-02",
+          "close": 39.355
+        },
+        {
+          "date": "2026-07-13",
+          "close": 36.205
+        },
+        {
+          "date": "2026-07-24",
+          "close": 36.565
+        },
+        {
+          "date": "2026-08-06",
+          "close": 42.505
+        },
+        {
+          "date": "2026-08-19",
+          "close": 40.955
+        },
+        {
+          "date": "2026-08-30",
+          "close": 42.14
+        },
+        {
+          "date": "2026-09-10",
+          "close": 41.925
+        },
+        {
+          "date": "2026-09-23",
+          "close": 40.81
+        },
+        {
+          "date": "2026-10-04",
+          "close": 40.04
+        },
+        {
+          "date": "2026-10-15",
+          "close": 40.815
+        },
+        {
+          "date": "2026-10-19",
+          "close": 40.96
+        }
+      ]
+    },
+    "TRNFP": {
+      "ticker": "TRNFP",
+      "spb_ticker": "TRNFP",
+      "short_name": "Транснф ап",
+      "isin": "RU0009091573",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 1067.0,
+      "moex_price_rub": 1067.0,
+      "spbex_price_rub": 1070.0,
+      "cross_exchange_spread_bps": 28.1,
+      "change_day_pct": -0.06,
+      "lot_size": 1,
+      "lot_cost_rub": 1067.0,
+      "issue_size": 155487500,
+      "market_cap_bln_rub": 166.12,
+      "moex_turnover_mln_rub": 1191.11,
+      "spbex_turnover_mln_rub": 0.78,
+      "total_turnover_mln_rub": 1191.89,
+      "spbex_liquidity_share_pct": 0.07,
+      "ytd_2026_return_pct": -23.36,
+      "return_30d_pct": 4.77,
+      "return_90d_pct": -0.47,
+      "volatility_ann_pct": 24.1,
+      "max_drawdown_2026_pct": -31.33,
+      "beta_imoex": 0.49,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 1394.0
+        },
+        {
+          "date": "2026-01-19",
+          "close": 1406.6
+        },
+        {
+          "date": "2026-01-30",
+          "close": 1411.4
+        },
+        {
+          "date": "2026-02-10",
+          "close": 1400.0
+        },
+        {
+          "date": "2026-02-23",
+          "close": 1445.2
+        },
+        {
+          "date": "2026-03-06",
+          "close": 1408.6
+        },
+        {
+          "date": "2026-03-19",
+          "close": 1402.2
+        },
+        {
+          "date": "2026-04-01",
+          "close": 1358.8
+        },
+        {
+          "date": "2026-04-12",
+          "close": 1395.0
+        },
+        {
+          "date": "2026-04-23",
+          "close": 1389.2
+        },
+        {
+          "date": "2026-05-04",
+          "close": 1382.0
+        },
+        {
+          "date": "2026-05-17",
+          "close": 1399.0
+        },
+        {
+          "date": "2026-05-28",
+          "close": 1430.8
+        },
+        {
+          "date": "2026-06-08",
+          "close": 1385.4
+        },
+        {
+          "date": "2026-06-19",
+          "close": 1342.2
+        },
+        {
+          "date": "2026-07-02",
+          "close": 1285.8
+        },
+        {
+          "date": "2026-07-13",
+          "close": 1238.6
+        },
+        {
+          "date": "2026-07-24",
+          "close": 1056.4
+        },
+        {
+          "date": "2026-08-06",
+          "close": 1106.6
+        },
+        {
+          "date": "2026-08-19",
+          "close": 1025.4
+        },
+        {
+          "date": "2026-08-30",
+          "close": 1030.0
+        },
+        {
+          "date": "2026-09-10",
+          "close": 1025.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 1026.6
+        },
+        {
+          "date": "2026-10-04",
+          "close": 1039.0
+        },
+        {
+          "date": "2026-10-15",
+          "close": 1053.4
+        },
+        {
+          "date": "2026-10-19",
+          "close": 1068.4
+        }
+      ]
+    },
+    "PLZL": {
+      "ticker": "PLZL",
+      "spb_ticker": "PLZL",
+      "short_name": "Полюс",
+      "isin": "RU000A0JNAA8",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 1164.6,
+      "moex_price_rub": 1164.6,
+      "spbex_price_rub": 1161.0,
+      "cross_exchange_spread_bps": -30.9,
+      "change_day_pct": 0.02,
+      "lot_size": 1,
+      "lot_cost_rub": 1164.6,
+      "issue_size": 1360694001,
+      "market_cap_bln_rub": 1586.57,
+      "moex_turnover_mln_rub": 6934.45,
+      "spbex_turnover_mln_rub": 0.296,
+      "total_turnover_mln_rub": 6934.74,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": -52.16,
+      "return_30d_pct": 20.54,
+      "return_90d_pct": -7.51,
+      "volatility_ann_pct": 48.1,
+      "max_drawdown_2026_pct": -66.2,
+      "beta_imoex": 1.07,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 2438.8
+        },
+        {
+          "date": "2026-01-19",
+          "close": 2609.0
+        },
+        {
+          "date": "2026-01-30",
+          "close": 2601.2
+        },
+        {
+          "date": "2026-02-10",
+          "close": 2661.6
+        },
+        {
+          "date": "2026-02-23",
+          "close": 2531.6
+        },
+        {
+          "date": "2026-03-06",
+          "close": 2436.4
+        },
+        {
+          "date": "2026-03-19",
+          "close": 2283.0
+        },
+        {
+          "date": "2026-04-01",
+          "close": 2167.8
+        },
+        {
+          "date": "2026-04-12",
+          "close": 2128.8
+        },
+        {
+          "date": "2026-04-23",
+          "close": 2288.0
+        },
+        {
+          "date": "2026-05-04",
+          "close": 2057.0
+        },
+        {
+          "date": "2026-05-17",
+          "close": 2076.4
+        },
+        {
+          "date": "2026-05-28",
+          "close": 2102.0
+        },
+        {
+          "date": "2026-06-08",
+          "close": 2018.0
+        },
+        {
+          "date": "2026-06-19",
+          "close": 2016.4
+        },
+        {
+          "date": "2026-07-02",
+          "close": 1932.2
+        },
+        {
+          "date": "2026-07-13",
+          "close": 1193.4
+        },
+        {
+          "date": "2026-07-24",
+          "close": 1227.2
+        },
+        {
+          "date": "2026-08-06",
+          "close": 1344.6
+        },
+        {
+          "date": "2026-08-19",
+          "close": 1190.0
+        },
+        {
+          "date": "2026-08-30",
+          "close": 1055.2
+        },
+        {
+          "date": "2026-09-10",
+          "close": 982.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 945.2
+        },
+        {
+          "date": "2026-10-04",
+          "close": 960.0
+        },
+        {
+          "date": "2026-10-15",
+          "close": 1093.6
+        },
+        {
+          "date": "2026-10-19",
+          "close": 1166.8
+        }
+      ]
+    },
+    "GMKN": {
+      "ticker": "GMKN",
+      "spb_ticker": "GMKN",
+      "short_name": "ГМКНорНик",
+      "isin": "RU0007288411",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 115.38,
+      "moex_price_rub": 115.38,
+      "spbex_price_rub": 115.4,
+      "cross_exchange_spread_bps": 1.7,
+      "change_day_pct": 0.02,
+      "lot_size": 10,
+      "lot_cost_rub": 1153.8,
+      "issue_size": 15286339700,
+      "market_cap_bln_rub": 1767.41,
+      "moex_turnover_mln_rub": 2649.7,
+      "spbex_turnover_mln_rub": 1.045,
+      "total_turnover_mln_rub": 2650.75,
+      "spbex_liquidity_share_pct": 0.04,
+      "ytd_2026_return_pct": -23.24,
+      "return_30d_pct": -1.82,
+      "return_90d_pct": -5.34,
+      "volatility_ann_pct": 31.32,
+      "max_drawdown_2026_pct": -43.38,
+      "beta_imoex": 0.91,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 150.62
+        },
+        {
+          "date": "2026-01-19",
+          "close": 158.72
+        },
+        {
+          "date": "2026-01-30",
+          "close": 160.0
+        },
+        {
+          "date": "2026-02-10",
+          "close": 155.96
+        },
+        {
+          "date": "2026-02-23",
+          "close": 155.22
+        },
+        {
+          "date": "2026-03-06",
+          "close": 159.3
+        },
+        {
+          "date": "2026-03-19",
+          "close": 152.52
+        },
+        {
+          "date": "2026-04-01",
+          "close": 140.02
+        },
+        {
+          "date": "2026-04-12",
+          "close": 131.9
+        },
+        {
+          "date": "2026-04-23",
+          "close": 139.6
+        },
+        {
+          "date": "2026-05-04",
+          "close": 124.7
+        },
+        {
+          "date": "2026-05-17",
+          "close": 127.92
+        },
+        {
+          "date": "2026-05-28",
+          "close": 125.62
+        },
+        {
+          "date": "2026-06-08",
+          "close": 130.0
+        },
+        {
+          "date": "2026-06-19",
+          "close": 131.7
+        },
+        {
+          "date": "2026-07-02",
+          "close": 122.12
+        },
+        {
+          "date": "2026-07-13",
+          "close": 107.96
+        },
+        {
+          "date": "2026-07-24",
+          "close": 111.8
+        },
+        {
+          "date": "2026-08-06",
+          "close": 125.2
+        },
+        {
+          "date": "2026-08-19",
+          "close": 122.12
+        },
+        {
+          "date": "2026-08-30",
+          "close": 120.1
+        },
+        {
+          "date": "2026-09-10",
+          "close": 132.3
+        },
+        {
+          "date": "2026-09-23",
+          "close": 127.52
+        },
+        {
+          "date": "2026-10-04",
+          "close": 118.38
+        },
+        {
+          "date": "2026-10-15",
+          "close": 114.96
+        },
+        {
+          "date": "2026-10-19",
+          "close": 115.62
+        }
+      ]
+    },
+    "CHMF": {
+      "ticker": "CHMF",
+      "spb_ticker": "CHMF",
+      "short_name": "СевСт-ао",
+      "isin": "RU0009046510",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 727.8,
+      "moex_price_rub": 727.8,
+      "spbex_price_rub": 726.0,
+      "cross_exchange_spread_bps": -24.7,
+      "change_day_pct": 0.03,
+      "lot_size": 1,
+      "lot_cost_rub": 727.8,
+      "issue_size": 837718660,
+      "market_cap_bln_rub": 609.02,
+      "moex_turnover_mln_rub": 1218.84,
+      "spbex_turnover_mln_rub": 0.102,
+      "total_turnover_mln_rub": 1218.94,
+      "spbex_liquidity_share_pct": 0.01,
+      "ytd_2026_return_pct": -23.59,
+      "return_30d_pct": 16.51,
+      "return_90d_pct": 8.8,
+      "volatility_ann_pct": 32.01,
+      "max_drawdown_2026_pct": -49.6,
+      "beta_imoex": 1.15,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 951.2
+        },
+        {
+          "date": "2026-01-19",
+          "close": 956.0
+        },
+        {
+          "date": "2026-01-30",
+          "close": 999.8
+        },
+        {
+          "date": "2026-02-10",
+          "close": 941.6
+        },
+        {
+          "date": "2026-02-23",
+          "close": 969.6
+        },
+        {
+          "date": "2026-03-06",
+          "close": 924.6
+        },
+        {
+          "date": "2026-03-19",
+          "close": 910.2
+        },
+        {
+          "date": "2026-04-01",
+          "close": 852.6
+        },
+        {
+          "date": "2026-04-12",
+          "close": 819.2
+        },
+        {
+          "date": "2026-04-23",
+          "close": 822.6
+        },
+        {
+          "date": "2026-05-04",
+          "close": 742.6
+        },
+        {
+          "date": "2026-05-17",
+          "close": 745.0
+        },
+        {
+          "date": "2026-05-28",
+          "close": 691.0
+        },
+        {
+          "date": "2026-06-08",
+          "close": 679.6
+        },
+        {
+          "date": "2026-06-19",
+          "close": 625.8
+        },
+        {
+          "date": "2026-07-02",
+          "close": 576.4
+        },
+        {
+          "date": "2026-07-13",
+          "close": 553.2
+        },
+        {
+          "date": "2026-07-24",
+          "close": 578.4
+        },
+        {
+          "date": "2026-08-06",
+          "close": 660.8
+        },
+        {
+          "date": "2026-08-19",
+          "close": 645.0
+        },
+        {
+          "date": "2026-08-30",
+          "close": 613.4
+        },
+        {
+          "date": "2026-09-10",
+          "close": 661.4
+        },
+        {
+          "date": "2026-09-23",
+          "close": 658.2
+        },
+        {
+          "date": "2026-10-04",
+          "close": 648.2
+        },
+        {
+          "date": "2026-10-15",
+          "close": 710.6
+        },
+        {
+          "date": "2026-10-19",
+          "close": 726.8
+        }
+      ]
+    },
+    "NLMK": {
+      "ticker": "NLMK",
+      "spb_ticker": "NLMK",
+      "short_name": "НЛМК ао",
+      "isin": "RU0009046452",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 76.76,
+      "moex_price_rub": 76.76,
+      "spbex_price_rub": 76.9,
+      "cross_exchange_spread_bps": 18.2,
+      "change_day_pct": -0.03,
+      "lot_size": 10,
+      "lot_cost_rub": 767.6,
+      "issue_size": 5993227240,
+      "market_cap_bln_rub": 460.52,
+      "moex_turnover_mln_rub": 847.86,
+      "spbex_turnover_mln_rub": 0.024,
+      "total_turnover_mln_rub": 847.88,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": -27.39,
+      "return_30d_pct": 12.74,
+      "return_90d_pct": 4.37,
+      "volatility_ann_pct": 31.16,
+      "max_drawdown_2026_pct": -50.43,
+      "beta_imoex": 1.04,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 105.8
+        },
+        {
+          "date": "2026-01-19",
+          "close": 105.78
+        },
+        {
+          "date": "2026-01-30",
+          "close": 113.48
+        },
+        {
+          "date": "2026-02-10",
+          "close": 107.24
+        },
+        {
+          "date": "2026-02-23",
+          "close": 111.28
+        },
+        {
+          "date": "2026-03-06",
+          "close": 106.3
+        },
+        {
+          "date": "2026-03-19",
+          "close": 102.96
+        },
+        {
+          "date": "2026-04-01",
+          "close": 98.1
+        },
+        {
+          "date": "2026-04-12",
+          "close": 95.34
+        },
+        {
+          "date": "2026-04-23",
+          "close": 93.0
+        },
+        {
+          "date": "2026-05-04",
+          "close": 85.36
+        },
+        {
+          "date": "2026-05-17",
+          "close": 84.04
+        },
+        {
+          "date": "2026-05-28",
+          "close": 79.9
+        },
+        {
+          "date": "2026-06-08",
+          "close": 73.8
+        },
+        {
+          "date": "2026-06-19",
+          "close": 69.04
+        },
+        {
+          "date": "2026-07-02",
+          "close": 59.12
+        },
+        {
+          "date": "2026-07-13",
+          "close": 59.1
+        },
+        {
+          "date": "2026-07-24",
+          "close": 65.86
+        },
+        {
+          "date": "2026-08-06",
+          "close": 73.78
+        },
+        {
+          "date": "2026-08-19",
+          "close": 72.0
+        },
+        {
+          "date": "2026-08-30",
+          "close": 67.18
+        },
+        {
+          "date": "2026-09-10",
+          "close": 73.94
+        },
+        {
+          "date": "2026-09-23",
+          "close": 72.62
+        },
+        {
+          "date": "2026-10-04",
+          "close": 69.16
+        },
+        {
+          "date": "2026-10-15",
+          "close": 76.26
+        },
+        {
+          "date": "2026-10-19",
+          "close": 76.82
+        }
+      ]
+    },
+    "RUAL": {
+      "ticker": "RUAL",
+      "spb_ticker": "RUAL",
+      "short_name": "РУСАЛ ао",
+      "isin": "RU000A1025V3",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 25.335,
+      "moex_price_rub": 25.335,
+      "spbex_price_rub": 25.31,
+      "cross_exchange_spread_bps": -9.9,
+      "change_day_pct": 0.02,
+      "lot_size": 10,
+      "lot_cost_rub": 253.35,
+      "issue_size": 15193014862,
+      "market_cap_bln_rub": 386.21,
+      "moex_turnover_mln_rub": 989.51,
+      "spbex_turnover_mln_rub": 0.387,
+      "total_turnover_mln_rub": 989.9,
+      "spbex_liquidity_share_pct": 0.04,
+      "ytd_2026_return_pct": -26.98,
+      "return_30d_pct": 9.59,
+      "return_90d_pct": -7.71,
+      "volatility_ann_pct": 37.69,
+      "max_drawdown_2026_pct": -56.92,
+      "beta_imoex": 1.18,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 34.81
+        },
+        {
+          "date": "2026-01-19",
+          "close": 38.125
+        },
+        {
+          "date": "2026-01-30",
+          "close": 39.28
+        },
+        {
+          "date": "2026-02-10",
+          "close": 38.685
+        },
+        {
+          "date": "2026-02-23",
+          "close": 38.39
+        },
+        {
+          "date": "2026-03-06",
+          "close": 44.4
+        },
+        {
+          "date": "2026-03-19",
+          "close": 41.81
+        },
+        {
+          "date": "2026-04-01",
+          "close": 40.435
+        },
+        {
+          "date": "2026-04-12",
+          "close": 42.42
+        },
+        {
+          "date": "2026-04-23",
+          "close": 41.725
+        },
+        {
+          "date": "2026-05-04",
+          "close": 38.38
+        },
+        {
+          "date": "2026-05-17",
+          "close": 38.2
+        },
+        {
+          "date": "2026-05-28",
+          "close": 34.065
+        },
+        {
+          "date": "2026-06-08",
+          "close": 36.16
+        },
+        {
+          "date": "2026-06-19",
+          "close": 31.34
+        },
+        {
+          "date": "2026-07-02",
+          "close": 26.88
+        },
+        {
+          "date": "2026-07-13",
+          "close": 23.585
+        },
+        {
+          "date": "2026-07-24",
+          "close": 23.275
+        },
+        {
+          "date": "2026-08-06",
+          "close": 26.94
+        },
+        {
+          "date": "2026-08-19",
+          "close": 27.165
+        },
+        {
+          "date": "2026-08-30",
+          "close": 25.25
+        },
+        {
+          "date": "2026-09-10",
+          "close": 26.7
+        },
+        {
+          "date": "2026-09-23",
+          "close": 24.87
+        },
+        {
+          "date": "2026-10-04",
+          "close": 23.28
+        },
+        {
+          "date": "2026-10-15",
+          "close": 24.335
+        },
+        {
+          "date": "2026-10-19",
+          "close": 25.42
+        }
+      ]
+    },
+    "YDEX": {
+      "ticker": "YDEX",
+      "spb_ticker": "YDEX",
+      "short_name": "ЯНДЕКС",
+      "isin": "RU000A107T19",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 3436.0,
+      "moex_price_rub": 3436.0,
+      "spbex_price_rub": 3437.0,
+      "cross_exchange_spread_bps": 2.9,
+      "change_day_pct": 0.01,
+      "lot_size": 1,
+      "lot_cost_rub": 3436.0,
+      "issue_size": 396907079,
+      "market_cap_bln_rub": 1368.73,
+      "moex_turnover_mln_rub": 4555.63,
+      "spbex_turnover_mln_rub": 1.112,
+      "total_turnover_mln_rub": 4556.74,
+      "spbex_liquidity_share_pct": 0.02,
+      "ytd_2026_return_pct": -23.33,
+      "return_30d_pct": -2.78,
+      "return_90d_pct": -13.09,
+      "volatility_ann_pct": 26.29,
+      "max_drawdown_2026_pct": -33.92,
+      "beta_imoex": 0.97,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 4498.0
+        },
+        {
+          "date": "2026-01-19",
+          "close": 4658.0
+        },
+        {
+          "date": "2026-01-30",
+          "close": 4735.0
+        },
+        {
+          "date": "2026-02-10",
+          "close": 4528.5
+        },
+        {
+          "date": "2026-02-23",
+          "close": 4803.5
+        },
+        {
+          "date": "2026-03-06",
+          "close": 4526.5
+        },
+        {
+          "date": "2026-03-19",
+          "close": 4460.0
+        },
+        {
+          "date": "2026-04-01",
+          "close": 4275.5
+        },
+        {
+          "date": "2026-04-12",
+          "close": 4143.5
+        },
+        {
+          "date": "2026-04-23",
+          "close": 4343.0
+        },
+        {
+          "date": "2026-05-04",
+          "close": 4035.0
+        },
+        {
+          "date": "2026-05-17",
+          "close": 4022.0
+        },
+        {
+          "date": "2026-05-28",
+          "close": 4012.5
+        },
+        {
+          "date": "2026-06-08",
+          "close": 3880.5
+        },
+        {
+          "date": "2026-06-19",
+          "close": 3912.0
+        },
+        {
+          "date": "2026-07-02",
+          "close": 3511.0
+        },
+        {
+          "date": "2026-07-13",
+          "close": 3623.5
+        },
+        {
+          "date": "2026-07-24",
+          "close": 3891.5
+        },
+        {
+          "date": "2026-08-06",
+          "close": 4039.5
+        },
+        {
+          "date": "2026-08-19",
+          "close": 3725.5
+        },
+        {
+          "date": "2026-08-30",
+          "close": 3489.5
+        },
+        {
+          "date": "2026-09-10",
+          "close": 3825.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 3774.5
+        },
+        {
+          "date": "2026-10-04",
+          "close": 3600.5
+        },
+        {
+          "date": "2026-10-15",
+          "close": 3427.0
+        },
+        {
+          "date": "2026-10-19",
+          "close": 3448.5
+        }
+      ]
+    },
+    "HEAD": {
+      "ticker": "HEAD",
+      "spb_ticker": "HEAD",
+      "short_name": "Хэдхантер",
+      "isin": "RU000A107662",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 2719.0,
+      "moex_price_rub": 2719.0,
+      "spbex_price_rub": 2718.0,
+      "cross_exchange_spread_bps": -3.7,
+      "change_day_pct": -0.07,
+      "lot_size": 1,
+      "lot_cost_rub": 2719.0,
+      "issue_size": 47184918,
+      "market_cap_bln_rub": 128.44,
+      "moex_turnover_mln_rub": 364.72,
+      "spbex_turnover_mln_rub": 0.0,
+      "total_turnover_mln_rub": 364.72,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": -6.36,
+      "return_30d_pct": 0.37,
+      "return_90d_pct": -5.91,
+      "volatility_ann_pct": 21.28,
+      "max_drawdown_2026_pct": -22.99,
+      "beta_imoex": 0.58,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 2907.0
+        },
+        {
+          "date": "2026-01-19",
+          "close": 2943.0
+        },
+        {
+          "date": "2026-01-30",
+          "close": 2944.0
+        },
+        {
+          "date": "2026-02-10",
+          "close": 2792.0
+        },
+        {
+          "date": "2026-02-23",
+          "close": 2917.0
+        },
+        {
+          "date": "2026-03-06",
+          "close": 2960.0
+        },
+        {
+          "date": "2026-03-19",
+          "close": 3019.0
+        },
+        {
+          "date": "2026-04-01",
+          "close": 2977.0
+        },
+        {
+          "date": "2026-04-12",
+          "close": 2933.0
+        },
+        {
+          "date": "2026-04-23",
+          "close": 2976.0
+        },
+        {
+          "date": "2026-05-04",
+          "close": 2918.0
+        },
+        {
+          "date": "2026-05-17",
+          "close": 2793.0
+        },
+        {
+          "date": "2026-05-28",
+          "close": 2865.0
+        },
+        {
+          "date": "2026-06-08",
+          "close": 2808.0
+        },
+        {
+          "date": "2026-06-19",
+          "close": 2733.0
+        },
+        {
+          "date": "2026-07-02",
+          "close": 2615.0
+        },
+        {
+          "date": "2026-07-13",
+          "close": 2562.0
+        },
+        {
+          "date": "2026-07-24",
+          "close": 2621.0
+        },
+        {
+          "date": "2026-08-06",
+          "close": 2886.0
+        },
+        {
+          "date": "2026-08-19",
+          "close": 2745.0
+        },
+        {
+          "date": "2026-08-30",
+          "close": 2647.0
+        },
+        {
+          "date": "2026-09-10",
+          "close": 2800.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 2889.0
+        },
+        {
+          "date": "2026-10-04",
+          "close": 2709.0
+        },
+        {
+          "date": "2026-10-15",
+          "close": 2712.0
+        },
+        {
+          "date": "2026-10-19",
+          "close": 2722.0
+        }
+      ]
+    },
+    "OZON": {
+      "ticker": "OZON",
+      "spb_ticker": "OZON",
+      "short_name": "Озон",
+      "isin": "RU000A10CW95",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 3523.5,
+      "moex_price_rub": 3523.5,
+      "spbex_price_rub": 3518.0,
+      "cross_exchange_spread_bps": -15.6,
+      "change_day_pct": 0.01,
+      "lot_size": 1,
+      "lot_cost_rub": 3523.5,
+      "issue_size": 216413733,
+      "market_cap_bln_rub": 762.21,
+      "moex_turnover_mln_rub": 8500.31,
+      "spbex_turnover_mln_rub": 5.574,
+      "total_turnover_mln_rub": 8505.89,
+      "spbex_liquidity_share_pct": 0.07,
+      "ytd_2026_return_pct": -20.71,
+      "return_30d_pct": 20.66,
+      "return_90d_pct": 8.05,
+      "volatility_ann_pct": 38.86,
+      "max_drawdown_2026_pct": -54.88,
+      "beta_imoex": 1.14,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 4442.0
+        },
+        {
+          "date": "2026-01-19",
+          "close": 4481.0
+        },
+        {
+          "date": "2026-01-30",
+          "close": 4652.0
+        },
+        {
+          "date": "2026-02-10",
+          "close": 4410.0
+        },
+        {
+          "date": "2026-02-23",
+          "close": 4808.5
+        },
+        {
+          "date": "2026-03-06",
+          "close": 4521.5
+        },
+        {
+          "date": "2026-03-19",
+          "close": 4503.0
+        },
+        {
+          "date": "2026-04-01",
+          "close": 4454.0
+        },
+        {
+          "date": "2026-04-12",
+          "close": 4303.5
+        },
+        {
+          "date": "2026-04-23",
+          "close": 4456.5
+        },
+        {
+          "date": "2026-05-04",
+          "close": 4090.5
+        },
+        {
+          "date": "2026-05-17",
+          "close": 4142.0
+        },
+        {
+          "date": "2026-05-28",
+          "close": 4025.0
+        },
+        {
+          "date": "2026-06-08",
+          "close": 3670.0
+        },
+        {
+          "date": "2026-06-19",
+          "close": 3710.5
+        },
+        {
+          "date": "2026-07-02",
+          "close": 3264.0
+        },
+        {
+          "date": "2026-07-13",
+          "close": 3227.5
+        },
+        {
+          "date": "2026-07-24",
+          "close": 2647.0
+        },
+        {
+          "date": "2026-08-06",
+          "close": 2908.0
+        },
+        {
+          "date": "2026-08-19",
+          "close": 2972.5
+        },
+        {
+          "date": "2026-08-30",
+          "close": 2177.0
+        },
+        {
+          "date": "2026-09-10",
+          "close": 2652.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 2940.0
+        },
+        {
+          "date": "2026-10-04",
+          "close": 3147.5
+        },
+        {
+          "date": "2026-10-15",
+          "close": 3481.0
+        },
+        {
+          "date": "2026-10-19",
+          "close": 3522.0
+        }
+      ]
+    },
+    "ASTR": {
+      "ticker": "ASTR",
+      "spb_ticker": "ASTR",
+      "short_name": "iАстра ао",
+      "isin": "RU000A106T36",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 219.4,
+      "moex_price_rub": 219.4,
+      "spbex_price_rub": 218.7,
+      "cross_exchange_spread_bps": -31.9,
+      "change_day_pct": -0.02,
+      "lot_size": 1,
+      "lot_cost_rub": 219.4,
+      "issue_size": 210000000,
+      "market_cap_bln_rub": 46.16,
+      "moex_turnover_mln_rub": 169.01,
+      "spbex_turnover_mln_rub": 0.0,
+      "total_turnover_mln_rub": 169.01,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": -11.78,
+      "return_30d_pct": 4.17,
+      "return_90d_pct": -0.32,
+      "volatility_ann_pct": 51.46,
+      "max_drawdown_2026_pct": -56.21,
+      "beta_imoex": 1.09,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 249.25
+        },
+        {
+          "date": "2026-01-19",
+          "close": 263.6
+        },
+        {
+          "date": "2026-01-30",
+          "close": 255.05
+        },
+        {
+          "date": "2026-02-10",
+          "close": 250.8
+        },
+        {
+          "date": "2026-02-23",
+          "close": 261.05
+        },
+        {
+          "date": "2026-03-06",
+          "close": 253.0
+        },
+        {
+          "date": "2026-03-19",
+          "close": 252.9
+        },
+        {
+          "date": "2026-04-01",
+          "close": 251.3
+        },
+        {
+          "date": "2026-04-12",
+          "close": 263.3
+        },
+        {
+          "date": "2026-04-23",
+          "close": 260.8
+        },
+        {
+          "date": "2026-05-04",
+          "close": 278.95
+        },
+        {
+          "date": "2026-05-17",
+          "close": 278.75
+        },
+        {
+          "date": "2026-05-28",
+          "close": 282.2
+        },
+        {
+          "date": "2026-06-08",
+          "close": 183.9
+        },
+        {
+          "date": "2026-06-19",
+          "close": 173.2
+        },
+        {
+          "date": "2026-07-02",
+          "close": 169.25
+        },
+        {
+          "date": "2026-07-13",
+          "close": 157.55
+        },
+        {
+          "date": "2026-07-24",
+          "close": 193.75
+        },
+        {
+          "date": "2026-08-06",
+          "close": 233.0
+        },
+        {
+          "date": "2026-08-19",
+          "close": 205.1
+        },
+        {
+          "date": "2026-08-30",
+          "close": 211.7
+        },
+        {
+          "date": "2026-09-10",
+          "close": 226.35
+        },
+        {
+          "date": "2026-09-23",
+          "close": 218.5
+        },
+        {
+          "date": "2026-10-04",
+          "close": 211.75
+        },
+        {
+          "date": "2026-10-15",
+          "close": 220.1
+        },
+        {
+          "date": "2026-10-19",
+          "close": 219.9
+        }
+      ]
+    },
+    "POSI": {
+      "ticker": "POSI",
+      "spb_ticker": "POSI",
+      "short_name": "iПозитив",
+      "isin": "RU000A103X66",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 1149.6,
+      "moex_price_rub": 1149.6,
+      "spbex_price_rub": 1152.0,
+      "cross_exchange_spread_bps": 20.9,
+      "change_day_pct": 0.05,
+      "lot_size": 1,
+      "lot_cost_rub": 1149.6,
+      "issue_size": 71214000,
+      "market_cap_bln_rub": 81.82,
+      "moex_turnover_mln_rub": 1128.19,
+      "spbex_turnover_mln_rub": 0.651,
+      "total_turnover_mln_rub": 1128.84,
+      "spbex_liquidity_share_pct": 0.06,
+      "ytd_2026_return_pct": 16.22,
+      "return_30d_pct": 11.99,
+      "return_90d_pct": 17.2,
+      "volatility_ann_pct": 36.47,
+      "max_drawdown_2026_pct": -43.11,
+      "beta_imoex": 1.07,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 988.6
+        },
+        {
+          "date": "2026-01-19",
+          "close": 1038.4
+        },
+        {
+          "date": "2026-01-30",
+          "close": 1089.8
+        },
+        {
+          "date": "2026-02-10",
+          "close": 1094.8
+        },
+        {
+          "date": "2026-02-23",
+          "close": 1203.0
+        },
+        {
+          "date": "2026-03-06",
+          "close": 1192.0
+        },
+        {
+          "date": "2026-03-19",
+          "close": 1119.2
+        },
+        {
+          "date": "2026-04-01",
+          "close": 1121.8
+        },
+        {
+          "date": "2026-04-12",
+          "close": 1066.0
+        },
+        {
+          "date": "2026-04-23",
+          "close": 1083.6
+        },
+        {
+          "date": "2026-05-04",
+          "close": 979.4
+        },
+        {
+          "date": "2026-05-17",
+          "close": 999.4
+        },
+        {
+          "date": "2026-05-28",
+          "close": 881.0
+        },
+        {
+          "date": "2026-06-08",
+          "close": 841.8
+        },
+        {
+          "date": "2026-06-19",
+          "close": 807.2
+        },
+        {
+          "date": "2026-07-02",
+          "close": 783.8
+        },
+        {
+          "date": "2026-07-13",
+          "close": 847.4
+        },
+        {
+          "date": "2026-07-24",
+          "close": 912.8
+        },
+        {
+          "date": "2026-08-06",
+          "close": 998.8
+        },
+        {
+          "date": "2026-08-19",
+          "close": 944.0
+        },
+        {
+          "date": "2026-08-30",
+          "close": 939.8
+        },
+        {
+          "date": "2026-09-10",
+          "close": 997.4
+        },
+        {
+          "date": "2026-09-23",
+          "close": 1053.0
+        },
+        {
+          "date": "2026-10-04",
+          "close": 1037.0
+        },
+        {
+          "date": "2026-10-15",
+          "close": 1074.6
+        },
+        {
+          "date": "2026-10-19",
+          "close": 1149.0
+        }
+      ]
+    },
+    "ELMT": {
+      "ticker": "ELMT",
+      "spb_ticker": "ELMT",
+      "short_name": "iЭлемент",
+      "isin": "RU000A102093",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 0.10185,
+      "moex_price_rub": 0.10185,
+      "spbex_price_rub": 0.1017,
+      "cross_exchange_spread_bps": -14.7,
+      "change_day_pct": 0.2,
+      "lot_size": 1000,
+      "lot_cost_rub": 101.85,
+      "issue_size": 469725539040,
+      "market_cap_bln_rub": 47.89,
+      "moex_turnover_mln_rub": 9.1,
+      "spbex_turnover_mln_rub": 1.523,
+      "total_turnover_mln_rub": 10.62,
+      "spbex_liquidity_share_pct": 14.35,
+      "ytd_2026_return_pct": -12.11,
+      "return_30d_pct": 5.48,
+      "return_90d_pct": -8.28,
+      "volatility_ann_pct": 32.01,
+      "max_drawdown_2026_pct": -43.76,
+      "beta_imoex": 0.5,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 0.116
+        },
+        {
+          "date": "2026-01-19",
+          "close": 0.138
+        },
+        {
+          "date": "2026-01-30",
+          "close": 0.1273
+        },
+        {
+          "date": "2026-02-10",
+          "close": 0.13
+        },
+        {
+          "date": "2026-02-23",
+          "close": 0.133
+        },
+        {
+          "date": "2026-03-06",
+          "close": 0.1396
+        },
+        {
+          "date": "2026-03-19",
+          "close": 0.1406
+        },
+        {
+          "date": "2026-04-01",
+          "close": 0.1418
+        },
+        {
+          "date": "2026-04-12",
+          "close": 0.1424
+        },
+        {
+          "date": "2026-04-23",
+          "close": 0.1433
+        },
+        {
+          "date": "2026-05-04",
+          "close": 0.1441
+        },
+        {
+          "date": "2026-05-17",
+          "close": 0.13
+        },
+        {
+          "date": "2026-05-28",
+          "close": 0.1163
+        },
+        {
+          "date": "2026-06-08",
+          "close": 0.1035
+        },
+        {
+          "date": "2026-06-19",
+          "close": 0.101
+        },
+        {
+          "date": "2026-07-02",
+          "close": 0.0894
+        },
+        {
+          "date": "2026-07-13",
+          "close": 0.0851
+        },
+        {
+          "date": "2026-07-24",
+          "close": 0.0927
+        },
+        {
+          "date": "2026-08-06",
+          "close": 0.1118
+        },
+        {
+          "date": "2026-08-19",
+          "close": 0.1053
+        },
+        {
+          "date": "2026-08-30",
+          "close": 0.102
+        },
+        {
+          "date": "2026-09-10",
+          "close": 0.1022
+        },
+        {
+          "date": "2026-09-23",
+          "close": 0.0979
+        },
+        {
+          "date": "2026-10-04",
+          "close": 0.0983
+        },
+        {
+          "date": "2026-10-15",
+          "close": 0.1009
+        },
+        {
+          "date": "2026-10-19",
+          "close": 0.1019
+        }
+      ]
+    },
+    "X5": {
+      "ticker": "X5",
+      "spb_ticker": "X5",
+      "short_name": "КЦ ИКС 5",
+      "isin": "RU000A108X38",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 2159.5,
+      "moex_price_rub": 2159.5,
+      "spbex_price_rub": 2156.0,
+      "cross_exchange_spread_bps": -16.2,
+      "change_day_pct": 0.02,
+      "lot_size": 1,
+      "lot_cost_rub": 2159.5,
+      "issue_size": 271572872,
+      "market_cap_bln_rub": 586.73,
+      "moex_turnover_mln_rub": 1973.47,
+      "spbex_turnover_mln_rub": 0.431,
+      "total_turnover_mln_rub": 1973.9,
+      "spbex_liquidity_share_pct": 0.02,
+      "ytd_2026_return_pct": -28.64,
+      "return_30d_pct": 20.6,
+      "return_90d_pct": 2.56,
+      "volatility_ann_pct": 25.82,
+      "max_drawdown_2026_pct": -42.56,
+      "beta_imoex": 0.72,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 3027.5
+        },
+        {
+          "date": "2026-01-19",
+          "close": 2602.5
+        },
+        {
+          "date": "2026-01-30",
+          "close": 2514.0
+        },
+        {
+          "date": "2026-02-10",
+          "close": 2393.0
+        },
+        {
+          "date": "2026-02-23",
+          "close": 2442.5
+        },
+        {
+          "date": "2026-03-06",
+          "close": 2395.0
+        },
+        {
+          "date": "2026-03-19",
+          "close": 2496.5
+        },
+        {
+          "date": "2026-04-01",
+          "close": 2440.0
+        },
+        {
+          "date": "2026-04-12",
+          "close": 2439.5
+        },
+        {
+          "date": "2026-04-23",
+          "close": 2412.5
+        },
+        {
+          "date": "2026-05-04",
+          "close": 2316.0
+        },
+        {
+          "date": "2026-05-17",
+          "close": 2406.5
+        },
+        {
+          "date": "2026-05-28",
+          "close": 2447.0
+        },
+        {
+          "date": "2026-06-08",
+          "close": 2404.0
+        },
+        {
+          "date": "2026-06-19",
+          "close": 2331.0
+        },
+        {
+          "date": "2026-07-02",
+          "close": 2244.0
+        },
+        {
+          "date": "2026-07-13",
+          "close": 1904.0
+        },
+        {
+          "date": "2026-07-24",
+          "close": 1934.5
+        },
+        {
+          "date": "2026-08-06",
+          "close": 2129.5
+        },
+        {
+          "date": "2026-08-19",
+          "close": 1967.0
+        },
+        {
+          "date": "2026-08-30",
+          "close": 1754.0
+        },
+        {
+          "date": "2026-09-10",
+          "close": 1809.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 1845.5
+        },
+        {
+          "date": "2026-10-04",
+          "close": 1924.0
+        },
+        {
+          "date": "2026-10-15",
+          "close": 2119.0
+        },
+        {
+          "date": "2026-10-19",
+          "close": 2160.5
+        }
+      ]
+    },
+    "MGNT": {
+      "ticker": "MGNT",
+      "spb_ticker": "MGNT",
+      "short_name": "Магнит ао",
+      "isin": "RU000A0JKQU8",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 1741.0,
+      "moex_price_rub": 1741.0,
+      "spbex_price_rub": 1745.0,
+      "cross_exchange_spread_bps": 23.0,
+      "change_day_pct": -0.03,
+      "lot_size": 1,
+      "lot_cost_rub": 1741.0,
+      "issue_size": 101911355,
+      "market_cap_bln_rub": 177.38,
+      "moex_turnover_mln_rub": 1222.3,
+      "spbex_turnover_mln_rub": 0.042,
+      "total_turnover_mln_rub": 1222.34,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": -41.63,
+      "return_30d_pct": 11.29,
+      "return_90d_pct": -2.74,
+      "volatility_ann_pct": 32.55,
+      "max_drawdown_2026_pct": -56.0,
+      "beta_imoex": 1.08,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 2980.0
+        },
+        {
+          "date": "2026-01-19",
+          "close": 3131.0
+        },
+        {
+          "date": "2026-01-30",
+          "close": 3251.5
+        },
+        {
+          "date": "2026-02-10",
+          "close": 3171.0
+        },
+        {
+          "date": "2026-02-23",
+          "close": 3339.5
+        },
+        {
+          "date": "2026-03-06",
+          "close": 3184.5
+        },
+        {
+          "date": "2026-03-19",
+          "close": 3237.0
+        },
+        {
+          "date": "2026-04-01",
+          "close": 3022.0
+        },
+        {
+          "date": "2026-04-12",
+          "close": 2885.5
+        },
+        {
+          "date": "2026-04-23",
+          "close": 2820.0
+        },
+        {
+          "date": "2026-05-04",
+          "close": 2517.5
+        },
+        {
+          "date": "2026-05-17",
+          "close": 2420.0
+        },
+        {
+          "date": "2026-05-28",
+          "close": 2301.5
+        },
+        {
+          "date": "2026-06-08",
+          "close": 2184.5
+        },
+        {
+          "date": "2026-06-19",
+          "close": 2081.5
+        },
+        {
+          "date": "2026-07-02",
+          "close": 1819.0
+        },
+        {
+          "date": "2026-07-13",
+          "close": 1818.5
+        },
+        {
+          "date": "2026-07-24",
+          "close": 1757.5
+        },
+        {
+          "date": "2026-08-06",
+          "close": 1850.0
+        },
+        {
+          "date": "2026-08-19",
+          "close": 1677.0
+        },
+        {
+          "date": "2026-08-30",
+          "close": 1540.5
+        },
+        {
+          "date": "2026-09-10",
+          "close": 1638.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 1636.0
+        },
+        {
+          "date": "2026-10-04",
+          "close": 1586.5
+        },
+        {
+          "date": "2026-10-15",
+          "close": 1699.0
+        },
+        {
+          "date": "2026-10-19",
+          "close": 1739.5
+        }
+      ]
+    },
+    "PHOR": {
+      "ticker": "PHOR",
+      "spb_ticker": "PHOR",
+      "short_name": "ФосАгро ао",
+      "isin": "RU000A0JRKT8",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 5795.0,
+      "moex_price_rub": 5795.0,
+      "spbex_price_rub": 5785.0,
+      "cross_exchange_spread_bps": -17.3,
+      "change_day_pct": -0.05,
+      "lot_size": 1,
+      "lot_cost_rub": 5795.0,
+      "issue_size": 129500000,
+      "market_cap_bln_rub": 750.97,
+      "moex_turnover_mln_rub": 1622.89,
+      "spbex_turnover_mln_rub": 1.614,
+      "total_turnover_mln_rub": 1624.51,
+      "spbex_liquidity_share_pct": 0.1,
+      "ytd_2026_return_pct": -10.12,
+      "return_30d_pct": 14.99,
+      "return_90d_pct": 3.83,
+      "volatility_ann_pct": 27.27,
+      "max_drawdown_2026_pct": -42.4,
+      "beta_imoex": 0.86,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 6452.0
+        },
+        {
+          "date": "2026-01-19",
+          "close": 6380.0
+        },
+        {
+          "date": "2026-01-30",
+          "close": 6440.0
+        },
+        {
+          "date": "2026-02-10",
+          "close": 6319.0
+        },
+        {
+          "date": "2026-02-23",
+          "close": 6677.0
+        },
+        {
+          "date": "2026-03-06",
+          "close": 7140.0
+        },
+        {
+          "date": "2026-03-19",
+          "close": 7766.0
+        },
+        {
+          "date": "2026-04-01",
+          "close": 7295.0
+        },
+        {
+          "date": "2026-04-12",
+          "close": 7016.0
+        },
+        {
+          "date": "2026-04-23",
+          "close": 7045.0
+        },
+        {
+          "date": "2026-05-04",
+          "close": 6665.0
+        },
+        {
+          "date": "2026-05-17",
+          "close": 6721.0
+        },
+        {
+          "date": "2026-05-28",
+          "close": 6383.0
+        },
+        {
+          "date": "2026-06-08",
+          "close": 6117.0
+        },
+        {
+          "date": "2026-06-19",
+          "close": 5763.0
+        },
+        {
+          "date": "2026-07-02",
+          "close": 5150.0
+        },
+        {
+          "date": "2026-07-13",
+          "close": 4810.0
+        },
+        {
+          "date": "2026-07-24",
+          "close": 5388.0
+        },
+        {
+          "date": "2026-08-06",
+          "close": 5828.0
+        },
+        {
+          "date": "2026-08-19",
+          "close": 5444.0
+        },
+        {
+          "date": "2026-08-30",
+          "close": 5092.0
+        },
+        {
+          "date": "2026-09-10",
+          "close": 5643.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 5216.0
+        },
+        {
+          "date": "2026-10-04",
+          "close": 5069.0
+        },
+        {
+          "date": "2026-10-15",
+          "close": 5451.0
+        },
+        {
+          "date": "2026-10-19",
+          "close": 5799.0
+        }
+      ]
+    },
+    "IRAO": {
+      "ticker": "IRAO",
+      "spb_ticker": "IRAO",
+      "short_name": "ИнтерРАОао",
+      "isin": "RU000A0JPNM1",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 2.5955,
+      "moex_price_rub": 2.5955,
+      "spbex_price_rub": 2.598,
+      "cross_exchange_spread_bps": 9.6,
+      "change_day_pct": -0.06,
+      "lot_size": 100,
+      "lot_cost_rub": 259.55,
+      "issue_size": 104400000000,
+      "market_cap_bln_rub": 271.65,
+      "moex_turnover_mln_rub": 580.86,
+      "spbex_turnover_mln_rub": 0.006,
+      "total_turnover_mln_rub": 580.86,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": -16.58,
+      "return_30d_pct": 11.2,
+      "return_90d_pct": 0.0,
+      "volatility_ann_pct": 26.18,
+      "max_drawdown_2026_pct": -42.48,
+      "beta_imoex": 0.87,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 3.119
+        },
+        {
+          "date": "2026-01-19",
+          "close": 3.38
+        },
+        {
+          "date": "2026-01-30",
+          "close": 3.515
+        },
+        {
+          "date": "2026-02-10",
+          "close": 3.358
+        },
+        {
+          "date": "2026-02-23",
+          "close": 3.3325
+        },
+        {
+          "date": "2026-03-06",
+          "close": 3.211
+        },
+        {
+          "date": "2026-03-19",
+          "close": 3.207
+        },
+        {
+          "date": "2026-04-01",
+          "close": 3.1945
+        },
+        {
+          "date": "2026-04-12",
+          "close": 3.1915
+        },
+        {
+          "date": "2026-04-23",
+          "close": 3.2525
+        },
+        {
+          "date": "2026-05-04",
+          "close": 3.151
+        },
+        {
+          "date": "2026-05-17",
+          "close": 3.2405
+        },
+        {
+          "date": "2026-05-28",
+          "close": 3.1685
+        },
+        {
+          "date": "2026-06-08",
+          "close": 3.065
+        },
+        {
+          "date": "2026-06-19",
+          "close": 2.712
+        },
+        {
+          "date": "2026-07-02",
+          "close": 2.5155
+        },
+        {
+          "date": "2026-07-13",
+          "close": 2.3405
+        },
+        {
+          "date": "2026-07-24",
+          "close": 2.51
+        },
+        {
+          "date": "2026-08-06",
+          "close": 2.651
+        },
+        {
+          "date": "2026-08-19",
+          "close": 2.49
+        },
+        {
+          "date": "2026-08-30",
+          "close": 2.2515
+        },
+        {
+          "date": "2026-09-10",
+          "close": 2.406
+        },
+        {
+          "date": "2026-09-23",
+          "close": 2.4125
+        },
+        {
+          "date": "2026-10-04",
+          "close": 2.3575
+        },
+        {
+          "date": "2026-10-15",
+          "close": 2.495
+        },
+        {
+          "date": "2026-10-19",
+          "close": 2.602
+        }
+      ]
+    },
+    "FLOT": {
+      "ticker": "FLOT",
+      "spb_ticker": "FLOT",
+      "short_name": "Совкомфлот",
+      "isin": "RU000A0JXNU8",
+      "primary_exchange": "MOEX",
+      "exchanges_traded": [
+        "MOEX",
+        "SPBEX"
+      ],
+      "price_rub": 87.7,
+      "moex_price_rub": 87.7,
+      "spbex_price_rub": 87.72,
+      "cross_exchange_spread_bps": 2.3,
+      "change_day_pct": -0.03,
+      "lot_size": 10,
+      "lot_cost_rub": 877.0,
+      "issue_size": 2374993901,
+      "market_cap_bln_rub": 208.6,
+      "moex_turnover_mln_rub": 832.55,
+      "spbex_turnover_mln_rub": 0.0,
+      "total_turnover_mln_rub": 832.55,
+      "spbex_liquidity_share_pct": 0.0,
+      "ytd_2026_return_pct": 17.36,
+      "return_30d_pct": 8.21,
+      "return_90d_pct": 12.45,
+      "volatility_ann_pct": 29.05,
+      "max_drawdown_2026_pct": -31.41,
+      "beta_imoex": 0.77,
+      "series_2026": [
+        {
+          "date": "2026-01-05",
+          "close": 74.83
+        },
+        {
+          "date": "2026-01-19",
+          "close": 74.58
+        },
+        {
+          "date": "2026-01-30",
+          "close": 79.25
+        },
+        {
+          "date": "2026-02-10",
+          "close": 74.6
+        },
+        {
+          "date": "2026-02-23",
+          "close": 76.5
+        },
+        {
+          "date": "2026-03-06",
+          "close": 85.29
+        },
+        {
+          "date": "2026-03-19",
+          "close": 92.33
+        },
+        {
+          "date": "2026-04-01",
+          "close": 84.82
+        },
+        {
+          "date": "2026-04-12",
+          "close": 85.44
+        },
+        {
+          "date": "2026-04-23",
+          "close": 83.42
+        },
+        {
+          "date": "2026-05-04",
+          "close": 81.42
+        },
+        {
+          "date": "2026-05-17",
+          "close": 79.1
+        },
+        {
+          "date": "2026-05-28",
+          "close": 81.99
+        },
+        {
+          "date": "2026-06-08",
+          "close": 80.55
+        },
+        {
+          "date": "2026-06-19",
+          "close": 74.8
+        },
+        {
+          "date": "2026-07-02",
+          "close": 75.9
+        },
+        {
+          "date": "2026-07-13",
+          "close": 68.82
+        },
+        {
+          "date": "2026-07-24",
+          "close": 75.04
+        },
+        {
+          "date": "2026-08-06",
+          "close": 78.14
+        },
+        {
+          "date": "2026-08-19",
+          "close": 74.35
+        },
+        {
+          "date": "2026-08-30",
+          "close": 75.19
+        },
+        {
+          "date": "2026-09-10",
+          "close": 81.0
+        },
+        {
+          "date": "2026-09-23",
+          "close": 82.82
+        },
+        {
+          "date": "2026-10-04",
+          "close": 80.23
+        },
+        {
+          "date": "2026-10-15",
+          "close": 88.25
+        },
+        {
+          "date": "2026-10-19",
+          "close": 87.82
+        }
+      ]
+    }
+  }
+}

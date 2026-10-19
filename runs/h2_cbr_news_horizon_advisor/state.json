@@ -1,0 +1,153 @@
+{
+  "task_id": "entry_002_cbr_news_horizon_advisor",
+  "domain": "russian_equities_quant_automation",
+  "title": "Инвестиционный консультант MOEX + SPBEX: Живая ставка ЦБ 14%, парсинг новостей и 3 горизонта (1–3М / 6–12М / 1–3Г)",
+  "task_instructions": "Обновить инвестиционную систему для Мосбиржи и СПБ Биржи: (1) заменить статичное допущение ставки ЦБ 19% на прямой парсинг живой ключевой ставки ЦБ РФ с cbr.ru (14,00% с 27.07.2026 после пика 21,00%) и курсов валют; (2) добавить детерминированный парсер живых новостей ЦБ РФ, Мосбиржи ISS и СМИ (120 публикаций) с оценкой сентимента и катализаторов; (3) рассчитать подробные рекомендации инвест-консультанта на 3 горизонта (1–3 мес., 6–12 мес., 1–3 года).",
+  "expected_deliverables": [
+    "deliverables/moex_spb_investment_strategy.md"
+  ],
+  "mode": "parallel",
+  "budget_k": 2,
+  "current_round": 1,
+  "stage": "DONE",
+  "library_root": "/Users/roman/.harness2/library",
+  "created_at": "2026-10-19T16:47:40.780705+00:00",
+  "proposals": {
+    "INV_1": {
+      "candidate_id": "INV_1",
+      "dimension": "INV",
+      "valid": true,
+      "errors": [],
+      "retries": 0,
+      "fallback_applied": false,
+      "changed_components": [
+        "guardrails.md",
+        "scripts/verify_moex_spb_quant_bundle.py"
+      ],
+      "notes": "<notes>\nUpgraded `scripts/verify_moex_spb_quant_bundle.py` and `guardrails.md` along the INV dimension to verify all 8 core JSON artifacts (`cbr_macro_live.json`, `market_news_live.json`, `issuer_news_catalysts.json`, etc.), reject hardcoded 19.0% CBR key rate priors in favor of live `cbr.ru` parsing (14.0%), verify >= 25 live news items, and enforce 3-horizon (`short_1_3m`, `medium_6_12m`, `long_1_3y`) advisory schemas across all 31 issuers.\n</notes>\n",
+      "probe_workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/probe_INV_1"
+    },
+    "DOM_1": {
+      "candidate_id": "DOM_1",
+      "dimension": "DOM",
+      "valid": true,
+      "errors": [],
+      "retries": 0,
+      "fallback_applied": false,
+      "changed_components": [
+        "skills/moex-spb-ifrs-reconciliation/SKILL.md"
+      ],
+      "notes": "<notes>\nExtended `skills/moex-spb-ifrs-reconciliation/SKILL.md` along the DOM dimension with Rules 5, 6, and 7: live CBR key-rate trajectory and FX synchronization from `cbr.ru` (14.00% key rate vs 16.5-17.5% commercial floating debt cost), live Russian financial news sentiment & catalyst classification, and 3-tier investment horizon stratification (1-3M tactical, 6-12M base, 1-3Y strategic compounders).\n</notes>\n",
+      "probe_workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/probe_DOM_1"
+    },
+    "INV_2": {
+      "candidate_id": "INV_2",
+      "dimension": "INV",
+      "valid": true,
+      "errors": [],
+      "retries": 0,
+      "fallback_applied": false,
+      "changed_components": [
+        "guardrails.md",
+        "scripts/verify_moex_spb_quant_bundle.py"
+      ],
+      "notes": "<notes>\nUpgraded `scripts/verify_moex_spb_quant_bundle.py` and `guardrails.md` along the INV dimension to verify all 8 core JSON artifacts (`cbr_macro_live.json`, `market_news_live.json`, `issuer_news_catalysts.json`, etc.), reject hardcoded 19.0% CBR key rate priors in favor of live `cbr.ru` parsing (14.0%), verify >= 25 live news items, and enforce 3-horizon (`short_1_3m`, `medium_6_12m`, `long_1_3y`) advisory schemas across all 31 issuers.\n</notes>\n",
+      "probe_workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/probe_INV_2"
+    },
+    "DOM_2": {
+      "candidate_id": "DOM_2",
+      "dimension": "DOM",
+      "valid": true,
+      "errors": [],
+      "retries": 0,
+      "fallback_applied": false,
+      "changed_components": [
+        "skills/moex-spb-ifrs-reconciliation/SKILL.md"
+      ],
+      "notes": "<notes>\nExtended `skills/moex-spb-ifrs-reconciliation/SKILL.md` along the DOM dimension with Rules 5, 6, and 7: live CBR key-rate trajectory and FX synchronization from `cbr.ru` (14.00% key rate vs 16.5-17.5% commercial floating debt cost), live Russian financial news sentiment & catalyst classification, and 3-tier investment horizon stratification (1-3M tactical, 6-12M base, 1-3Y strategic compounders).\n</notes>\n",
+      "probe_workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/probe_DOM_2"
+    }
+  },
+  "compositions": {
+    "composed_1": {
+      "composition_id": "composed_1",
+      "valid": true,
+      "errors": [],
+      "retries": 0,
+      "fallback_applied": false,
+      "changed_components": [
+        "guardrails.md",
+        "scripts/verify_moex_spb_quant_bundle.py",
+        "skills/moex-spb-ifrs-reconciliation/SKILL.md"
+      ],
+      "notes": "<notes>\nComposed INV_1 (expanded `verify_moex_spb_quant_bundle.py` and `guardrails.md` checking all 8 core JSON artifacts, rejecting hardcoded 19% CBR rate priors, verifying >= 25 live news items, and enforcing 3-horizon advisory structure) with DOM_1 (Rules 5, 6, and 7 in `skills/moex-spb-ifrs-reconciliation/SKILL.md` for live CBR rate/FX parsing, live news catalyst classification, and 3-tier horizon stratification).\n</notes>\n",
+      "rollout_workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/composed_1",
+      "harness_dir": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/harnesses/composed_1"
+    },
+    "composed_2": {
+      "composition_id": "composed_2",
+      "valid": true,
+      "errors": [],
+      "retries": 0,
+      "fallback_applied": false,
+      "changed_components": [
+        "guardrails.md",
+        "scripts/verify_moex_spb_quant_bundle.py",
+        "skills/moex-spb-ifrs-reconciliation/SKILL.md"
+      ],
+      "notes": "<notes>\nComposed INV_1 (expanded `verify_moex_spb_quant_bundle.py` and `guardrails.md` checking all 8 core JSON artifacts, rejecting hardcoded 19% CBR rate priors, verifying >= 25 live news items, and enforcing 3-horizon advisory structure) with DOM_1 (Rules 5, 6, and 7 in `skills/moex-spb-ifrs-reconciliation/SKILL.md` for live CBR rate/FX parsing, live news catalyst classification, and 3-tier horizon stratification).\n</notes>\n",
+      "rollout_workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/composed_2",
+      "harness_dir": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/harnesses/composed_2"
+    }
+  },
+  "adopted_harness": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/harnesses/composed_1",
+  "updated_at": "2026-10-19T17:26:51.940679+00:00",
+  "proposal_retries": {},
+  "composition_retries": {},
+  "selector_mapping": {
+    "cand_1": {
+      "run_id": "composed_1",
+      "workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/composed_1",
+      "harness_dir": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/harnesses/composed_1"
+    },
+    "cand_2": {
+      "run_id": "base_2",
+      "workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/base_2",
+      "harness_dir": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/base_harness"
+    },
+    "cand_3": {
+      "run_id": "composed_2",
+      "workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/composed_2",
+      "harness_dir": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/harnesses/composed_2"
+    },
+    "cand_4": {
+      "run_id": "base_1",
+      "workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/rollouts/base_1",
+      "harness_dir": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_cbr_news_horizon_advisor/base_harness"
+    }
+  },
+  "chosen_run_id": "composed_1",
+  "library_entry_dir": "/Users/roman/.harness2/library/russian_equities_quant_automation/entry_003_entry_002_cbr_news_horizon_advisor",
+  "sova_sync": {
+    "synced": true,
+    "sova_lessons_file": "/Users/roman/.gemini/config/skills/sova/references/harness2-lessons.md",
+    "domains_synced": [
+      "enterprise_economics_exam_prep",
+      "executive_consulting_reports",
+      "financial_risk_excel_modeling",
+      "russian_equities_quant_automation",
+      "sova_agent_system"
+    ],
+    "lessons_count": 10,
+    "copied_verifiers": [
+      "verify_ep_kr1_materials.py",
+      "verify_mckinsey_docx.py",
+      "verify_leadership_case_report.py",
+      "verify_traceability_chain.py",
+      "verify_moex_spb_quant_bundle.py",
+      "scientific_evidence_verifier.py",
+      "sova_heavy_core.py"
+    ],
+    "promoted_core_files": []
+  }
+}

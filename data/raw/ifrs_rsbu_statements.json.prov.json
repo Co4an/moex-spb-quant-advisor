@@ -1,0 +1,17 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/raw/ifrs_rsbu_statements.json",
+    "kind": "reconciled_fundamentals",
+    "sha256": "674b645d44eeb8da5a082a454d483d2d09ae58576de0ce599d1aa96e7d353280"
+  },
+  "derived_from": [
+    "@evidence[[inputs/reports/LKOH_IFRS_LTM.csv]]",
+    "@evidence[[inputs/reports/PLZL_IFRS_LTM.html]]",
+    "@evidence[[inputs/reports/YDEX_IFRS_LTM.json]]"
+  ],
+  "generated_by": {
+    "script_path": "scripts/financial_statement_parser.py",
+    "timestamp_utc": "2026-10-19T16:30:26.355621+00:00"
+  }
+}

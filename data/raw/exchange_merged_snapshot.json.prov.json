@@ -1,0 +1,18 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/raw/exchange_merged_snapshot.json",
+    "kind": "raw_exchange_snapshot",
+    "sha256": "c84f2aeefee2108b224820dd28dacef444e432325629693ee31b0e6c00610018"
+  },
+  "derived_from": [
+    "@evidence[[data/raw/cbr_macro_live.json]]",
+    "@evidence[[data/raw/moex_live.json]]",
+    "@evidence[[data/raw/spbex_live.json]]",
+    "@evidence[[data/raw/candles_2026.json]]"
+  ],
+  "generated_by": {
+    "script_path": "scripts/moex_spb_collector.py",
+    "timestamp_utc": "2026-10-19T16:30:26.312966+00:00"
+  }
+}

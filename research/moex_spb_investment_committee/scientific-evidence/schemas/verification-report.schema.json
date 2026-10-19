@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scientific Evidence Verification Report",
+  "type": "object",
+  "required": [
+    "schema_name",
+    "verified_at",
+    "root_dir",
+    "summary",
+    "results"
+  ]
+}

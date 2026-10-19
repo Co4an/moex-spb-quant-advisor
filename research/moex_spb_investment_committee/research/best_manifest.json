@@ -1,0 +1,29 @@
+{
+  "status": "qualified",
+  "candidate_id": "incumbent_5factor_rate_adjusted",
+  "combined_score": 87.94,
+  "correct": true,
+  "metrics": {
+    "combined_score": 87.94,
+    "expected_12m_return_pct": 60.15,
+    "avg_div_yield_pct": 17.45
+  },
+  "rubrics": [
+    {
+      "id": "utility_threshold",
+      "pass": true,
+      "evidence": "Metric combined_score=87.94 satisfied >= 80.0. All required AST/token patterns present."
+    },
+    {
+      "id": "div_yield_threshold",
+      "pass": true,
+      "evidence": "Metric avg_div_yield_pct=17.45 satisfied >= 15.0. All required AST/token patterns present."
+    }
+  ],
+  "source_hashes": {
+    "research/evaluate_quant_models.py": "0493ea888f615afa3ef48e9ea51dc6e08bda260abd65c63233d102564c080ddd"
+  },
+  "total_attempts": 2,
+  "qualified_attempts": 1,
+  "updated_at": "2026-10-19T16:05:20.386551+00:00"
+}

@@ -1,0 +1,1609 @@
+{
+  "fetched_at": "2026-10-19T16:30:33.566705+00:00",
+  "total_news_items": 120,
+  "sources_queried": [
+    "https://iss.moex.com/iss/sitenews.json?iss.meta=off",
+    "https://www.cbr.ru/rss/eventrss",
+    "https://www.cbr.ru/rss/RssPress",
+    "https://news.google.com/rss/search?q=%D0%A6%D0%91%20%D0%A0%D0%A4%20%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0%20%D0%B8%D0%BD%D1%84%D0%BB%D1%8F%D1%86%D0%B8%D1%8F%20%D0%9C%D0%BE%D1%81%D0%B1%D0%B8%D1%80%D0%B6%D0%B0%202026&hl=ru&gl=RU&ceid=RU:ru",
+    "https://news.google.com/rss/search?q=%28%D0%9B%D1%83%D0%BA%D0%BE%D0%B9%D0%BB%20OR%20%D0%A0%D0%BE%D1%81%D0%BD%D0%B5%D1%84%D1%82%D1%8C%20OR%20%D0%A2%D0%B0%D1%82%D0%BD%D0%B5%D1%84%D1%82%D1%8C%20OR%20%D0%A1%D1%83%D1%80%D0%B3%D1%83%D1%82%D0%BD%D0%B5%D1%84%D1%82%D0%B5%D0%B3%D0%B0%D0%B7%20OR%20%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BD%D0%B5%D1%84%D1%82%D1%8C%20OR%20%D0%93%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%20OR%20%D0%9D%D0%9E%D0%92%D0%90%D0%A2%D0%AD%D0%9A%29%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%20%D0%B4%D0%B8%D0%B2%D0%B8%D0%B4%D0%B5%D0%BD%D0%B4%D1%8B&hl=ru&gl=RU&ceid=RU:ru",
+    "https://news.google.com/rss/search?q=%28%D0%A1%D0%B1%D0%B5%D1%80%D0%B1%D0%B0%D0%BD%D0%BA%20OR%20%22%D0%91%D0%B0%D0%BD%D0%BA%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22%20OR%20%22%D0%A2-%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8%22%20OR%20%D0%A1%D0%BE%D0%B2%D0%BA%D0%BE%D0%BC%D0%B1%D0%B0%D0%BD%D0%BA%20OR%20%D0%92%D0%A2%D0%91%20OR%20%D0%9C%D0%BE%D1%81%D0%B1%D0%B8%D1%80%D0%B6%D0%B0%20OR%20%22%D0%A1%D0%9F%D0%91%20%D0%91%D0%B8%D1%80%D0%B6%D0%B0%22%29%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8&hl=ru&gl=RU&ceid=RU:ru",
+    "https://news.google.com/rss/search?q=%28%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%20OR%20%D0%9E%D0%B7%D0%BE%D0%BD%20OR%20%D0%A5%D1%8D%D0%B4%D1%85%D0%B0%D0%BD%D1%82%D0%B5%D1%80%20OR%20%D0%98%D0%9A%D0%A15%20OR%20%D0%9C%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%20OR%20%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%20OR%20%D0%90%D1%81%D1%82%D1%80%D0%B0%20OR%20%D0%9F%D0%BE%D0%B7%D0%B8%D1%82%D0%B8%D0%B2%29%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8&hl=ru&gl=RU&ceid=RU:ru",
+    "https://news.google.com/rss/search?q=%28%D0%9F%D0%BE%D0%BB%D1%8E%D1%81%20OR%20%D0%A4%D0%BE%D1%81%D0%B0%D0%B3%D1%80%D0%BE%20OR%20%D0%9D%D0%BE%D1%80%D0%BD%D0%B8%D0%BA%D0%B5%D0%BB%D1%8C%20OR%20%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B0%D0%BB%D1%8C%20OR%20%D0%9D%D0%9B%D0%9C%D0%9A%20OR%20%D0%A0%D1%83%D1%81%D0%B0%D0%BB%20OR%20%D0%A1%D0%BE%D0%B2%D0%BA%D0%BE%D0%BC%D1%84%D0%BB%D0%BE%D1%82%20OR%20%22%D0%98%D0%BD%D1%82%D0%B5%D1%80%20%D0%A0%D0%90%D0%9E%22%29%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8&hl=ru&gl=RU&ceid=RU:ru"
+  ],
+  "news_items": [
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 19:06:09",
+      "title": "О начале торгов ценными бумагами &quot;20&quot; октября  2026 года",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 19:04:37",
+      "title": "Об изменении риск-параметров на Фондовом рынке и рынке депозитов",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 19:04:10",
+      "title": "О включении ценных бумаг в Сектор РИИ",
+      "sentiment_score": 0.25,
+      "catalyst_category": "Корпоративные события и структура торгов",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 19:00:00",
+      "title": "О значении индексов Московской биржи по итогам основной торговой сессии 19.10.2026",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 18:59:53",
+      "title": "О внесении изменений в Список ценных бумаг, допущенных к торгам",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 18:55:24",
+      "title": "О регистрации выпуска биржевых облигаций, о включении его в Список ценных бумаг, допущенных к торгам, и о присвоении указанным биржевым облигациям регистрационного номера",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Корпоративные события и структура торгов",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 18:36:25",
+      "title": "Об исключении ценных бумаг из Списка ценных бумаг, допущенных к торгам, и о прекращении торгов ценными бумагами",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 18:29:35",
+      "title": "20.10.2026 ППК \"ФОНД РАЗВИТИЯ ТЕРРИТОРИЙ\" проведет депозитный аукцион.",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 18:08:55",
+      "title": "2026-10-20 состоится депозитный аукцион 22 026 506 Межрегионального УФК в сфере управления ликвидностью.",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 18:05:23",
+      "title": "19.10.2026, 18-05 (мск) изменены значения верхней границы ценового коридора и диапазона оценки рыночных рисков ценной бумаги RU000A0JUKX4 (ДОМ.РФ30об).",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MOEX_ISS_OFFICIAL",
+      "source_name": "Московская Биржа (ISS)",
+      "published_at": "2026-10-19 17:28:13",
+      "title": "О перечне площадок для расчета индексов Московской биржи иностранных цифровых валют",
+      "sentiment_score": 0.15,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Fri, 16 Oct 2026 12:46:00 +0300",
+      "title": "В большинстве регионов в сентябре цены выросли умеренно",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Thu, 15 Oct 2026 17:32:00 +0300",
+      "title": "Приглашаем исследователей принять участие в научной конференции по Обзору денежно-кредитной политики",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Thu, 15 Oct 2026 15:28:00 +0300",
+      "title": "Банк России провел третий Евразийский круглый стол на выездной Ежегодной сессии МВФ и Всемирного банка",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Wed, 14 Oct 2026 20:00:00 +0300",
+      "title": "Доклад «Региональная экономика»: потребительская активность была умеренной",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Wed, 14 Oct 2026 19:45:00 +0300",
+      "title": "Показатели устойчивой инфляции в сентябре практически не изменились",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Wed, 14 Oct 2026 19:30:00 +0300",
+      "title": "О чем говорят тренды: умеренный рост экономики продолжается",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Wed, 14 Oct 2026 18:30:00 +0300",
+      "title": "Мониторинг предприятий: деловая активность в октябре выросла",
+      "sentiment_score": 0.4,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Tue, 13 Oct 2026 09:00:00 +0300",
+      "title": "Онлайн-занятия по финансовой грамотности для старшего поколения начнутся 13 октября",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Mon, 12 Oct 2026 11:23:00 +0300",
+      "title": "Интервью Зульфии Кахрумановой радио «Комсомольская правда»",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (События и ДКП)",
+      "published_at": "Fri, 09 Oct 2026 17:15:00 +0300",
+      "title": "Индикаторы денежно-кредитных условий в августе – сентябре менялись разнонаправленно, оставаясь умеренно жесткими",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Fri, 16 Oct 2026 11:00:00 +0300",
+      "title": "Установлены факты манипулирования рынком руководителем компании – профессионального участника рынка ценных бумаг (16.10.2026)",
+      "sentiment_score": -0.4,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Tue, 13 Oct 2026 17:05:39 +0300",
+      "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (13.10.2026)",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Thu, 08 Oct 2026 11:00:00 +0300",
+      "title": "Установлены факты манипулирования рынком ценных бумаг группой аффилированных организаций и их владельцами (08.10.2026)",
+      "sentiment_score": -0.4,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Wed, 07 Oct 2026 12:10:00 +0300",
+      "title": "Состоялось заседание Национального финансового совета (07.10.2026)",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Wed, 07 Oct 2026 11:38:00 +0300",
+      "title": "Банк России утвердил перечень системно значимых кредитных организаций (07.10.2026)",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Tue, 06 Oct 2026 12:38:00 +0300",
+      "title": "Мирожский монастырь: монета Банка России (06.10.2026)",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Mon, 05 Oct 2026 10:40:00 +0300",
+      "title": "Совет директоров Банка России принял решение о включении ценных бумаг в Ломбардный список (05.10.2026)",
+      "sentiment_score": 0.25,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Thu, 01 Oct 2026 11:35:00 +0300",
+      "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (01.10.2026)",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Thu, 01 Oct 2026 09:43:00 +0300",
+      "title": "Монета, посвященная судебной системе России (01.10.2026)",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "CBR_OFFICIAL_RSS",
+      "source_name": "Банк России (Пресс-служба)",
+      "published_at": "Tue, 29 Sep 2026 18:19:00 +0300",
+      "title": "Банки смогут экономить капитал при кредитовании проектов по защите объектов критической инфраструктуры (29.09.2026)",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "BSPB",
+        "T",
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Smart-lab",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Thu, 15 Oct 2026 02:50:52 GMT",
+      "title": "Неделя на рынках 8–14 октября 2026: что стояло за ростом Мосбиржи",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Wed, 10 Jun 2026 07:00:00 GMT",
+      "title": "Рынок акций РФ завершил день выше 2520 пунктов по индексу МосБиржи",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Fri, 03 Jul 2026 07:00:00 GMT",
+      "title": "Ключевая ставка и рынок. Неоправданные ожидания 03.07.2026",
+      "sentiment_score": -0.35,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Эксперт",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Wed, 01 Jul 2026 07:00:00 GMT",
+      "title": "Рынок акций остается в нисходящем тренде",
+      "sentiment_score": -0.4,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Альфа-Банк",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Tue, 09 Jun 2026 07:00:00 GMT",
+      "title": "Почему индекс Мосбиржи упал 9 июня 2026 года: разбираем",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БИЗНЕС Online — Новости Казани",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Fri, 24 Apr 2026 07:00:00 GMT",
+      "title": "Индекс Мосбиржи опускается после снижения ключевой ставки",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Thu, 03 Sep 2026 07:00:00 GMT",
+      "title": "Индекс МосБиржи превысил 2200 пунктов и обновил максимум с 14 августа",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Эксперт",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Thu, 02 Jul 2026 07:00:00 GMT",
+      "title": "Бензин, ставка и «руины биржи» — главные заявления Эльвиры Набиуллиной с Финконгресса ЦБ",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Sat, 18 Jul 2026 07:00:00 GMT",
+      "title": "Для возрождения рынка ОФЗ нужно снижение ключевой ставки 18.07.2026",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Smart-lab",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Tue, 22 Sep 2026 07:00:00 GMT",
+      "title": "Инфляционные ожидания Мысли о ключевой ставке Мосбиржа",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+      "title": "Индекс МосБиржи обновил минимум с октября 2022 года",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Thu, 23 Jul 2026 07:00:00 GMT",
+      "title": "Как отреагируют рынки на решение ЦБ 23.07.2026",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Thu, 17 Sep 2026 07:00:00 GMT",
+      "title": "Индексы МосБиржи и РТС снизились на 1% на старте торгов основной сессии",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Thu, 18 Jun 2026 07:00:00 GMT",
+      "title": "Снижение ставки ЦБ - последняя надежда для рынка 18.06.2026",
+      "sentiment_score": 0.5,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Wed, 01 Jul 2026 07:00:00 GMT",
+      "title": "Индекс МосБиржи просел к 2340 пунктам вслед за снижением цен на нефть",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Thu, 11 Jun 2026 07:00:00 GMT",
+      "title": "Индексы МосБиржи и РТС подросли на 0,2% в начале основной сессии торгов",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Fri, 24 Apr 2026 07:00:00 GMT",
+      "title": "Рынок акций РФ отреагировал откатом на решение ЦБ снизить ставку и его прогнозы",
+      "sentiment_score": -0.45,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Макро и рынок акций",
+      "published_at": "Thu, 11 Jun 2026 07:00:00 GMT",
+      "title": "Рынок акций просел к 2515 пунктам по индексу МосБиржии и закрыл неделю в минусе",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "title": "Совет директоров \"ЛУКОЙЛа\" рекомендовал дивиденды за 9 месяцев в размере 535 руб. на акцию",
+      "sentiment_score": 0.6,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "LKOH"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Wed, 07 Oct 2026 07:00:00 GMT",
+      "title": "«ЛУКОЙЛ» будоражит рынок: дивиденды и сделка драйвят акции",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "LKOH"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Marketpower.pro",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Wed, 14 Oct 2026 21:53:27 GMT",
+      "title": "Лукойл рекомендовал дивиденды 535 рублей на акцию: стоит ли покупать",
+      "sentiment_score": 1.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "LKOH"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Эксперт",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "title": "Совет директоров «Лукойла» рекомендовал дивиденды по итогам девяти месяцев",
+      "sentiment_score": 0.6,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "LKOH"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Smart-Lab",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Thu, 15 Oct 2026 21:33:13 GMT",
+      "title": "Сколько акций Транснефти нужно купить, чтобы жить на пассивный доход? Дивидендная политика, показатели, перспективы",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "TRNFP"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Альфа-Банк",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Thu, 07 May 2026 07:00:00 GMT",
+      "title": "Есть ли шансы на дивиденды Газпрома в 2026–2027",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "GAZP"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Ведомости",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 02 Oct 2026 07:00:00 GMT",
+      "title": "Акционеры «Новатэка» одобрили дивиденды за первое полугодие",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "NVTK"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "AKM.RU",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 25 Sep 2026 07:00:00 GMT",
+      "title": "Татнефть выплатит дивиденды за 6 месяцев из расчета 32.88 руб. на акцию",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "TATN"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Mon, 12 Oct 2026 05:32:50 GMT",
+      "title": "Газпром нефть и Татнефть: 12 октября — последний день с дивидендами",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "TATN",
+        "GAZP"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Клерк.ру",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 16 Oct 2026 10:52:00 GMT",
+      "title": "Дивидендный календарь 2026–2027: даты отсечек акций РФ",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 02 Oct 2026 07:00:00 GMT",
+      "title": "Акционеры \"НОВАТЭКа\" одобрили дивиденды за I полугодие в 35,5 рублей на акцию",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "NVTK"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Альфа-Банк",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "title": "Совет директоров ЛУКОЙЛа рекомендовал промежуточные дивиденды",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "LKOH"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "title": "Дивиденды \"ЛУКОЙЛа\" оказались близки к ожиданиям",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "LKOH"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 02 Oct 2026 07:00:00 GMT",
+      "title": "Акционеры Газпром нефти одобрили дивиденды за I полугодие 2026",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "GAZP"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Ведомости",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 09 Oct 2026 07:59:05 GMT",
+      "title": "Совет директоров «Лукойла» рекомендовал дивиденды за девять месяцев",
+      "sentiment_score": 0.6,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "LKOH"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "title": "Совет директоров «ЛУКОЙЛа» рекомендовал дивиденды за 9 месяцев в 535 рублей на акцию",
+      "sentiment_score": 0.6,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "LKOH"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 10 Jul 2026 07:00:00 GMT",
+      "title": "Акционеры \"Газпрома\" подтвердили право на дивиденды и взыскивают в суде проценты",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "GAZP"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Альфа-Банк",
+      "query_cluster": "Нефть, газ и дивиденды",
+      "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "title": "НОВАТЭК, ГМК Норникель, Т-Технологии, Новабев: последний день с дивидендами",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "T",
+        "NVTK",
+        "GMKN"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Ведомости",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 15:10:07 GMT",
+      "title": "Мосбиржа с 20 октября обновит удельные веса криптобирж",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Московская Биржа",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 10:55:28 GMT",
+      "title": "Группа 'Московская Биржа'",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 06:20:00 GMT",
+      "title": "Рынок акций РФ открылся в основную сессию ростом индексов МосБиржи и РТС на 0,8%",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Альфа-Банк",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Sat, 17 Oct 2026 10:55:16 GMT",
+      "title": "Почему объёмы торгов акциями ВТБ выросли в несколько раз",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "VTBR"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 05:06:39 GMT",
+      "title": "Прогноз по цене акций Сбербанка. Больше аргументов за рост",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "SBER"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Investing.com",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 09:54:00 GMT",
+      "title": "Индекс Мосбиржи и акции Газпрома выросли до максимумов с июня",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX",
+        "GAZP"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 10:59:00 GMT",
+      "title": "Позитив не стихает, индекс МосБиржи движется к 2500 пунктам",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX",
+        "POSI"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Бизнес журнал",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 15:41:00 GMT",
+      "title": "Акции ПОЛЮС PLZL резко дешевеют на Мосбирже",
+      "sentiment_score": -1.0,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "MOEX",
+        "PLZL"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Ведомости",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 14:27:42 GMT",
+      "title": "Мосбиржа провела дискретный аукцион по ценным бумагам «Южный Кузбасс»",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Альфа-Банк",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 11:46:25 GMT",
+      "title": "Ход торгов: Индекс МосБиржи отступил от максимума за 4 месяца",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 04:19:00 GMT",
+      "title": "Рынок акций РФ открылся в утреннюю сессию ростом индекса IMOEX на 1,1%",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Fri, 16 Oct 2026 10:35:00 GMT",
+      "title": "ЦБ установил факт манипулирования акциями \"Сбербанка\", \"Совкомбанка\" и \"Сургутнефтегаза\"",
+      "sentiment_score": -0.4,
+      "catalyst_category": "Макроэкономика и ключевая ставка ЦБ",
+      "tickers": [
+        "SBER",
+        "SVCB",
+        "SNGSP",
+        "SNGS"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Ведомости",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 14:07:47 GMT",
+      "title": "На Мосбирже 24 и 25 октября не будет торгов",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Альфа-Банк",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Fri, 16 Oct 2026 07:00:00 GMT",
+      "title": "Форум по акции ВТБ (VTBR) 💬 | Обсуждение и мнения инвесторов",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "VTBR"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Fri, 16 Oct 2026 16:11:00 GMT",
+      "title": "Рынок акций РФ в пятницу превысил 2426 пунктов по индексу МосБиржи",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Ведомости",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Mon, 19 Oct 2026 05:44:37 GMT",
+      "title": "Цена акций «Газпрома» на Мосбирже выросла на 2,6%",
+      "sentiment_score": 0.4,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX",
+        "GAZP"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Интерфакс",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Fri, 16 Oct 2026 04:11:00 GMT",
+      "title": "Рынок акций РФ открылся в утреннюю сессию ростом индексов МосБиржи и РТС на 0,5%",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Ведомости",
+      "query_cluster": "Банки и финтех",
+      "published_at": "Tue, 13 Oct 2026 15:38:42 GMT",
+      "title": "Мосбиржа приостановит торги акциями ПИК с 20 октября",
+      "sentiment_score": -0.4,
+      "catalyst_category": "Корпоративные события и структура торгов",
+      "tickers": [
+        "MOEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Sun, 18 Oct 2026 07:40:00 GMT",
+      "title": "Российский рынок в воскресенье сохраняет позитив, в лидерах - \"Газпром\" и \"НОВАТЭК\"",
+      "sentiment_score": 0.9,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "GAZP",
+        "NVTK",
+        "POSI"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Росбалт",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Sun, 18 Oct 2026 07:27:00 GMT",
+      "title": "Акции VK упали на 3,54%, Ozon — на 2,17% на фоне сообщений об атаке БПЛА на Петербург",
+      "sentiment_score": -1.0,
+      "catalyst_category": "Инфраструктурные и операционные риски",
+      "tickers": [
+        "OZON"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Forbes.ru",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Mon, 12 Oct 2026 21:00:00 GMT",
+      "title": "Горящие данные: что делать с акциями «Яндекса» после ударов по дата-центрам",
+      "sentiment_score": -1.0,
+      "catalyst_category": "Инфраструктурные и операционные риски",
+      "tickers": [
+        "YDEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Wed, 14 Oct 2026 06:03:16 GMT",
+      "title": "Прогноз по цене акций Группы Позитив. Комбинация сигналов на откат",
+      "sentiment_score": -0.45,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "POSI"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Банки.ру",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Sat, 17 Oct 2026 20:10:44 GMT",
+      "title": "Морковск на Ozon: я провела эксперимент и вот что выяснила про «бесплатный» сыр",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "OZON"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Эксперт",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Fri, 09 Oct 2026 10:29:00 GMT",
+      "title": "Акции «Яндекса» упали на фоне атаки беспилотников на дата-центр в Калуге",
+      "sentiment_score": -0.55,
+      "catalyst_category": "Инфраструктурные и операционные риски",
+      "tickers": [
+        "YDEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "CNews.ru",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Thu, 01 Oct 2026 07:00:00 GMT",
+      "title": "«Яндекс» меняет подход к мотивации сотрудников",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "YDEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Smart-lab",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Tue, 13 Oct 2026 11:26:00 GMT",
+      "title": "МКПАО Яндекс восстановился после украинских атак: Обзор предстоящего ралли акций YDEX",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Инфраструктурные и операционные риски",
+      "tickers": [
+        "YDEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Альфа-Банк",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "title": "Яндекс: взгляд на акции после волны снижения",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "YDEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Fri, 16 Oct 2026 10:43:00 GMT",
+      "title": "X5 может направить на дивиденды более 150 рублей на акцию за 9 месяцев 2026 года",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Дивиденды и распределение капитала",
+      "tickers": [
+        "X5"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Банки.ру",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Fri, 16 Oct 2026 03:18:04 GMT",
+      "title": "🧇 Акция с кэшбеком 40% от Т-банка. FitnesShock на Ozon",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "T",
+        "OZON"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Thu, 15 Oct 2026 07:11:58 GMT",
+      "title": "Прогноз по цене акций Совкомбанка. Пока преобладает позитив",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "SVCB",
+        "POSI"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Эксперт",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Mon, 12 Oct 2026 08:58:00 GMT",
+      "title": "Глава Минцифры назвал атаку на дата-центры «Яндекса» беспрецедентной",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Инфраструктурные и операционные риски",
+      "tickers": [
+        "YDEX"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Smart-lab",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Mon, 12 Oct 2026 14:07:00 GMT",
+      "title": "Акции Магнита готовятся протестировать среднесрочное сопротивление",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MGNT"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Tue, 13 Oct 2026 06:33:04 GMT",
+      "title": "Сегодня акции \"Яндекса\" могут вырасти как минимум до 3430 рублей",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "YDEX"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Tue, 13 Oct 2026 07:00:46 GMT",
+      "title": "Прогноз по цене акций Магнита. Возможен рост после разгрузки перекупленности",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "MGNT"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "title": "Акции X5 вернулись в «народный портфель» Мосбиржи",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX",
+        "X5"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "IT, ритейл и техсектор",
+      "published_at": "Mon, 12 Oct 2026 07:00:00 GMT",
+      "title": "Акции \"Магнита\" растут на фоне общего подъема рынка",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MGNT"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Альфа-Банк",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Mon, 19 Oct 2026 08:52:33 GMT",
+      "title": "Битва акций: Северсталь, НЛМК или ММК",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "CHMF",
+        "NLMK"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Mon, 19 Oct 2026 09:45:00 GMT",
+      "title": "Рост акций \"Полюса\" опережает улучшение результатов",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "PLZL"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Mon, 19 Oct 2026 04:56:39 GMT",
+      "title": "Прогноз по цене акций НЛМК. Идет борьба за важный уровень",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "NLMK"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Ведомости",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Fri, 16 Oct 2026 08:46:20 GMT",
+      "title": "Цена акций «Полюса» на Мосбирже выросла на 4,1%",
+      "sentiment_score": 0.4,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "MOEX",
+        "PLZL"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "M O N D I A R A",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Mon, 19 Oct 2026 13:50:11 GMT",
+      "title": "Сколько еще могут расти акции Фосагро? Трейдеры ждут 6559 рублей (19 октября 2026 г.)",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "PHOR"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Smart-lab",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Sun, 18 Oct 2026 02:38:31 GMT",
+      "title": "Честный разбор торговой недели: Северсталь, НОВАТЭК и Норильский никель",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "NVTK",
+        "GMKN",
+        "CHMF"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Finversia",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Thu, 15 Oct 2026 16:09:42 GMT",
+      "title": "Акции «Совкомфлота» растут на ожиданиях – Публикации",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "FLOT"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Fri, 16 Oct 2026 16:37:36 GMT",
+      "title": "На рынке бодрое настроение, акции ДВМП, «Полюса» и «НОВАТЭКа» оказались в лидерах роста",
+      "sentiment_score": 0.75,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "NVTK",
+        "PLZL"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "M O N D I A R A",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Mon, 19 Oct 2026 16:09:47 GMT",
+      "title": "Акции Совкомфлота у ₽87–88: возможен ли рост к ₽92–93? Прогноз (19 октября 2026 г.)",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "FLOT"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Fri, 16 Oct 2026 05:05:52 GMT",
+      "title": "Прогноз по цене акций ГМК Норильский никель. Следим за закрытием недели",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "GMKN"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Ведомости",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Thu, 15 Oct 2026 07:42:06 GMT",
+      "title": "Акции «Совкомфлота» подорожали на 5% на фоне возможного ослабления санкций США",
+      "sentiment_score": -0.45,
+      "catalyst_category": "Инфраструктурные и операционные риски",
+      "tickers": [
+        "FLOT"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Thu, 15 Oct 2026 06:30:11 GMT",
+      "title": "Акции «Совкомфлота» и ДВМП дорожают в ожидании послабления санкций США",
+      "sentiment_score": -0.45,
+      "catalyst_category": "Инфраструктурные и операционные риски",
+      "tickers": [
+        "FLOT"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Fri, 16 Oct 2026 06:23:33 GMT",
+      "title": "Прогноз по цене акций ФосАгро. Признаки разворота вниз — Технический анализ на БКС Экспресс, 16.10.2026",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "PHOR"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "M O N D I A R A",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Mon, 19 Oct 2026 12:55:00 GMT",
+      "title": "Прогноз по акциям Фосагро: цель — 6600–6740, где сходятся фигура и Фибо 62% (19 октября 2026 г.)",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "PHOR"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Thu, 15 Oct 2026 05:38:25 GMT",
+      "title": "Прогноз по цене акций НЛМК. Покупатели проявляют упорство",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "NLMK"
+      ],
+      "horizon_impact": "short_1_3m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "Финам",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Thu, 15 Oct 2026 16:47:37 GMT",
+      "title": "Рынок остается в негативе, но «Совкомфлот» вырос на 4%",
+      "sentiment_score": 0.0,
+      "catalyst_category": "Отраслевая конъюнктура и отчетность",
+      "tickers": [
+        "FLOT"
+      ],
+      "horizon_impact": "medium_6_12m"
+    },
+    {
+      "source_type": "MEDIA_RSS_LIVE",
+      "source_name": "БКС Экспресс",
+      "query_cluster": "Металлы, золото и флот",
+      "published_at": "Thu, 15 Oct 2026 16:15:40 GMT",
+      "title": "Прогноз по цене акций ГМК Норильский никель. Боковик вместо роста",
+      "sentiment_score": 0.3,
+      "catalyst_category": "Технический импульс и позиционирование",
+      "tickers": [
+        "GMKN"
+      ],
+      "horizon_impact": "short_1_3m"
+    }
+  ]
+}

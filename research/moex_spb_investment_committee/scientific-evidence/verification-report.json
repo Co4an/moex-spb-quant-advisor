@@ -1,0 +1,774 @@
+{
+  "schema_name": "scientific-evidence.verification-report",
+  "verified_at": "2026-10-19T17:35:14.205890+00:00",
+  "root_dir": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/research/moex_spb_investment_committee",
+  "summary": {
+    "total_references": 67,
+    "resolved_references": 67,
+    "anchored_references": 0,
+    "dangling_references": 0,
+    "manifests_checked": 9,
+    "script_warnings": []
+  },
+  "results": [
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ],
+      "locator": "S9",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/cbr_macro_live.json#fetched_at]]",
+      "target": "inputs/cbr_macro_live.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'fetched_at' in cbr_macro_live.json."
+      ],
+      "locator": "fetched_at",
+      "resolved_path": "inputs/cbr_macro_live.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ],
+      "locator": "S1",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S2]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S2' in sources.json."
+      ],
+      "locator": "S2",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S3]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S3' in sources.json."
+      ],
+      "locator": "S3",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/fundamentals_reconciled.json#reconciliation_checks_passed]]",
+      "target": "inputs/fundamentals_reconciled.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'reconciliation_checks_passed' in fundamentals_reconciled.json."
+      ],
+      "locator": "reconciliation_checks_passed",
+      "resolved_path": "inputs/fundamentals_reconciled.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/fundamentals_reconciled.json#issuers.TRNFP]]",
+      "target": "inputs/fundamentals_reconciled.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'issuers.TRNFP' in fundamentals_reconciled.json."
+      ],
+      "locator": "issuers.TRNFP",
+      "resolved_path": "inputs/fundamentals_reconciled.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/quant_valuation_matrix.json#issuers.SNGSP]]",
+      "target": "inputs/quant_valuation_matrix.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'issuers.SNGSP' in quant_valuation_matrix.json."
+      ],
+      "locator": "issuers.SNGSP",
+      "resolved_path": "inputs/quant_valuation_matrix.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S10]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S10' in sources.json."
+      ],
+      "locator": "S10",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/issuer_news_catalysts.json#issuers]]",
+      "target": "inputs/issuer_news_catalysts.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'issuers' in issuer_news_catalysts.json."
+      ],
+      "locator": "issuers",
+      "resolved_path": "inputs/issuer_news_catalysts.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/quant_valuation_matrix.json#avoid_list]]",
+      "target": "inputs/quant_valuation_matrix.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'avoid_list' in quant_valuation_matrix.json."
+      ],
+      "locator": "avoid_list",
+      "resolved_path": "inputs/quant_valuation_matrix.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/sector_aggregates.json#sectors]]",
+      "target": "inputs/sector_aggregates.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'sectors' in sector_aggregates.json."
+      ],
+      "locator": "sectors",
+      "resolved_path": "inputs/sector_aggregates.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/optimal_portfolios.json#portfolios]]",
+      "target": "inputs/optimal_portfolios.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'portfolios' in optimal_portfolios.json."
+      ],
+      "locator": "portfolios",
+      "resolved_path": "inputs/optimal_portfolios.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S8]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S8' in sources.json."
+      ],
+      "locator": "S8",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[variants/variants_summary.json#variants]]",
+      "target": "variants/variants_summary.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'variants' in variants_summary.json."
+      ],
+      "locator": "variants",
+      "resolved_path": "variants/variants_summary.json"
+    },
+    {
+      "subject_path": "claims_grounding.json",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[posthoc/posthoc_summary.json#analyses]]",
+      "target": "posthoc/posthoc_summary.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'analyses' in posthoc_summary.json."
+      ],
+      "locator": "analyses",
+      "resolved_path": "posthoc/posthoc_summary.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ],
+      "locator": "S9",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/cbr_macro_live.json#fetched_at]]",
+      "target": "inputs/cbr_macro_live.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'fetched_at' in cbr_macro_live.json."
+      ],
+      "locator": "fetched_at",
+      "resolved_path": "inputs/cbr_macro_live.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ],
+      "locator": "S1",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S2]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S2' in sources.json."
+      ],
+      "locator": "S2",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S3]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S3' in sources.json."
+      ],
+      "locator": "S3",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S6]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S6' in sources.json."
+      ],
+      "locator": "S6",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S7]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S7' in sources.json."
+      ],
+      "locator": "S7",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/exchange_merged_snapshot.json#macro_market_pulse]]",
+      "target": "inputs/exchange_merged_snapshot.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'macro_market_pulse' in exchange_merged_snapshot.json."
+      ],
+      "locator": "macro_market_pulse",
+      "resolved_path": "inputs/exchange_merged_snapshot.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/fundamentals_reconciled.json#reconciliation_checks_passed]]",
+      "target": "inputs/fundamentals_reconciled.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'reconciliation_checks_passed' in fundamentals_reconciled.json."
+      ],
+      "locator": "reconciliation_checks_passed",
+      "resolved_path": "inputs/fundamentals_reconciled.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/fundamentals_reconciled.json#issuers.TRNFP]]",
+      "target": "inputs/fundamentals_reconciled.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'issuers.TRNFP' in fundamentals_reconciled.json."
+      ],
+      "locator": "issuers.TRNFP",
+      "resolved_path": "inputs/fundamentals_reconciled.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/quant_valuation_matrix.json#issuers.SNGSP]]",
+      "target": "inputs/quant_valuation_matrix.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'issuers.SNGSP' in quant_valuation_matrix.json."
+      ],
+      "locator": "issuers.SNGSP",
+      "resolved_path": "inputs/quant_valuation_matrix.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S10]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S10' in sources.json."
+      ],
+      "locator": "S10",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/issuer_news_catalysts.json#issuers]]",
+      "target": "inputs/issuer_news_catalysts.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'issuers' in issuer_news_catalysts.json."
+      ],
+      "locator": "issuers",
+      "resolved_path": "inputs/issuer_news_catalysts.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/quant_valuation_matrix.json#avoid_list]]",
+      "target": "inputs/quant_valuation_matrix.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'avoid_list' in quant_valuation_matrix.json."
+      ],
+      "locator": "avoid_list",
+      "resolved_path": "inputs/quant_valuation_matrix.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/sector_aggregates.json#sectors]]",
+      "target": "inputs/sector_aggregates.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'sectors' in sector_aggregates.json."
+      ],
+      "locator": "sectors",
+      "resolved_path": "inputs/sector_aggregates.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[inputs/optimal_portfolios.json#portfolios]]",
+      "target": "inputs/optimal_portfolios.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'portfolios' in optimal_portfolios.json."
+      ],
+      "locator": "portfolios",
+      "resolved_path": "inputs/optimal_portfolios.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S8]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S8' in sources.json."
+      ],
+      "locator": "S8",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[variants/variants_summary.json#variants]]",
+      "target": "variants/variants_summary.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'variants' in variants_summary.json."
+      ],
+      "locator": "variants",
+      "resolved_path": "variants/variants_summary.json"
+    },
+    {
+      "subject_path": "report.md",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[posthoc/posthoc_summary.json#analyses]]",
+      "target": "posthoc/posthoc_summary.json",
+      "status": "resolved",
+      "messages": [
+        "Verified JSON key path 'analyses' in posthoc_summary.json."
+      ],
+      "locator": "analyses",
+      "resolved_path": "posthoc/posthoc_summary.json"
+    },
+    {
+      "subject_path": "research/evaluate_quant_models.py",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ],
+      "locator": "S1",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "research/evaluate_quant_models.py",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S3]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S3' in sources.json."
+      ],
+      "locator": "S3",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "research/evaluate_quant_models.py",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S6]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S6' in sources.json."
+      ],
+      "locator": "S6",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "research/evaluate_quant_models.py",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S7]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S7' in sources.json."
+      ],
+      "locator": "S7",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "research/evaluate_quant_models.py",
+      "subject_kind": "text-artifact",
+      "raw_reference": "@evidence[[sources.json#S8]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S8' in sources.json."
+      ],
+      "locator": "S8",
+      "resolved_path": "sources.json"
+    },
+    {
+      "subject_path": "inputs/cbr_macro_live.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "<artifact.sha256>",
+      "target": "inputs/cbr_macro_live.json",
+      "status": "resolved",
+      "hash_checked": true,
+      "messages": [
+        "Artifact SHA-256 verified."
+      ]
+    },
+    {
+      "subject_path": "inputs/cbr_macro_live.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/cbr_macro_live.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/exchange_merged_snapshot.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "<artifact.sha256>",
+      "target": "inputs/exchange_merged_snapshot.json",
+      "status": "resolved",
+      "hash_checked": true,
+      "messages": [
+        "Artifact SHA-256 verified."
+      ]
+    },
+    {
+      "subject_path": "inputs/exchange_merged_snapshot.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/exchange_merged_snapshot.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/fundamentals_reconciled.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "<artifact.sha256>",
+      "target": "inputs/fundamentals_reconciled.json",
+      "status": "resolved",
+      "hash_checked": true,
+      "messages": [
+        "Artifact SHA-256 verified."
+      ]
+    },
+    {
+      "subject_path": "inputs/fundamentals_reconciled.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/fundamentals_reconciled.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/issuer_news_catalysts.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "<artifact.sha256>",
+      "target": "inputs/issuer_news_catalysts.json",
+      "status": "resolved",
+      "hash_checked": true,
+      "messages": [
+        "Artifact SHA-256 verified."
+      ]
+    },
+    {
+      "subject_path": "inputs/issuer_news_catalysts.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/issuer_news_catalysts.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/market_news_live.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "<artifact.sha256>",
+      "target": "inputs/market_news_live.json",
+      "status": "resolved",
+      "hash_checked": true,
+      "messages": [
+        "Artifact SHA-256 verified."
+      ]
+    },
+    {
+      "subject_path": "inputs/market_news_live.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/market_news_live.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/optimal_portfolios.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "<artifact.sha256>",
+      "target": "inputs/optimal_portfolios.json",
+      "status": "resolved",
+      "hash_checked": true,
+      "messages": [
+        "Artifact SHA-256 verified."
+      ]
+    },
+    {
+      "subject_path": "inputs/optimal_portfolios.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/optimal_portfolios.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/quant_valuation_matrix.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "<artifact.sha256>",
+      "target": "inputs/quant_valuation_matrix.json",
+      "status": "resolved",
+      "hash_checked": true,
+      "messages": [
+        "Artifact SHA-256 verified."
+      ]
+    },
+    {
+      "subject_path": "inputs/quant_valuation_matrix.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/quant_valuation_matrix.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/sector_aggregates.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "<artifact.sha256>",
+      "target": "inputs/sector_aggregates.json",
+      "status": "resolved",
+      "hash_checked": true,
+      "messages": [
+        "Artifact SHA-256 verified."
+      ]
+    },
+    {
+      "subject_path": "inputs/sector_aggregates.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/sector_aggregates.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/strategy_ablations.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "<artifact.sha256>",
+      "target": "inputs/strategy_ablations.json",
+      "status": "resolved",
+      "hash_checked": true,
+      "messages": [
+        "Artifact SHA-256 verified."
+      ]
+    },
+    {
+      "subject_path": "inputs/strategy_ablations.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S1]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S1' in sources.json."
+      ]
+    },
+    {
+      "subject_path": "inputs/strategy_ablations.json.prov.json",
+      "subject_kind": "manifest",
+      "raw_reference": "@evidence[[sources.json#S9]]",
+      "target": "sources.json",
+      "status": "resolved",
+      "messages": [
+        "Verified id 'S9' in sources.json."
+      ]
+    }
+  ]
+}

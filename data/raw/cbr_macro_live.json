@@ -1,0 +1,94 @@
+{
+  "fetched_at": "2026-10-19T16:30:14.515973+00:00",
+  "source_keyrate_url": "https://www.cbr.ru/hd_base/KeyRate/?UniDbQuery.Posted=True&UniDbQuery.From=01.01.2024&UniDbQuery.To=31.12.2026",
+  "source_fx_url": "https://www.cbr.ru/scripts/XML_daily.asp",
+  "as_of_date": "19.10.2026",
+  "cbr_key_rate_pct": 14.0,
+  "effective_since_date": "27.07.2026",
+  "cycle_peak_rate_pct": 21.0,
+  "cycle_peak_date": "28.10.2024",
+  "cumulative_easing_from_peak_bps": -700,
+  "rate_changes_2024_2026": [
+    {
+      "date": "03.01.2024",
+      "rate_pct": 16.0,
+      "change_bps": 0
+    },
+    {
+      "date": "29.07.2024",
+      "rate_pct": 18.0,
+      "change_bps": 200
+    },
+    {
+      "date": "16.09.2024",
+      "rate_pct": 19.0,
+      "change_bps": 100
+    },
+    {
+      "date": "28.10.2024",
+      "rate_pct": 21.0,
+      "change_bps": 200
+    },
+    {
+      "date": "09.06.2025",
+      "rate_pct": 20.0,
+      "change_bps": -100
+    },
+    {
+      "date": "28.07.2025",
+      "rate_pct": 18.0,
+      "change_bps": -200
+    },
+    {
+      "date": "15.09.2025",
+      "rate_pct": 17.0,
+      "change_bps": -100
+    },
+    {
+      "date": "27.10.2025",
+      "rate_pct": 16.5,
+      "change_bps": -50
+    },
+    {
+      "date": "22.12.2025",
+      "rate_pct": 16.0,
+      "change_bps": -50
+    },
+    {
+      "date": "16.02.2026",
+      "rate_pct": 15.5,
+      "change_bps": -50
+    },
+    {
+      "date": "23.03.2026",
+      "rate_pct": 15.0,
+      "change_bps": -50
+    },
+    {
+      "date": "27.04.2026",
+      "rate_pct": 14.5,
+      "change_bps": -50
+    },
+    {
+      "date": "22.06.2026",
+      "rate_pct": 14.25,
+      "change_bps": -25
+    },
+    {
+      "date": "27.07.2026",
+      "rate_pct": 14.0,
+      "change_bps": -25
+    }
+  ],
+  "fx_as_of_date": "20.10.2026",
+  "official_fx_rub": {
+    "USD": 82.8504,
+    "EUR": 93.2316,
+    "CNY": 12.3869
+  },
+  "scenario_rates_pct": {
+    "bear_hawkish": 16.0,
+    "base_live_cbr": 14.0,
+    "bull_easing": 11.5
+  }
+}

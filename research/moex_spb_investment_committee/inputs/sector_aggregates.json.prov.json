@@ -1,0 +1,11 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "inputs/sector_aggregates.json",
+    "sha256": "82847b9263c17dc1ebce6733a07f292aef873554a64714bebfa0316c231fe707"
+  },
+  "derived_from": [
+    "@evidence[[sources.json#S1]]",
+    "@evidence[[sources.json#S9]]"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/raw/moex_live.json",
+    "kind": "raw_exchange_snapshot",
+    "sha256": "2cceea98010c1ca41c3f43af548087b0e1edcb4158f9fc4ab38d307a0a2fea02"
+  },
+  "derived_from": [
+    "https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQBR/securities.json?iss.meta=off&iss.only=securities,marketdata"
+  ],
+  "generated_by": {
+    "script_path": "scripts/moex_spb_collector.py",
+    "timestamp_utc": "2026-10-19T16:30:16.719220+00:00"
+  }
+}

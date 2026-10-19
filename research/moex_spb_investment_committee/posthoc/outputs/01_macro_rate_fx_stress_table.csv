@@ -1,0 +1,4 @@
+scenario_id,scenario_name,cbr_rate_pct,usd_rub,core_alpha_return_pct,dividend_rentier_return_pct,tech_spb_growth_return_pct,fx_commodity_shield_return_pct
+bear_16pct_78fx,Жёсткий сценарий (возврат ставки ЦБ к 16% и крепкий рубль 78 ₽/$),16.0,78.0,29.8,40.4,11.2,28.5
+base_14pct_82_85fx,Базовый сценарий (текущая живая ставка ЦБ 14% и курс 82.85 ₽/$),14.0,82.85,45.67,56.64,19.86,43.21
+bull_11_5pct_92fx,Мягкий сценарий (снижение ставки ЦБ до 11.5% и курс 92 ₽/$),11.5,92.0,64.2,73.1,34.8,61.5

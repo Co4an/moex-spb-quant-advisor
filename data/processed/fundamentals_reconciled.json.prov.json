@@ -1,0 +1,16 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/processed/fundamentals_reconciled.json",
+    "kind": "reconciled_fundamentals",
+    "sha256": "5f5223eba971e71847bd38b32fb8e04e663186c2d78e451322af88131eefe6c4"
+  },
+  "derived_from": [
+    "@evidence[[data/raw/exchange_merged_snapshot.json]]",
+    "@evidence[[data/raw/ifrs_rsbu_statements.json]]"
+  ],
+  "generated_by": {
+    "script_path": "scripts/financial_statement_parser.py",
+    "timestamp_utc": "2026-10-19T16:30:26.359571+00:00"
+  }
+}

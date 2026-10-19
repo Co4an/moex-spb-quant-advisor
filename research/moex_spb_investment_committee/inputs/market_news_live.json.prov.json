@@ -1,0 +1,11 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "inputs/market_news_live.json",
+    "sha256": "7af55b5c13f946d3eec0598f7c7a3b1b18f6a54ab50f3da20eac2cb9d47888a2"
+  },
+  "derived_from": [
+    "@evidence[[sources.json#S1]]",
+    "@evidence[[sources.json#S9]]"
+  ]
+}

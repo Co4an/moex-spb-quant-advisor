@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "design_fingerprint": "c2f05245ec33a72fbcb5bc2ec8575ff85e16732a8ad757ccbb0adf1879b517c1",
+  "source_review_fingerprints": [
+    "58c672bc4742dcf6f430eea5f54e1e8b4640ee7122aa7b127c6f4b6249056ece",
+    "ed63e9682b9c6b856c630d51a999cf9ddafa172868198b93792cba2fd09916b4",
+    "afd4a8f2047cf77560c5a14c48e3f647b66e5b4d167dd9b84deaa80a04790860"
+  ],
+  "minority_findings": [
+    {
+      "dimension": "ablation_design",
+      "source_review_index": 2,
+      "source_reviewer": "judge_gamma_risk"
+    }
+  ],
+  "request_fingerprint": "f9659d8e4d42bdea8ed3f8ff6ed676240e6a22d4ce4e746a76dac8db43090fc1"
+}

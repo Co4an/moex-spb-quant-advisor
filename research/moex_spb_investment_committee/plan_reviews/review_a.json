@@ -1,0 +1,11 @@
+{
+  "reviewer_id": "judge_alpha_quant",
+  "dimensions": {
+    "scope_alignment": "pass",
+    "metric_calibration": "pass",
+    "evidence_feasibility": "pass",
+    "ablation_design": "pass"
+  },
+  "notes": "Охват обеих бирж (MOEX + SPBEX) и 8 секторов с Z-нормализацией корректен.",
+  "design_fingerprint": "c2f05245ec33a72fbcb5bc2ec8575ff85e16732a8ad757ccbb0adf1879b517c1"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/processed/issuer_news_catalysts.json",
+    "kind": "news_and_horizon_output",
+    "sha256": "f013f6c8a006444276b68b46196184eee53c905760ea64c920f151701c6615e4"
+  },
+  "derived_from": [
+    "@evidence[[data/raw/market_news_live.json]]",
+    "@evidence[[data/processed/fundamentals_reconciled.json]]"
+  ],
+  "generated_by": {
+    "script_path": "scripts/news_and_horizon_engine.py",
+    "timestamp_utc": "2026-10-19T16:30:33.573812+00:00"
+  }
+}

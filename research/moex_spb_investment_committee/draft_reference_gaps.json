@@ -1,0 +1,37 @@
+{
+  "status": "ready",
+  "summary": "Все безрисковые бенчмарки (RGBI, ОФЗ, TMON@, LQDT) и базовые линии факторных абляций привязаны к верифицированным источникам S2, S3 и S8.",
+  "rewrite_targets": [
+    {
+      "target_id": "benchmark-money-market-and-ofz",
+      "priority": "high",
+      "citation_intent": "benchmark_context",
+      "section": "1. Макроэкономический водораздел высокой процентной ставки и архитектура отбора бумаг",
+      "reason": "Обосновать порог альтернативной безрисковой доходности ОФЗ (RGBI 111,73 п., ~16,2%) и фондов денежного рынка (TMON@, LQDT ~18,8%).",
+      "anchor_text": "котировок индекса государственных облигаций RGBI на уровне 111,73 п.",
+      "search_topics": [
+        "MOEX RGBI index yield",
+        "SPBEX TMON LQDT money market turnover"
+      ],
+      "resolved_source_ids": [
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "target_id": "comparator-passive-and-naive-pe",
+      "priority": "medium",
+      "citation_intent": "comparator",
+      "section": "5. Рекомендуемые модельные портфели на 1 000 000 рублей и верификация через абляции",
+      "reason": "Закрепить сравнение пятифакторного ядра с пассивным индексом Топ-8 по капитализации и наивным отбором по минимальному P/E.",
+      "anchor_text": "полная пятифакторная модель (incumbent_5factor_rate_adjusted, индекс полезности 87,94 п.)",
+      "search_topics": [
+        "factor ablation rate immunity",
+        "value trap low P/E high leverage"
+      ],
+      "resolved_source_ids": [
+        "S8"
+      ]
+    }
+  ]
+}

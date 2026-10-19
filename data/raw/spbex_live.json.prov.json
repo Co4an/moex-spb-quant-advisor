@@ -1,0 +1,16 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/raw/spbex_live.json",
+    "kind": "raw_exchange_snapshot",
+    "sha256": "eca975170c79f8b72e2de8507a3b7de36851b4d1960ae0652eb5437b8295e2c6"
+  },
+  "derived_from": [
+    "https://spbexchange.ru/api/reader/marketdata/default/rus",
+    "https://spbexchange.ru/api/listing/v1/instruments/ru/list?page=1&size=300"
+  ],
+  "generated_by": {
+    "script_path": "scripts/moex_spb_collector.py",
+    "timestamp_utc": "2026-10-19T16:30:17.148014+00:00"
+  }
+}

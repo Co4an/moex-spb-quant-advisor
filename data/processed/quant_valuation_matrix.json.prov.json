@@ -1,0 +1,16 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/processed/quant_valuation_matrix.json",
+    "kind": "quant_valuation_output",
+    "sha256": "64fb6212b715a0c8c4a59f6ba3140a08d0422217f415b0e525d0d49c39391bae"
+  },
+  "derived_from": [
+    "@evidence[[data/processed/fundamentals_reconciled.json]]",
+    "@evidence[[data/processed/issuer_news_catalysts.json]]"
+  ],
+  "generated_by": {
+    "script_path": "scripts/quant_sector_engine.py",
+    "timestamp_utc": "2026-10-19T16:30:33.627071+00:00"
+  }
+}

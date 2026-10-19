@@ -1,0 +1,15 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/processed/strategy_ablations.json",
+    "kind": "quant_valuation_output",
+    "sha256": "b80f031a082bd4288edb8baa12107cb9e3aef4871332829f525851307142e42b"
+  },
+  "derived_from": [
+    "@evidence[[data/processed/quant_valuation_matrix.json]]"
+  ],
+  "generated_by": {
+    "script_path": "scripts/quant_sector_engine.py",
+    "timestamp_utc": "2026-10-19T16:30:33.628966+00:00"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "inputs/fundamentals_reconciled.json",
+    "sha256": "5f5223eba971e71847bd38b32fb8e04e663186c2d78e451322af88131eefe6c4"
+  },
+  "derived_from": [
+    "@evidence[[sources.json#S1]]",
+    "@evidence[[sources.json#S9]]"
+  ]
+}

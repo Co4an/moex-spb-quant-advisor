@@ -1,0 +1,11 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "inputs/optimal_portfolios.json",
+    "sha256": "14f0142b58aa21955fef462de04dd7d61a2cb1f1f692db674e6d46887f58a1a8"
+  },
+  "derived_from": [
+    "@evidence[[sources.json#S1]]",
+    "@evidence[[sources.json#S9]]"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/processed/sector_aggregates.json",
+    "kind": "quant_valuation_output",
+    "sha256": "82847b9263c17dc1ebce6733a07f292aef873554a64714bebfa0316c231fe707"
+  },
+  "derived_from": [
+    "@evidence[[data/processed/quant_valuation_matrix.json]]"
+  ],
+  "generated_by": {
+    "script_path": "scripts/quant_sector_engine.py",
+    "timestamp_utc": "2026-10-19T16:30:33.627764+00:00"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "inputs/cbr_macro_live.json",
+    "sha256": "5ee2c30c33469cbd62e747db4f0d03f4bf3ffdec4225ee03a5d19c794e5d3cf7"
+  },
+  "derived_from": [
+    "@evidence[[sources.json#S1]]",
+    "@evidence[[sources.json#S9]]"
+  ]
+}

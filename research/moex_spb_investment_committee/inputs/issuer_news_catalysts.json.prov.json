@@ -1,0 +1,11 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "inputs/issuer_news_catalysts.json",
+    "sha256": "f013f6c8a006444276b68b46196184eee53c905760ea64c920f151701c6615e4"
+  },
+  "derived_from": [
+    "@evidence[[sources.json#S1]]",
+    "@evidence[[sources.json#S9]]"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "entry_id": "entry_001_moex_spb_wunderwaffe",
+  "seq": 1,
+  "task_id": "moex_spb_wunderwaffe",
+  "domain": "russian_equities_quant_automation",
+  "created_at": "2026-10-19T16:09:25.027126+00:00",
+  "modified_components": [
+    "guardrails.md",
+    "scripts/verify_moex_spb_quant_bundle.py",
+    "skills/moex-spb-ifrs-reconciliation/SKILL.md",
+    "systemprompt.md"
+  ],
+  "has_experience_lesson": true,
+  "cue": "When building an automated quantitative pipeline and multi-agent investment analysis for Moscow Exchange (MOEX ISS API) and SPB Exchange (spbexchange.ru internal JSON API) equities and IFRS/RSBU financial statements",
+  "lesson": "Pair (1) a deterministic bundle verifier in scripts/verify_moex_spb_quant_bundle.py and guardrails.md that checks SPBEX Russian comma-decimal float parsing, MinTsifry TLS context, cross-exchange ticker aliases (T on MOEX vs TCSG on SPBEX), 62 FCF and EV accounting identities, .prov.json SHA-256 manifests, and dashboard/data_bundle.js synchronization with (2) a practitioner reconciliation skill in skills/moex-spb-ifrs-reconciliation/SKILL.md triggered from systemprompt.md that enforces full charter-capital share-class adjustments (TRNFP preferred = 21.45% of 724.93M total shares; SNGS + SNGSP combined market cap) and share-class payout realization factors (SNGSP statutory 10% RSBU profit payout vs SNGS ordinary fixed-dividend trap) under a high CBR key rate.",
+  "confidence": "high, because both orthogonal probes independently demonstrated their respective execution improvements and composed cleanly in composed_1.",
+  "helped_components": [
+    "scripts/verify_moex_spb_quant_bundle.py",
+    "guardrails.md",
+    "skills/moex-spb-ifrs-reconciliation/SKILL.md",
+    "systemprompt.md"
+  ]
+}

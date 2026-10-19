@@ -1,0 +1,11 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "inputs/quant_valuation_matrix.json",
+    "sha256": "64fb6212b715a0c8c4a59f6ba3140a08d0422217f415b0e525d0d49c39391bae"
+  },
+  "derived_from": [
+    "@evidence[[sources.json#S1]]",
+    "@evidence[[sources.json#S9]]"
+  ]
+}

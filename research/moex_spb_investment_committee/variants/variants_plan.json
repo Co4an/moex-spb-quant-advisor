@@ -1,0 +1,48 @@
+{
+  "incumbent_id": "incumbent_5factor_rate_adjusted",
+  "incumbent_score": 89.03,
+  "variants": [
+    {
+      "variant_id": "baseline_equal_weight_universe",
+      "kind": "baseline",
+      "factor_removed": "Равновзвешенный индекс всех 31 эмитентов без факторного отбора",
+      "score": 37.24,
+      "correct": true
+    },
+    {
+      "variant_id": "baseline_mcap_top8",
+      "kind": "baseline",
+      "factor_removed": "Пассивный портфель 8 крупнейших компаний по капитализации (вкл. Газпром и Роснефть)",
+      "score": 31.31,
+      "correct": true
+    },
+    {
+      "variant_id": "ablation_no_rate_immunity",
+      "kind": "ablation",
+      "factor_removed": "Абляция без фактора устойчивости к ключевой ставке ЦБ (игнорирование долговой нагрузки и кэш-кубышек)",
+      "score": 65.55,
+      "correct": true
+    },
+    {
+      "variant_id": "ablation_naive_pe_only",
+      "kind": "ablation",
+      "factor_removed": "Абляция только по минимальному P/E (ловушка дешёвых закредитованных бумаг — value trap)",
+      "score": 68.38,
+      "correct": true
+    },
+    {
+      "variant_id": "ablation_moex_only_no_spbex",
+      "kind": "ablation",
+      "factor_removed": "Абляция без эмитентов и кросс-ликвидности СПБ Биржи (исключение ELMT, SPBE, OZON)",
+      "score": 86.88,
+      "correct": true
+    },
+    {
+      "variant_id": "ablation_stale_19pct_cbr_prior",
+      "kind": "ablation",
+      "factor_removed": "Абляция: устаревшая статичная ставка ЦБ 19% без учёта 120 живых новостей",
+      "score": 81.4,
+      "correct": true
+    }
+  ]
+}

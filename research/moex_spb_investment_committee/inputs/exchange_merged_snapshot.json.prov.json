@@ -1,0 +1,11 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "inputs/exchange_merged_snapshot.json",
+    "sha256": "c84f2aeefee2108b224820dd28dacef444e432325629693ee31b0e6c00610018"
+  },
+  "derived_from": [
+    "@evidence[[sources.json#S1]]",
+    "@evidence[[sources.json#S9]]"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/raw/candles_2026.json",
+    "kind": "raw_exchange_snapshot",
+    "sha256": "e279b30b4a2fa3dc9787fd22858b041b733b764be8fa50638a161ae5eeafbeb1"
+  },
+  "derived_from": [
+    "https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQBR/securities/<SECID>/candles.json"
+  ],
+  "generated_by": {
+    "script_path": "scripts/moex_spb_collector.py",
+    "timestamp_utc": "2026-10-19T16:30:26.307190+00:00"
+  }
+}

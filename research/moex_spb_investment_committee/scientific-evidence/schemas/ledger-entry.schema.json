@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scientific Evidence Ledger Entry",
+  "type": "object",
+  "required": [
+    "schema_name",
+    "entry_id",
+    "entry_kind",
+    "subject",
+    "evidence_refs",
+    "recorded_at"
+  ]
+}

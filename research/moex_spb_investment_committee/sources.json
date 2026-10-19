@@ -1,0 +1,93 @@
+[
+  {
+    "id": "S1",
+    "title": "Информационно-статистический сервер Московской биржи (MOEX ISS API) — Котировки, капитализация и объёмы торгов режима TQBR",
+    "url": "https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQBR/securities.json",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "510 ценных бумаг в режиме основных торгов TQBR, совокупный дневной оборот 153,79 млрд руб., капитализация Сбербанка 6 205,2 млрд руб., ЛУКОЙЛа 4 176,8 млрд руб., Роснефти 4 025,1 млрд руб., Полюса 1 574,9 млрд руб.",
+    "locator": "securities, marketdata tables (TQBR)"
+  },
+  {
+    "id": "S2",
+    "title": "Информационно-статистический сервер Московской биржи (MOEX ISS API) — Индексы фондового рынка и гособлигаций (IMOEX, RGBI, отраслевые индексы)",
+    "url": "https://iss.moex.com/iss/engines/stock/markets/index/boards/SNDX/securities.json",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "Индекс Мосбиржи IMOEX 2 433,13 п., индекс государственных облигаций RGBI 111,73 п., отраслевые индексы MOEXOG 6 878,53 п., MOEXFN 8 629,17 п., MOEXMM 4 635,49 п., MOEXCH 25 393,96 п.",
+    "locator": "marketdata (SNDX)"
+  },
+  {
+    "id": "S3",
+    "title": "ПАО «СПБ Биржа» — Оперативные рыночные данные и итоги торгов российскими ценными бумагами и БПИФ",
+    "url": "https://spbexchange.ru/api/reader/marketdata/default/rus",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "247 инструментов (230 акций и 17 биржевых фондов), совокупный оборот 5,863 млрд руб.; оборот TMON@ 3,554 млрд руб., LQDT 903,4 млн руб., TGLD@ 349,8 млн руб., акций ПАО СПБ Биржа (SPBE) 161,1 млн руб. при цене 174,1 руб., МКПАО Озон 4,81 млн руб., ПАО Элемент (ELMT) 1,03 млн руб.",
+    "locator": "marketdata/default/rus JSON array"
+  },
+  {
+    "id": "S4",
+    "title": "ПАО «СПБ Биржа» — Официальный список ценных бумаг, допущенных к организованным торгам",
+    "url": "https://spbexchange.ru/ru/listing/securities/list/",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "Реестр ценных бумаг ПАО СПБ Биржа с параметрами лотности, шага цены, категории инструмента и кодов srtsCode (включая SPBE, ELMT, TCSG, OZON, YDEX, SBER, LKOH).",
+    "locator": "listing/v1/instruments/ru/list"
+  },
+  {
+    "id": "S5",
+    "title": "Свечной архив Московской биржи (MOEX ISS Candles API) за 2026 год по 31 эмитенту и индексу IMOEX",
+    "url": "https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQBR/securities/SBER/candles.json",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "Дневные свечи (interval=24) с 2026-01-01 по 2026-10-19 для расчёта реализованной годовой волатильности, максимальной просадки 2026 года, импульса 30D/90D и коэффициента бета к IMOEX.",
+    "locator": "candles (interval=24, 2026)"
+  },
+  {
+    "id": "S6",
+    "title": "Сводная верифицированная база консолидированной финансовой отчётности МСФО и РСБУ за 2024–2026 (LTM) по 31 эмитенту при ключевой ставке ЦБ 14,00%",
+    "file": "inputs/fundamentals_reconciled.json",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "Пройдено 62 автоматических проверки бухгалтерских тождеств (0 предупреждений) при живой ставке ЦБ РФ 14,00%: Выручка, EBITDA, Чистая прибыль, OCF, CAPEX, FCF, Общий долг, Денежные средства, Чистый долг, ROE, ROIC, Н1.0, процентный баланс и корректировка на полный уставный капитал для TRNFP и SNGS/SNGSP.",
+    "locator": "issuers (31 companies, 62 accounting checks, cbr_key_rate_assumption_pct=14.0)"
+  },
+  {
+    "id": "S7",
+    "title": "Количественная матрица оценки, пятифакторного скоринга, 3 горизонтов инвестирования (1–3М / 6–12М / 1–3Г) и модельных портфелей MOEX & SPBEX",
+    "file": "inputs/quant_valuation_matrix.json",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "Топ-10 бумаг по интегральному пятифакторному баллу при ставке ЦБ 14,00%: BSPB (87,9), SNGSP (84,6), HEAD (83,9), LKOH (83,4), MOEX (82,2), TRNFP (80,6), TATN (78,2), X5 (77,6), IRAO (77,6), PLZL (75,7).",
+    "locator": "issuers, top_picks, avoid_list, horizons"
+  },
+  {
+    "id": "S8",
+    "title": "Результаты 7 контролируемых факторных абляций и сравнения с пассивными индексами (strategy_ablations.json)",
+    "file": "inputs/strategy_ablations.json",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "Индекс интегральной полезности полной 5-факторной модели (incumbent_5factor_rate_adjusted) составляет 89,03 п. против 37,24 п. у равновзвешенного индекса (-51,79 п.), 31,31 п. у Топ-8 по капитализации (-57,72 п.), 65,55 п. без фактора ставки ЦБ (-23,48 п.) и 81,40 п. у модели с устаревшей ставкой 19% (-7,63 п.).",
+    "locator": "variants (incumbent vs 6 baselines/ablations)"
+  },
+  {
+    "id": "S9",
+    "title": "Банк России — Официальная база ключевой ставки (cbr.ru/hd_base/KeyRate/) и официальных курсов валют (XML_daily.asp)",
+    "url": "https://www.cbr.ru/hd_base/KeyRate/",
+    "file": "inputs/cbr_macro_live.json",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "Действующая ключевая ставка Банка России по состоянию на 19.10.2026 составляет 14,00% годовых (установлена с 27.07.2026 после цикла из 10 снижений с пика 21,00% от 28.10.2024); официальные курсы ЦБ РФ: USD/RUB = 82,8504, EUR/RUB = 93,2316, CNY/RUB = 12,3869.",
+    "locator": "key_rate_pct, recent_cycle_transitions, fx_official_cbr"
+  },
+  {
+    "id": "S10",
+    "title": "Агрегированный поток живых новостей ЦБ РФ, Мосбиржи ISS и деловых СМИ (120 публикаций) и база корпоративных катализаторов по 31 эмитенту",
+    "file": "inputs/issuer_news_catalysts.json",
+    "accessed": "2026-10-19",
+    "evidence": "retrieved_text",
+    "excerpt": "120 живых публикаций (27 релизов ЦБ РФ, 50 новостей Мосбиржи ISS, 43 статьи деловых СМИ) с расчётом сентимента, промежуточных зимних дивидендных отсечек (LKOH, X5, HEAD, TATN) и 3 горизонтов инвестирования по всем 31 эмитентам.",
+    "locator": "issuers, market_sentiment_index"
+  }
+]

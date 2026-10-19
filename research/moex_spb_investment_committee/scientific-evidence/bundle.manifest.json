@@ -1,0 +1,18 @@
+{
+  "schema_name": "scientific-evidence.schema-bundle",
+  "generated_at": "2026-10-19T15:54:45.911162+00:00",
+  "bundle_root": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/research/moex_spb_investment_committee/scientific-evidence",
+  "spec_markdown": "spec.md",
+  "ledger_path": "ledger.jsonl",
+  "schemas": {
+    "evidence-reference": "schemas/evidence-reference.schema.json",
+    "artifact-manifest": "schemas/artifact-manifest.schema.json",
+    "ledger-entry": "schemas/ledger-entry.schema.json",
+    "verification-report": "schemas/verification-report.schema.json"
+  },
+  "verification_statuses": [
+    "resolved",
+    "anchored",
+    "dangling"
+  ]
+}

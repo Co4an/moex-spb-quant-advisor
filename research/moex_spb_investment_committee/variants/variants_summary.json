@@ -1,0 +1,64 @@
+{
+  "incumbent_id": "incumbent_5factor_rate_adjusted",
+  "incumbent_score": 89.03,
+  "variant_count": 6,
+  "ablation_count": 4,
+  "baseline_count": 2,
+  "variants": [
+    {
+      "variant_id": "baseline_equal_weight_universe",
+      "kind": "baseline",
+      "factor_removed": "Равновзвешенный индекс всех 31 эмитентов без факторного отбора",
+      "score": 37.24,
+      "correct": true,
+      "delta_vs_incumbent": -51.79,
+      "relative_contribution_pct": 58.17
+    },
+    {
+      "variant_id": "baseline_mcap_top8",
+      "kind": "baseline",
+      "factor_removed": "Пассивный портфель 8 крупнейших компаний по капитализации (вкл. Газпром и Роснефть)",
+      "score": 31.31,
+      "correct": true,
+      "delta_vs_incumbent": -57.72,
+      "relative_contribution_pct": 64.83
+    },
+    {
+      "variant_id": "ablation_no_rate_immunity",
+      "kind": "ablation",
+      "factor_removed": "Абляция без фактора устойчивости к ключевой ставке ЦБ (игнорирование долговой нагрузки и кэш-кубышек)",
+      "score": 65.55,
+      "correct": true,
+      "delta_vs_incumbent": -23.48,
+      "relative_contribution_pct": 26.37
+    },
+    {
+      "variant_id": "ablation_naive_pe_only",
+      "kind": "ablation",
+      "factor_removed": "Абляция только по минимальному P/E (ловушка дешёвых закредитованных бумаг — value trap)",
+      "score": 68.38,
+      "correct": true,
+      "delta_vs_incumbent": -20.65,
+      "relative_contribution_pct": 23.19
+    },
+    {
+      "variant_id": "ablation_moex_only_no_spbex",
+      "kind": "ablation",
+      "factor_removed": "Абляция без эмитентов и кросс-ликвидности СПБ Биржи (исключение ELMT, SPBE, OZON)",
+      "score": 86.88,
+      "correct": true,
+      "delta_vs_incumbent": -2.15,
+      "relative_contribution_pct": 2.41
+    },
+    {
+      "variant_id": "ablation_stale_19pct_cbr_prior",
+      "kind": "ablation",
+      "factor_removed": "Абляция: устаревшая статичная ставка ЦБ 19% без учёта 120 живых новостей",
+      "score": 81.4,
+      "correct": true,
+      "delta_vs_incumbent": -7.63,
+      "relative_contribution_pct": 8.57
+    }
+  ],
+  "generated_at": "2026-10-19T17:35:14.206827+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/processed/optimal_portfolios.json",
+    "kind": "quant_valuation_output",
+    "sha256": "14f0142b58aa21955fef462de04dd7d61a2cb1f1f692db674e6d46887f58a1a8"
+  },
+  "derived_from": [
+    "@evidence[[data/processed/quant_valuation_matrix.json]]",
+    "@evidence[[data/raw/exchange_merged_snapshot.json]]"
+  ],
+  "generated_by": {
+    "script_path": "scripts/quant_sector_engine.py",
+    "timestamp_utc": "2026-10-19T16:30:33.628596+00:00"
+  }
+}

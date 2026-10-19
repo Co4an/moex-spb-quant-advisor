@@ -1,0 +1,68 @@
+{
+  "claims": [
+    {
+      "id": "claim-live-cbr-rate-and-microstructure",
+      "section": "Макроэкономический режим ключевой ставки 14,00% и почему устаревшее допущение 19% искажает оценку",
+      "claim": "По данным официальной базы Банка России (cbr.ru/hd_base/KeyRate/), действующая ключевая ставка на 19 октября 2026 года составляет 14,00% годовых (установлена с 27 июля 2026 года после 10 снижений с пика 21,00% от 28 октября 2024 года) при курсе доллара 82,8504 руб., однако коммерческий плавающий долг (16,2–17,5%) продолжает подавлять денежный поток закредитованных эмитентов.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S6",
+        "S9"
+      ],
+      "evidence_refs": [
+        "@evidence[[sources.json#S9]]",
+        "@evidence[[inputs/cbr_macro_live.json#fetched_at]]",
+        "@evidence[[sources.json#S1]]",
+        "@evidence[[sources.json#S2]]",
+        "@evidence[[sources.json#S3]]"
+      ]
+    },
+    {
+      "id": "claim-charter-capital-and-sngsp",
+      "section": "Сверка отчётности МСФО и РСБУ с уставным капиталом и процентным балансом при ставке 14,00%",
+      "claim": "Пересчёт капитализации ПАО Транснефть (TRNFP) по полному уставному капиталу (771,76 млрд руб.) за вычетом чистой денежной подушки 230,0 млрд руб. формирует EV = 541,76 млрд руб., EV/EBITDA = 0,96x и P/E = 2,64x при дивидендной доходности 17,66%, а кубышка ПАО Сургутнефтегаз (6 150,0 млрд руб. = 664,3% консолидированной капитализации 925,75 млрд руб.) генерирует +731,9 млрд руб. чистого процентного дохода в год и 21,12% дивидендной доходности по SNGSP.",
+      "source_ids": [
+        "S1",
+        "S6",
+        "S7"
+      ],
+      "evidence_refs": [
+        "@evidence[[inputs/fundamentals_reconciled.json#reconciliation_checks_passed]]",
+        "@evidence[[inputs/fundamentals_reconciled.json#issuers.TRNFP]]",
+        "@evidence[[inputs/quant_valuation_matrix.json#issuers.SNGSP]]"
+      ]
+    },
+    {
+      "id": "claim-news-and-three-horizons",
+      "section": "Новостной контур октября 2026 года и инвестиционный консультант по трём горизонтам (1–3М / 6–12М / 1–3Г)",
+      "claim": "Автоматический парсинг 120 живых новостей ЦБ РФ, Мосбиржи ISS и деловых СМИ в сочетании с пятифакторной моделью разделяет рекомендации на 3 горизонта: тактический 1–3М (LKOH +28,5%, X5 +28,4%, HEAD +24,2%, TATN +19,5% под зимние отсечки и добор PLZL в коридоре 1 081,4–1 139,3 руб. на откате 19.10.2026), базовый 6–12М (SNGSP +68,5%, BSPB +67,7%, TRNFP +65,6%) и стратегический 1–3Г (BSPB CAGR +37,7%/год, HEAD +34,2%/год, X5 +34,0%/год, T/TCSG +29,8%/год, PLZL +28,9%/год, YDEX +27,5%/год).",
+      "source_ids": [
+        "S7",
+        "S10"
+      ],
+      "evidence_refs": [
+        "@evidence[[sources.json#S10]]",
+        "@evidence[[inputs/issuer_news_catalysts.json#issuers]]",
+        "@evidence[[inputs/quant_valuation_matrix.json#avoid_list]]"
+      ]
+    },
+    {
+      "id": "claim-portfolios-and-7-ablations",
+      "section": "Отраслевой Z-скоринг, модельные портфели на 1 000 000 рублей и верификация через 7 абляций",
+      "claim": "Полная пятифакторная модель при живой ставке ЦБ 14,00% (incumbent_5factor_rate_adjusted, индекс полезности 89,03 п.) опережает пассивный индекс Топ-8 по капитализации (31,31 п.) на 57,72 п. и вариант на устаревшей ставке 19% (81,40 п.) на 7,63 п., при этом флагманский портфель core_alpha (горизонт 9–12 мес.) обеспечивает ожидаемую доходность +17,50% за 1–3М, +45,67% за 6–12М и +29,25% годовых на горизонте 1–3 года.",
+      "source_ids": [
+        "S7",
+        "S8"
+      ],
+      "evidence_refs": [
+        "@evidence[[inputs/sector_aggregates.json#sectors]]",
+        "@evidence[[inputs/optimal_portfolios.json#portfolios]]",
+        "@evidence[[sources.json#S8]]",
+        "@evidence[[variants/variants_summary.json#variants]]",
+        "@evidence[[posthoc/posthoc_summary.json#analyses]]"
+      ]
+    }
+  ]
+}

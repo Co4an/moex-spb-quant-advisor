@@ -1,0 +1,90 @@
+{
+  "task_id": "moex_spb_wunderwaffe",
+  "domain": "russian_equities_quant_automation",
+  "title": "moex_spb_wunderwaffe",
+  "task_instructions": "Спроектировать и верифицировать автоматизированную систему анализа отчётностей МСФО/РСБУ и биржевых котировок Мосбиржи (MOEX ISS) и СПБ Биржи (SPBEX API), секторального Z-скоринга и портфельной оптимизации с финальным мультиагентным меморандумом.",
+  "expected_deliverables": [
+    "deliverables/moex_spb_investment_strategy.md"
+  ],
+  "mode": "single",
+  "budget_k": 1,
+  "current_round": 1,
+  "stage": "DONE",
+  "library_root": "/Users/roman/.harness2/library",
+  "created_at": "2026-10-19T15:54:48.152292+00:00",
+  "proposals": {
+    "INV_1": {
+      "candidate_id": "INV_1",
+      "dimension": "INV",
+      "valid": true,
+      "errors": [],
+      "retries": 0,
+      "fallback_applied": false,
+      "changed_components": [
+        "guardrails.md",
+        "scripts/verify_moex_spb_quant_bundle.py"
+      ],
+      "notes": "<notes>\n## Scoped INV Proposal (`propose_INV_1`)\n\n### 1. Created `context/harness/scripts/verify_moex_spb_quant_bundle.py`\n- **Trajectory Motivation (`base_1_trajectory.md`, Step 2 — Инженерно-процедурная проблема INV):** In `base_1`, ingesting quotes from MOEX ISS and SPB Exchange exposed three recurring procedural failure modes: (1) SPB Exchange returns numeric values as strings with Russian decimal commas and uses a Russian National CA certificate, (2) cross-exchange ticker aliases (`T` on MOEX vs. `TCSG` on SPBEX) fail naive 1-to-1 ticker joins, and (3) without an automated bundle verifier, downstream tables (`quant_valuation_matrix.json`, `fundamentals_reconciled.json`, `sector_aggregates.json`, `optimal_portfolios.json`), `.prov.json` SHA-256 manifests, and `dashboard/data_bundle.js` can drift out of sync or leak forbidden meta-labels into markdown deliverables.\n- **What it does:** Provides a zero-dependency Python standard-library verifier (`scripts/verify_moex_spb_quant_bundle.py`) that deterministically checks:\n  - **(a)** Existence, JSON validity, `.prov.json` SHA-256 cryptographic manifest integrity, and 31-issuer composite score synchronization across `data/raw/exchange_merged_snapshot.json`, `data/processed/fundamentals_reconciled.json`, `data/processed/quant_valuation_matrix.json`, `data/processed/sector_aggregates.json`, `data/processed/optimal_portfolios.json`, and `dashboard/data_bundle.js`.\n  - **(b)** Cross-exchange alias mapping (`T` <-> `TCSG`) and SPB comma-float parsing across all 31 equities (`price_rub > 0`, `moex_price_rub > 0`, and positive float `spbex_price_rub`).\n  - **(c)** Accounting identities `FCF == OCF - CAPEX` (within 0.15 bln RUB rounding tolerance) for all 31 issuers and `EV == Consolidated Market Cap + Net Debt` for all non-bank issuers, plus zero `reconciliation_warnings`.\n  - **(d)** Absence of forbidden AI-slop labels (`SCQA`, `SO WHAT`, `Пирамида Минто`, `Hero KPI`) in deliverable markdown reports.\n\n### 2. Updated `context/harness/guardrails.md`\n- **Trajectory Motivation (`base_1_trajectory.md`, Step 2):** Codified the workspace-specific ingestion facts (`T` <-> `TCSG` alias, SPBEX comma-decimal strings, SSL fallback) and added a mandatory pre-completion verification gate requiring `python3 scripts/verify_moex_spb_quant_bundle.py` to exit `0` before finalizing any deliverable. Contains zero Jinja template braces.\n</notes>\n",
+      "probe_workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_moex_spb_wunderwaffe/rollouts/probe_INV_1"
+    },
+    "DOM_1": {
+      "candidate_id": "DOM_1",
+      "dimension": "DOM",
+      "valid": true,
+      "errors": [],
+      "retries": 0,
+      "fallback_applied": false,
+      "changed_components": [
+        "skills/moex-spb-ifrs-reconciliation/SKILL.md",
+        "systemprompt.md"
+      ],
+      "notes": "<notes>\n### DOM Proposal (`propose_DOM_1`): Russian Equity & IFRS/RSBU Practitioner Reconciliation (`moex-spb-ifrs-reconciliation`)\n\n1. **Trajectory Motivation (`base_1` Step 2 — DOM Methodological Distortion):**\n   - In `base_1`, naive single-class `ISSUECAPITALIZATION` from `MOEX ISS` distorted `P/E` and `EV/EBITDA` for issuers where only preferred shares trade (`TRNFP`, representing 21.45% of 724.93M total charter shares) or where dual share classes (`SNGS` + `SNGSP`, `TATN` + `TATNP`, `SBER` + `SBERP`) split corporate equity.\n   - Without a share-class payout realization factor (`Payout_Quality`), `SNGS` ordinary shares (fixed ~0.90 RUB dividend trap) could receive the same valuation and cash-pile score as `SNGSP` preferred shares (entitled by corporate charter to 10% of RSBU net profit, ~40.5% of total dividends), and capped-payout cash piles (`IRAO` at 25% of IFRS net income) were not distinguished from 80–100% FCF distributors (`LKOH`, `HEAD`).\n\n2. **Changes Made to `context/harness/`:**\n   - Created `context/harness/skills/moex-spb-ifrs-reconciliation/SKILL.md` encoding checkable practitioner rules and verified workspace facts for:\n     (a) **Charter-Capital Multi-Class Share Adjustment:** Full-entity market cap reconstruction for `TRNFP` (`21.45%` of `724.93M` total shares), `SNGS` + `SNGSP`, `TATN` + `TATNP`, `SBER` + `SBERP`, and `MTLR` + `MTLRP`.\n     (b) **Share-Class Payout Realization Factor (`Payout_Quality`):** Explicit separation between `SNGSP` (`0.90` realization via statutory 10% RSBU net profit charter clause) and `SNGS` (`<= 0.25` ordinary dividend trap), plus differentiation of `IRAO` (`25%` cap) vs `LKOH`/`HEAD`/`SBER`/`BSPB` (`75–100%` FCF / `50%` IFRS payout).\n     (c) **High CBR Key-Rate Net Interest Balance:** Rewarding net-cash interest earners (`Net Debt < 0`) and penalizing floating-rate leverage (`Net Debt / EBITDA > 1.8x`) under the 15–16%+ key rate regime.\n     (d) **SPB Exchange (`SPBEX`) Alpha & Benchmark Integration:** Incorporating `SPBE`, `ELMT`, and `OZON` alongside cross-venue spread/volume reconciliation (`T` vs `TCSG`) and risk-free money-market (`LQDT` / `TMON@`) and gold (`TGLD@`) hurdle benchmarks.\n   - Updated `context/harness/systemprompt.md` with the exact skill trigger line:\n     `When analyzing or reconciling MOEX and SPBEX equities and IFRS/RSBU financial statements, load the \\`moex-spb-ifrs-reconciliation\\` skill.`\n</notes>\n",
+      "probe_workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_moex_spb_wunderwaffe/rollouts/probe_DOM_1"
+    }
+  },
+  "compositions": {
+    "composed_1": {
+      "composition_id": "composed_1",
+      "valid": true,
+      "errors": [],
+      "retries": 0,
+      "fallback_applied": false,
+      "changed_components": [
+        "guardrails.md",
+        "scripts/verify_moex_spb_quant_bundle.py",
+        "skills/moex-spb-ifrs-reconciliation/SKILL.md",
+        "systemprompt.md"
+      ],
+      "notes": "<notes>\nMerged orthogonal INV_1 (`guardrails.md` + `scripts/verify_moex_spb_quant_bundle.py`) and DOM_1 (`systemprompt.md` + `skills/moex-spb-ifrs-reconciliation/SKILL.md`) without conflicts.\n</notes>\n",
+      "rollout_workspace": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_moex_spb_wunderwaffe/rollouts/composed_1",
+      "harness_dir": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_moex_spb_wunderwaffe/harnesses/composed_1"
+    }
+  },
+  "adopted_harness": "/Users/roman/Downloads/осенняя сессия/бабки сука бабки/runs/h2_moex_spb_wunderwaffe/harnesses/composed_1",
+  "updated_at": "2026-10-19T16:09:25.032581+00:00",
+  "proposal_retries": {},
+  "composition_retries": {},
+  "library_entry_dir": "/Users/roman/.harness2/library/russian_equities_quant_automation/entry_001_moex_spb_wunderwaffe",
+  "sova_sync": {
+    "synced": true,
+    "sova_lessons_file": "/Users/roman/.gemini/config/skills/sova/references/harness2-lessons.md",
+    "domains_synced": [
+      "enterprise_economics_exam_prep",
+      "executive_consulting_reports",
+      "financial_risk_excel_modeling",
+      "russian_equities_quant_automation",
+      "sova_agent_system"
+    ],
+    "lessons_count": 9,
+    "copied_verifiers": [
+      "verify_ep_kr1_materials.py",
+      "verify_mckinsey_docx.py",
+      "verify_leadership_case_report.py",
+      "verify_traceability_chain.py",
+      "verify_moex_spb_quant_bundle.py",
+      "scientific_evidence_verifier.py",
+      "sova_heavy_core.py"
+    ],
+    "promoted_core_files": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema_name": "scientific-evidence.artifact-manifest",
+  "artifact": {
+    "path": "data/raw/cbr_macro_live.json",
+    "kind": "raw_exchange_snapshot",
+    "sha256": "5ee2c30c33469cbd62e747db4f0d03f4bf3ffdec4225ee03a5d19c794e5d3cf7"
+  },
+  "derived_from": [
+    "https://www.cbr.ru/hd_base/KeyRate/?UniDbQuery.Posted=True&UniDbQuery.From=01.01.2024&UniDbQuery.To=31.12.2026",
+    "https://www.cbr.ru/scripts/XML_daily.asp"
+  ],
+  "generated_by": {
+    "script_path": "scripts/moex_spb_collector.py",
+    "timestamp_utc": "2026-10-19T16:30:14.516904+00:00"
+  }
+}
