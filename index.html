@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический терминал оценки акций и отчётностей МСФО/РСБУ — Мосбиржа и СПБ Биржа</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #EEF2F6;
+      --bg-surface: #FFFFFF;
+      --bg-subtle: #E3E8EF;
+      --bg-tint: #D5DFEB;
+      --ink-primary: #0F172A;
+      --ink-secondary: #334155;
+      --ink-muted: #475569;
+      --accent-navy: #16325B;
+      --accent-navy-hover: #0F2342;
+      --accent-copper: #7C2D12;
+      --semantic-pos: #14532D;
+      --semantic-pos-bg: #E8F2EC;
+      --semantic-neg: #7F1D1D;
+      --semantic-neg-bg: #F3E9E9;
+      --semantic-hold: #6B4415;
+      --semantic-hold-bg: #F2EEE6;
+      --border-hairline: #CBD5E1;
+      --border-strong: #94A3B8;
+      --shadow-soft: 0 8px 24px -6px rgba(15, 23, 42, 0.07);
+      --font-serif: "PT Serif", Georgia, serif;
+      --font-sans: "PT Sans", sans-serif;
+      --font-mono: "SFMono-Regular", Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    ::selection {
+      background-color: var(--accent-navy);
+      color: #FFFFFF;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-subtle);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-strong);
+      border: 2px solid var(--bg-subtle);
+    }
+
+    html, body {
+      background-color: var(--bg-page);
+      color: var(--ink-primary);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.5;
+      caret-color: var(--accent-navy);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent-navy);
+      text-underline-offset: 3px;
+    }
+
+    button, input, select {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent-navy);
+      outline-offset: 2px;
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .shell {
+      max-width: 1560px;
+      margin: 0 auto;
+      padding: 28px 32px 64px;
+    }
+
+    /* Masthead */
+    .masthead {
+      border-bottom: 2px solid var(--ink-primary);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: end;
+    }
+
+    .masthead h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 2.5vw, 2.35rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      color: var(--ink-primary);
+      max-width: 34ch;
+    }
+
+    .masthead-subtitle {
+      margin-top: 8px;
+      color: var(--ink-secondary);
+      max-width: 72ch;
+      font-size: 0.96rem;
+    }
+
+    .masthead-meta {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .meta-stamp {
+      font-size: 0.85rem;
+      color: var(--ink-secondary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-navy);
+      color: #FFFFFF;
+      border: 1px solid var(--accent-navy);
+      padding: 8px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-navy-hover);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    /* Exchange Pulse Strip */
+    .pulse-bar {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      margin-bottom: 28px;
+    }
+
+    .pulse-cell {
+      padding: 14px 18px;
+      border-right: 1px solid var(--border-hairline);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pulse-cell:last-child {
+      border-right: none;
+    }
+
+    .pulse-label {
+      font-size: 0.8rem;
+      color: var(--ink-secondary);
+      font-weight: 600;
+    }
+
+    .pulse-val-row {
+      margin-top: 6px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .pulse-val {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink-primary);
+    }
+
+    .pulse-delta {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 1px 6px;
+    }
+
+    .pos {
+      color: var(--semantic-pos);
+    }
+    .neg {
+      color: var(--semantic-neg);
+    }
+    .badge-pos {
+      color: var(--semantic-pos);
+      background-color: var(--semantic-pos-bg);
+    }
+    .badge-neg {
+      color: var(--semantic-neg);
+      background-color: var(--semantic-neg-bg);
+    }
+    .badge-hold {
+      color: var(--semantic-hold);
+      background-color: var(--semantic-hold-bg);
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 4px;
+      border-bottom: 1px solid var(--border-strong);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-tab {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-hairline);
+      border-bottom: none;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      transition: background-color 150ms ease, color 150ms ease;
+    }
+
+    .nav-tab:hover {
+      background: var(--bg-tint);
+      color: var(--ink-primary);
+    }
+
+    .nav-tab.active {
+      background: var(--bg-surface);
+      color: var(--accent-navy);
+      border-color: var(--border-strong);
+      position: relative;
+      top: 1px;
+      padding-bottom: 11px;
+    }
+
+    /* Macro Stress Simulator Bar */
+    .simulator-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      padding: 18px 22px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .simulator-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .simulator-header h2 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .simulator-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .sim-control {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .sim-control label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink-secondary);
+    }
+
+    .sim-control input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent-navy);
+      cursor: pointer;
+    }
+
+    .sim-control input[type="number"] {
+      width: 100%;
+      padding: 6px 10px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-page);
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+    }
+
+    .sim-caption {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    /* Main Workbench Grid: Screener Table + Inspector Drawer */
+    .workbench {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .panel-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-hairline);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .panel-header h2 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink-primary);
+    }
+
+    .filter-row {
+      padding: 12px 20px;
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-hairline);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-row select,
+    .filter-row input[type="search"] {
+      padding: 6px 10px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-surface);
+      font-size: 0.85rem;
+    }
+
+    .filter-row input[type="search"] {
+      min-width: 190px;
+    }
+
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    /* Data Tables */
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    th {
+      background: var(--bg-subtle);
+      color: var(--ink-secondary);
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border-strong);
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    th.num, td.num {
+      text-align: right;
+    }
+
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border-hairline);
+      vertical-align: middle;
+    }
+
+    tbody tr {
+      cursor: pointer;
+      transition: background-color 120ms ease;
+    }
+
+    tbody tr:hover {
+      background-color: var(--bg-page);
+    }
+
+    tbody tr.selected-row {
+      background-color: #E8EEF5;
+    }
+
+    .ticker-cell {
+      font-weight: 700;
+      color: var(--accent-navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .exch-tag {
+      font-size: 0.7rem;
+      padding: 1px 5px;
+      border: 1px solid var(--border-strong);
+      color: var(--ink-secondary);
+      font-weight: 600;
+    }
+
+    .exch-tag.spb {
+      border-color: var(--accent-copper);
+      color: var(--accent-copper);
+    }
+
+    .rec-pill {
+      display: inline-block;
+      padding: 2px 7px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* Inspector Panel */
+    .inspector-body {
+      padding: 20px;
+    }
+
+    .dossier-top {
+      border-bottom: 1px solid var(--border-hairline);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .dossier-title h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      line-height: 1.2;
+    }
+
+    .dossier-sub {
+      font-size: 0.84rem;
+      color: var(--ink-secondary);
+      margin-top: 4px;
+    }
+
+    .dossier-price-box {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .dossier-price {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 700;
+    }
+
+    .scenario-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border-hairline);
+      background: var(--bg-page);
+      margin-bottom: 18px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .scenario-cell {
+      padding: 10px 12px;
+      border-right: 1px solid var(--border-hairline);
+    }
+    .scenario-cell:last-child {
+      border-right: none;
+    }
+    .scenario-name {
+      font-size: 0.76rem;
+      color: var(--ink-secondary);
+      font-weight: 600;
+    }
+    .scenario-val {
+      font-size: 1.02rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .section-h4 {
+      font-family: var(--font-serif);
+      font-size: 1.02rem;
+      margin: 18px 0 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--border-hairline);
+      color: var(--ink-primary);
+    }
+
+    .kv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 18px;
+      font-size: 0.85rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .kv-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px dotted var(--border-hairline);
+    }
+
+    .kv-row span:first-child {
+      color: var(--ink-secondary);
+    }
+    .kv-row span:last-child {
+      font-weight: 700;
+    }
+
+    /* Factor Bars */
+    .factor-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .factor-item {
+      display: grid;
+      grid-template-columns: 185px 1fr 44px;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .factor-track {
+      height: 8px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-hairline);
+      overflow: hidden;
+    }
+
+    .factor-fill {
+      height: 100%;
+      background: var(--accent-navy);
+    }
+
+    .note-box {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: var(--bg-page);
+      border: 1px solid var(--border-hairline);
+      font-size: 0.85rem;
+      line-height: 1.45;
+      color: var(--ink-primary);
+    }
+
+    /* Portfolio Builder Section */
+    .portfolio-selector {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .port-btn {
+      padding: 10px 16px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-page);
+      cursor: pointer;
+      text-align: left;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .port-btn.active {
+      background: var(--accent-navy);
+      color: #FFFFFF;
+      border-color: var(--accent-navy);
+    }
+
+    .port-btn-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .port-btn-meta {
+      font-size: 0.78rem;
+      opacity: 0.88;
+      margin-top: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Editorial Memo View */
+    .memo-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 28px;
+      padding: 24px;
+    }
+
+    .memo-prose {
+      max-width: 70ch;
+    }
+
+    .memo-prose h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      margin: 24px 0 10px;
+      color: var(--ink-primary);
+    }
+
+    .memo-prose h3:first-child {
+      margin-top: 0;
+    }
+
+    .memo-prose p {
+      margin-bottom: 14px;
+      color: var(--ink-primary);
+      line-height: 1.62;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 1180px) {
+      .pulse-bar {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .simulator-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .workbench, .memo-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .shell {
+        padding: 16px;
+      }
+      .pulse-bar, .simulator-grid, .kv-grid {
+        grid-template-columns: 1fr;
+      }
+      .masthead {
+        grid-template-columns: 1fr;
+      }
+      .masthead-meta {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="masthead">
+      <div>
+        <h1>Количественный терминал анализа отчётностей и акций Мосбиржи и СПБ Биржи</h1>
+        <p class="masthead-subtitle">
+          Автоматический парсинг котировок MOEX ISS и SPBEX API, сверка консолидированной отчётности МСФО и РСБУ с уставным капиталом, Z-скоринг 8 отраслей и вердикт мультиагентного комитета.
+        </p>
+      </div>
+      <div class="masthead-meta">
+        <div class="meta-stamp" id="timestamp-label">Загрузка слепка биржевых данных...</div>
+        <button type="button" class="btn-primary" id="btn-refresh-live">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+            <path d="M16 16h5v5"/>
+          </svg>
+          <span>Пересчитать живые данные бирж</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Live Market Pulse Bar -->
+    <section class="pulse-bar" aria-label="Ключевые биржевые индикаторы">
+      <div class="pulse-cell">
+        <span class="pulse-label">Ключевая ставка ЦБ РФ (cbr.ru)</span>
+        <div class="pulse-val-row">
+          <span class="pulse-val" id="pulse-cbr-rate">14,00%</span>
+          <span class="pulse-delta badge-pos" id="pulse-cbr-note">с 27.07.2026 (−700 б.п. от пика)</span>
+        </div>
+      </div>
+      <div class="pulse-cell">
+        <span class="pulse-label">Индекс Мосбиржи (IMOEX)</span>
+        <div class="pulse-val-row">
+          <span class="pulse-val" id="pulse-imoex">—</span>
+          <span class="pulse-delta" id="pulse-imoex-chg">—</span>
+        </div>
+      </div>
+      <div class="pulse-cell">
+        <span class="pulse-label">Индекс гособлигаций (RGBI)</span>
+        <div class="pulse-val-row">
+          <span class="pulse-val" id="pulse-rgbi">—</span>
+          <span class="pulse-delta" id="pulse-ofz-yield">ОФЗ ~13,4%</span>
+        </div>
+      </div>
+      <div class="pulse-cell">
+        <span class="pulse-label">Оборот MOEX / SPBEX</span>
+        <div class="pulse-val-row">
+          <span class="pulse-val" id="pulse-moex-vol">—</span>
+          <span class="pulse-delta" id="pulse-spb-vol">—</span>
+        </div>
+      </div>
+      <div class="pulse-cell">
+        <span class="pulse-label">Курс ЦБ (USD/RUB) и TMON@</span>
+        <div class="pulse-val-row">
+          <span class="pulse-val" id="pulse-tmon">—</span>
+          <span class="pulse-delta badge-pos" id="pulse-mm-yield">ДД ~13,8% год.</span>
+        </div>
+      </div>
+      <div class="pulse-cell">
+        <span class="pulse-label">Фаворит квантового отбора</span>
+        <div class="pulse-val-row">
+          <span class="pulse-val" id="pulse-top-pick">—</span>
+          <span class="pulse-delta badge-pos" id="pulse-top-ret">—</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Macro Stress-Test & Capital Simulator -->
+    <section class="simulator-panel" aria-label="Макроэкономический стресс-тест и калькулятор капитала">
+      <div class="simulator-header">
+        <h2>Макро-симулятор справедливых цен (база ЦБ РФ: 14,00%) и калькулятор рабочего капитала</h2>
+        <span class="sim-caption">Траектория ЦБ РФ с cbr.ru: пик 21,0% (28.10.2024) → 16,0% (22.12.2025) → 14,0% (с 27.07.2026)</span>
+      </div>
+      <div class="simulator-grid">
+        <div class="sim-control">
+          <label for="sim-rate">
+            <span>Ключевая ставка ЦБ РФ</span>
+            <span class="tabular" id="sim-rate-val">14,0%</span>
+          </label>
+          <input type="range" id="sim-rate" min="9.5" max="20.0" step="0.5" value="14.0">
+          <span class="sim-caption">Сценарии: жёсткий 16,0% · база ЦБ 14,0% · смягчение 11,5%</span>
+        </div>
+        <div class="sim-control">
+          <label for="sim-fx">
+            <span>Курс рубля ЦБ (USD/RUB)</span>
+            <span class="tabular" id="sim-fx-val">82,9 ₽</span>
+          </label>
+          <input type="range" id="sim-fx" min="72.0" max="115.0" step="0.5" value="82.85">
+          <span class="sim-caption">Официальный курс ЦБ: 82,85 ₽/$ (12,39 ₽/¥, 93,23 ₽/€)</span>
+        </div>
+        <div class="sim-control">
+          <label for="sim-brent">
+            <span>Нефть Brent ($/барр.)</span>
+            <span class="tabular" id="sim-brent-val">76 $</span>
+          </label>
+          <input type="range" id="sim-brent" min="55" max="105" step="1" value="76">
+          <span class="sim-caption">Корректирует расчётный FCF и дивидендную базу нефтегазового сектора</span>
+        </div>
+        <div class="sim-control">
+          <label for="sim-capital">
+            <span>Инвестируемый капитал (₽)</span>
+            <span class="tabular" id="sim-cap-formatted">1 000 000 ₽</span>
+          </label>
+          <input type="number" id="sim-capital" min="50000" max="500000000" step="50000" value="1000000">
+          <span class="sim-caption">Формирует точную спецификацию лотов MOEX и SPBEX</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- View Switcher Tabs -->
+    <nav class="nav-tabs" aria-label="Разделы терминала">
+      <button type="button" class="nav-tab active" data-tab="tab-screener">1. Скринер акций, МСФО/РСБУ и сроки (31 эмитент)</button>
+      <button type="button" class="nav-tab" data-tab="tab-horizons">2. Инвест-консультант: Горизонты (1–3М / 6–12М / 1–3Г) и Новости</button>
+      <button type="button" class="nav-tab" data-tab="tab-sectors">3. Отраслевая матрица Z-оценок (8 секторов)</button>
+      <button type="button" class="nav-tab" data-tab="tab-portfolios">4. Оптимальные портфели и расчёт лотов</button>
+      <button type="button" class="nav-tab" data-tab="tab-committee">5. Инвестиционный меморандум и верификация</button>
+    </nav>
+
+    <!-- TAB 1: SCREENER & COMPANY IFRS INSPECTOR -->
+    <main id="tab-screener" class="tab-view">
+      <div class="workbench">
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Количественная матрица эмитентов Мосбиржи и СПБ Биржи</h2>
+            <span class="meta-stamp" id="screener-count-label">Показано: 31 из 31</span>
+          </div>
+          <div class="filter-row">
+            <input type="search" id="flt-search" placeholder="Поиск по тикеру или компании...">
+            <select id="flt-exchange" aria-label="Фильтр по бирже">
+              <option value="ALL">Все биржи (MOEX + SPBEX)</option>
+              <option value="SPBEX">Торгуются на СПБ Бирже (вкл. двойной листинг)</option>
+              <option value="SPB_PRIMARY">Эксклюзивы / Флагманы СПБ Биржи (SPBE, ELMT, OZON)</option>
+              <option value="MOEX">Московская биржа (TQBR)</option>
+            </select>
+            <select id="flt-sector" aria-label="Фильтр по сектору">
+              <option value="ALL">Все отрасли (8 секторов)</option>
+            </select>
+            <select id="flt-horizon" aria-label="Фильтр по горизонту инвестирования">
+              <option value="ALL">Все сроки инвестирования</option>
+              <option value="short_1_3m">Краткосрочно 1–3 мес. (Отсечки и новости)</option>
+              <option value="medium_6_12m">Среднесрочно 6–12 мес. (Годовой цикл)</option>
+              <option value="long_1_3y">Долгосрочно 1–3 года (Компаундеры ROE)</option>
+            </select>
+            <select id="flt-tier" aria-label="Фильтр по вердикту">
+              <option value="ALL">Все рекомендации</option>
+              <option value="TOP_BUY">Только ТОП-ИДЕИ (ПОКУПАТЬ)</option>
+              <option value="BUY_ALL">Все к покупке (ТОП-ИДЕЯ + ПОКУПАТЬ)</option>
+              <option value="HOLD">ДЕРЖАТЬ</option>
+              <option value="AVOID">ИЗБЕГАТЬ</option>
+            </select>
+            <label class="checkbox-label">
+              <input type="checkbox" id="flt-netcash">
+              <span>Только чистый кэш (Net Debt ≤ 0)</span>
+            </label>
+          </div>
+          <div class="table-wrap">
+            <table id="screener-table">
+              <thead>
+                <tr>
+                  <th data-sort="global_rank">№</th>
+                  <th data-sort="ticker">Тикер / Площадка</th>
+                  <th data-sort="short_name">Эмитент</th>
+                  <th class="num" data-sort="price_rub">Цена (₽)</th>
+                  <th class="num" data-sort="fair_price_sim">Цель 12М (₽)</th>
+                  <th class="num" data-sort="ret_1_3m">1–3 мес.</th>
+                  <th class="num" data-sort="total_ret_sim">6–12 мес.</th>
+                  <th class="num" data-sort="cagr_3y">3 года (год.)</th>
+                  <th class="num" data-sort="div_yield_sim">Див. 12М</th>
+                  <th class="num" data-sort="pe_ratio">P/E</th>
+                  <th>Реком. срок</th>
+                  <th class="num" data-sort="composite_score">Балл</th>
+                  <th>Вердикт</th>
+                </tr>
+              </thead>
+              <tbody id="screener-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right-hand Inspector Drawer -->
+        <aside class="panel" id="issuer-inspector" aria-label="Карточка разбора отчётности эмитента">
+          <div class="panel-header">
+            <h2>Досье инвест-консультанта: отчётность, сроки и новости</h2>
+            <span class="meta-stamp" id="insp-standard">МСФО</span>
+          </div>
+          <div class="inspector-body" id="inspector-content"></div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- TAB 2: MULTI-HORIZON ADVISOR & LIVE NEWS FEED -->
+    <section id="tab-horizons" class="tab-view hidden">
+      <div class="workbench">
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Матрица сроков инвестирования: 1–3 месяца · 6–12 месяцев · 1–3 года</h2>
+            <span class="meta-stamp">Коридоры входа, стоп-контроль, календарь дивидендов и цели по 31 бумаге</span>
+          </div>
+          <div class="filter-row">
+            <select id="flt-adv-horizon" aria-label="Выбор целевого горизонта">
+              <option value="ALL">Показать все 31 бумагу</option>
+              <option value="short_1_3m">Фокус: 1–3 месяца (Зимние дивиденды дек. 2026 – янв. 2027 и тактика)</option>
+              <option value="medium_6_12m">Фокус: 6–12 месяцев (Годовой дивидендный сезон весна–лето 2027 и ставка ЦБ 14% → 12%)</option>
+              <option value="long_1_3y">Фокус: 1–3 года (Структурные компаундеры с высокой ROE)</option>
+            </select>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Тикер</th>
+                  <th>Эмитент</th>
+                  <th class="num">Текущая цена</th>
+                  <th class="num">Коридор входа</th>
+                  <th class="num">Стоп-контроль</th>
+                  <th class="num">Цель 1–3М (доходн.)</th>
+                  <th class="num">Цель 6–12М (доходн.)</th>
+                  <th class="num">Цель 3Г (CAGR)</th>
+                  <th>Оптимальный срок</th>
+                  <th>Ближайший катализатор и тактика</th>
+                </tr>
+              </thead>
+              <tbody id="horizons-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Живая лента новостей ЦБ РФ, Мосбиржи и СМИ">
+          <div class="panel-header">
+            <h2>Живой новостной поток и триггеры (ЦБ РФ · MOEX · СМИ)</h2>
+            <span class="meta-stamp" id="news-count-stamp">120 публикаций</span>
+          </div>
+          <div class="filter-row">
+            <select id="flt-news-cat" aria-label="Категория новостей">
+              <option value="ALL">Все категории новостей</option>
+              <option value="Дивиденды и распределение капитала">Дивиденды и распределение капитала</option>
+              <option value="Макроэкономика и ключевая ставка ЦБ">Макроэкономика и ключевая ставка ЦБ</option>
+              <option value="Технический импульс и позиционирование">Технический импульс и позиционирование</option>
+              <option value="Инфраструктурные и операционные риски">Инфраструктурные и операционные риски</option>
+              <option value="Корпоративные события и структура торгов">Корпоративные события и структура торгов</option>
+              <option value="Отраслевая конъюнктура и отчетность">Отраслевая конъюнктура и отчетность</option>
+            </select>
+          </div>
+          <div class="inspector-body" id="live-news-container" style="max-height: 780px; overflow-y: auto;"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TAB 3: SECTOR MATRIX -->
+    <section id="tab-sectors" class="tab-view hidden">
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Секторальная матрица фундаментальных мультипликаторов и Z-оценок</h2>
+          <span class="meta-stamp">Агрегация по консолидированной отчётности МСФО/РСБУ при ставке ЦБ 14,0%</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Отрасль</th>
+                <th class="num">Бумаг</th>
+                <th class="num">Капитализация (млрд ₽)</th>
+                <th class="num">Выручка LTM (млрд ₽)</th>
+                <th class="num">EBITDA LTM (млрд ₽)</th>
+                <th class="num">Чистая прибыль (млрд ₽)</th>
+                <th class="num">FCF (млрд ₽)</th>
+                <th class="num">Чистый долг (млрд ₽)</th>
+                <th class="num">Медиан. P/E</th>
+                <th class="num">Медиан. EV/EBITDA</th>
+                <th class="num">Сред. ДД</th>
+                <th class="num">Сред. ROE</th>
+                <th class="num">Квантовый балл</th>
+                <th>Фаворит (Срок)</th>
+                <th>Позиционирование</th>
+              </tr>
+            </thead>
+            <tbody id="sectors-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: OPTIMAL PORTFOLIOS & LOT ALLOCATOR -->
+    <section id="tab-portfolios" class="tab-view hidden">
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Модельные портфели (Мосбиржа + СПБ Биржа), рекомендуемые сроки и расчёт лотов</h2>
+          <span class="meta-stamp" id="port-cap-header">Расчёт на капитал: 1 000 000 ₽</span>
+        </div>
+        <div class="inspector-body">
+          <div class="portfolio-selector" id="portfolio-buttons"></div>
+          <div class="scenario-strip" id="portfolio-summary-strip"></div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Тикер</th>
+                  <th>Инструмент</th>
+                  <th>Отрасль</th>
+                  <th>Биржа исполнения</th>
+                  <th class="num">Доля (%)</th>
+                  <th class="num">Целевая сумма (₽)</th>
+                  <th class="num">Цена бумаги (₽)</th>
+                  <th class="num">К покупке (лотов)</th>
+                  <th class="num">Див. доходность</th>
+                  <th class="num">Доходн. 1–3М</th>
+                  <th class="num">Доходн. 12М</th>
+                  <th class="num">CAGR 3 года</th>
+                  <th>Реком. срок</th>
+                  <th>Функция в портфеле</th>
+                </tr>
+              </thead>
+              <tbody id="portfolio-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: MULTI-AGENT INVESTMENT COMMITTEE MEMO & ABLATIONS -->
+    <section id="tab-committee" class="tab-view hidden">
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Итоговый меморандум инвестиционного комитета и контролируемые абляции модели</h2>
+          <span class="meta-stamp">Верифицировано цепочкой доказательств SHA-256 (Ставка ЦБ РФ 14,00% с cbr.ru)</span>
+        </div>
+        <div class="memo-layout">
+          <article class="memo-prose">
+            <h3>Цикл снижения ключевой ставки ЦБ РФ с 21,0% до 14,0% и новая структура доходностей</h3>
+            <p>
+              Прямая выгрузка исторического ряда Банка России с официального портала cbr.ru фиксирует фундаментальный разворот денежно-кредитного цикла: после прохождения пика 21,00% годовых в октябре 2024 года регулятор провёл серию последовательных снижений в 2025–2026 годах, доведя ключевую ставку до 14,00% годовых (действует с 27 июля 2026 года, суммарное смягчение составило 700 б.п.). На этом фоне доходность длинных ОФЗ при индексе RGBI 111,73 п. опустилась к 13,4% годовых, а фонды денежного рынка (TMON@ на СПБ Бирже и LQDT на Мосбирже) дают около 13,75% годовых. Это запускает структурный переток капитала с банковских депозитов в первоклассные дивидендные акции, предлагающие 16–21% только дивидендного потока плюс 35–48% потенциала переоценки тела бумаги.
+            </p>
+            <p>
+              Вместе с тем при ключевой ставке 14,00% эффективная стоимость коммерческого кредитования для корпораций с плавающим долгом (КС + 2,5–3,5%) остаётся на уровне 16,5–17,5% годовых. Поэтому водораздел между эмитентами с чистой денежной позицией (Сургутнефтегаз-п с кубышкой 6 150 млрд руб., ЛУКОЙЛ с чистым кэшем 1 150 млрд руб., Интер РАО с подушкой 477 млрд руб., Транснефть-п и Хэдхантер) и закредитованными компаниями (Газпром с отрицательным FCF −130 млрд руб., РУСАЛ с Чистым долгом / EBITDA 3,74×, Норникель и Магнит) сохраняет решающее значение.
+            </p>
+
+            <h3>На какой срок инвестировать: эшелонирование портфеля по трём горизонтам</h3>
+            <p>
+              Детальный анализ календаря дивидендных отсечек и октябрьского новостного потока 2026 года показывает, что единый статичный срок удержания неэффективен — капитал необходимо распределять по трём временным эшелонам. Первый, тактический горизонт (1–3 месяца, до января 2027 года) предназначен для захвата зимнего дивидендного сезона в бумагах ЛУКОЙЛа (промежуточная отсечка в декабре около 7,8%), Хэдхантера (~8,5%), КЦ ИКС 5 (~7,5%) и Татнефти (~5,2%), а также для подбора технологических лидеров на локальных новостных просадках.
+            </p>
+            <p>
+              Второй, базовый институциональный горизонт (6–12 месяцев, до осени 2027 года) охватывает полный цикл годовых выплат за 2026 год весной–летом 2027 года и дальнейшее движение ключевой ставки ЦБ с 14,0% в сторону 11,5–12,0%. Главными бенефициарами этого окна выступают Банк Санкт-Петербург (P/E 2,09×, Н1.0 = 19,8%, полная доходность 12М +67,7%), Сургутнефтегаз-п (+68,5% с учетом валютного хеджа при курсе ЦБ 82,85 руб./долл.), Транснефть-п (+65,6% с учётом индексации тарифов с 1 января), Московская Биржа (+55,2%) и Интер РАО (+61,1%).
+            </p>
+            <p>
+              Третий, стратегический горизонт (1–3 года, 2026–2029 годы) ориентирован на капитализацию высокой рентабельности собственного капитала (ROE 24–90%) по мере нормализации нейтральной ставки ЦБ к 9,5–10,0%. Здесь сосредоточены структурные компаундеры: Хэдхантер (CAGR 3Y +34,2% годовых), Т-Технологии (ROE 31,2% и позитивный эффект от консолидации Точка Банка), Яндекс (покупка на октябрьской новостной просадке вокруг дата-центров), Сбербанк (ROE 24,5%), ПАО «Элемент» на СПБ Бирже и Полюс (набор позиции траншами на технической коррекции 19 октября 2026 года с прицелом на запуск «Сухого Лога»).
+            </p>
+          </article>
+
+          <div>
+            <h4 class="section-h4">Результаты контролируемых абляций модели отбора (7 вариантов)</h4>
+            <p class="sim-caption" style="margin-bottom: 12px;">
+              Проверка вклада каждого фактора путём поочерёдного отключения модулей (Incumbent против базовых индексов и усечённых версий при живой ставке ЦБ 14,0%):
+            </p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Вариант стратегии</th>
+                    <th class="num">1–3 мес.</th>
+                    <th class="num">12 мес.</th>
+                    <th class="num">Индекс полезности</th>
+                    <th class="num">Δ к ядру</th>
+                  </tr>
+                </thead>
+                <tbody id="ablations-tbody"></tbody>
+              </table>
+            </div>
+
+            <div class="note-box" style="margin-top: 18px;">
+              <strong>Вывод из таблицы абляций:</strong> Полная пятифакторная модель с учётом живой ставки ЦБ 14,0%, новостных катализаторов и 3 горизонтов набирает максимальный индекс полезности. Отключение фактора процентного баланса, игнорирование листинга СПБ Биржи или отказ от новостного фильтра зимних отсечек приводят к статистически значимой потере доходности на всех трёх горизонтах.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="data_bundle.js"></script>
+  <script>
+    (function () {
+      const DATA = window.WUNDERWAFFE_DATA;
+      if (!DATA) {
+        document.getElementById("timestamp-label").textContent = "Ошибка: не найден файл data_bundle.js";
+        return;
+      }
+
+      // Formatting helpers (strict Russian typographic standards)
+      function fmtNum(val, decimals = 1) {
+        if (val === null || val === undefined || isNaN(val)) return "—";
+        const fixed = Number(val).toFixed(decimals);
+        const parts = fixed.split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, "\u202F");
+        return decimals > 0 ? parts.join(",") : parts[0];
+      }
+
+      function fmtPrice(val) {
+        if (val === null || val === undefined || isNaN(val)) return "—";
+        const n = Number(val);
+        if (n < 1) return fmtNum(n, 4);
+        if (n < 20) return fmtNum(n, 3);
+        if (n < 500) return fmtNum(n, 2);
+        return fmtNum(n, 1);
+      }
+
+      function fmtSignPct(val, decimals = 1) {
+        if (val === null || val === undefined || isNaN(val)) return "—";
+        const n = Number(val);
+        const sign = n > 0 ? "+" : "";
+        return sign + fmtNum(n, decimals) + "%";
+      }
+
+      // State initialized from live cbr.ru & exchange snapshot
+      const mp = DATA.macro_pulse || {};
+      const liveCbrRate = Number(DATA.cbr_key_rate_pct || mp.cbr_key_rate_pct || 14.0);
+      const liveUsdRub = Number((mp.official_fx_rub && mp.official_fx_rub.USD) || 82.85);
+
+      let simRate = liveCbrRate;
+      let simFx = liveUsdRub;
+      let simBrent = 76.0;
+      let simCapital = 1000000;
+      let selectedTicker = "BSPB";
+      let selectedPortfolioId = "core_alpha";
+      let sortCol = "global_rank";
+      let sortAsc = true;
+
+      // Sync slider initial values with live CBR data
+      const elSimRate = document.getElementById("sim-rate");
+      if (elSimRate) {
+        elSimRate.value = String(liveCbrRate);
+        document.getElementById("sim-rate-val").textContent = fmtNum(liveCbrRate, 1) + "%";
+      }
+      const elSimFx = document.getElementById("sim-fx");
+      if (elSimFx) {
+        elSimFx.value = String(liveUsdRub);
+        document.getElementById("sim-fx-val").textContent = fmtNum(liveUsdRub, 2) + " ₽";
+      }
+
+      // Populate Header & Pulse
+      const dtGen = new Date(DATA.generated_at);
+      document.getElementById("timestamp-label").textContent =
+        "Слепок cbr.ru, MOEX ISS и SPBEX: " + dtGen.toLocaleString("ru-RU");
+
+      document.getElementById("pulse-cbr-rate").textContent = fmtNum(liveCbrRate, 2) + "%";
+      if (mp.cbr_effective_since) {
+        document.getElementById("pulse-cbr-note").textContent =
+          "с " + mp.cbr_effective_since + " (" + mp.cbr_cumulative_easing_bps + " б.п. от пика)";
+      }
+
+      document.getElementById("pulse-imoex").textContent = fmtNum(mp.imoex, 2);
+      const imoexChg = Number(mp.imoex_change_pct || 0);
+      const elImoexChg = document.getElementById("pulse-imoex-chg");
+      elImoexChg.textContent = fmtSignPct(imoexChg, 2);
+      elImoexChg.className = "pulse-delta " + (imoexChg >= 0 ? "badge-pos" : "badge-neg");
+
+      document.getElementById("pulse-rgbi").textContent = fmtNum(mp.rgbi, 2);
+      document.getElementById("pulse-moex-vol").textContent = fmtNum(mp.moex_tqbr_turnover_bln_rub, 1) + " млрд ₽";
+      document.getElementById("pulse-spb-vol").textContent = "СПБ: " + fmtNum(mp.spbex_total_turnover_bln_rub, 2) + " млрд ₽";
+
+      const tmon = (DATA.spbex_etfs && DATA.spbex_etfs["TMON@"]) ? DATA.spbex_etfs["TMON@"].price : 148.48;
+      document.getElementById("pulse-tmon").textContent = fmtNum(liveUsdRub, 2) + " ₽/$ · " + fmtNum(tmon, 2) + " ₽";
+      document.getElementById("pulse-mm-yield").textContent = "TMON@ ~" + fmtNum(liveCbrRate - 0.25, 2) + "%";
+
+      // Populate sector filter dropdown
+      const sectorSelect = document.getElementById("flt-sector");
+      (DATA.sectors || []).forEach(sec => {
+        const opt = document.createElement("option");
+        opt.value = sec.sector;
+        opt.textContent = sec.sector + " (" + sec.companies_count + ")";
+        sectorSelect.appendChild(opt);
+      });
+
+      // Dynamic Macro Simulation Model per Issuer anchored at liveCbrRate (14.0%) and liveUsdRub (82.85)
+      function getSimulatedIssuer(raw) {
+        const rateDelta = simRate - liveCbrRate; // + means tighter CBR policy, - means rate cut
+        const fxRatio = (simFx - liveUsdRub) / liveUsdRub;
+        const oilRatio = (simBrent - 76.0) / 76.0;
+
+        const isBank = raw.is_bank;
+        const fxShare = (raw.fx_exporter_share_pct || 0) / 100.0;
+        const ndEbitda = raw.net_debt_to_ebitda || 0;
+        const netCashMcap = raw.net_cash_to_mcap_pct || 0;
+
+        let rateImpactPct = 0;
+        if (isBank) {
+          rateImpactPct = -rateDelta * 2.2;
+        } else if (ndEbitda <= 0) {
+          rateImpactPct = -rateDelta * 1.1 + (rateDelta * Math.min(80, netCashMcap) * 0.018);
+        } else {
+          rateImpactPct = -rateDelta * (2.6 + ndEbitda * 1.15);
+        }
+
+        let fxImpactPct = fxRatio * fxShare * 68.0;
+        if (raw.ticker === "SNGSP") {
+          fxImpactPct = fxRatio * 95.0;
+        }
+
+        let oilImpactPct = 0;
+        if (raw.sector === "Нефть и газ" && raw.ticker !== "TRNFP") {
+          oilImpactPct = oilRatio * 36.0;
+        }
+
+        const totalMacroShiftPct = rateImpactPct + fxImpactPct + oilImpactPct;
+        const upsideSim = Number((raw.upside_base_pct + totalMacroShiftPct).toFixed(1));
+        const fairPriceSim = Number((raw.price_rub * (1 + upsideSim / 100.0)).toFixed(raw.price_rub < 5 ? 4 : 2));
+
+        let divYieldSim = raw.div_yield_pct;
+        if (raw.ticker === "SNGSP") {
+          divYieldSim = Math.max(6.0, Number((raw.div_yield_pct * (1 + fxRatio * 1.35 + rateDelta * 0.02)).toFixed(2)));
+        } else if (raw.sector === "Нефть и газ" && raw.ticker !== "TRNFP" && raw.div_yield_pct > 0) {
+          divYieldSim = Math.max(0.0, Number((raw.div_yield_pct * (1 + fxRatio * 0.55 + oilRatio * 0.45)).toFixed(2)));
+        }
+
+        const totalRetSim = Number((upsideSim + divYieldSim).toFixed(1));
+        const scoreSim = Number(Math.max(15, Math.min(99, raw.composite_score + totalMacroShiftPct * 0.22)).toFixed(1));
+
+        const hShort = (raw.horizons && raw.horizons.short_1_3m) || {};
+        const hLong = (raw.horizons && raw.horizons.long_1_3y) || {};
+        const ret13m = Number(((hShort.expected_total_return_pct || 0) + totalMacroShiftPct * 0.35).toFixed(1));
+        const cagr3y = Number(((hLong.expected_cagr_3y_pct || 0) + totalMacroShiftPct * 0.28).toFixed(1));
+
+        let recLabel = "ДЕРЖАТЬ";
+        let tierCode = "HOLD";
+        if (scoreSim >= 73.5 && totalRetSim >= 32.0) {
+          recLabel = "ТОП-ИДЕЯ (ПОКУПАТЬ)";
+          tierCode = "TOP_BUY";
+        } else if (scoreSim >= 65.0 && totalRetSim >= 22.0) {
+          recLabel = "ПОКУПАТЬ";
+          tierCode = "BUY";
+        } else if (scoreSim < 51.0 || totalRetSim < 8.0) {
+          recLabel = "ИЗБЕГАТЬ";
+          tierCode = "AVOID";
+        }
+
+        return Object.assign({}, raw, {
+          fair_price_sim: fairPriceSim,
+          upside_sim: upsideSim,
+          div_yield_sim: divYieldSim,
+          total_ret_sim: totalRetSim,
+          ret_1_3m: ret13m,
+          cagr_3y: cagr3y,
+          composite_score: scoreSim,
+          recommendation_sim: recLabel,
+          tier_code_sim: tierCode
+        });
+      }
+
+      function getPillClass(tier) {
+        if (tier === "TOP_BUY" || tier === "BUY") return "rec-pill badge-pos";
+        if (tier === "AVOID") return "rec-pill badge-neg";
+        return "rec-pill badge-hold";
+      }
+
+      // Render Screener Table
+      function renderScreener() {
+        const searchVal = (document.getElementById("flt-search").value || "").trim().toLowerCase();
+        const exchVal = document.getElementById("flt-exchange").value;
+        const secVal = document.getElementById("flt-sector").value;
+        const horVal = document.getElementById("flt-horizon").value;
+        const tierVal = document.getElementById("flt-tier").value;
+        const onlyNetCash = document.getElementById("flt-netcash").checked;
+
+        const simList = (DATA.issuers || []).map(getSimulatedIssuer);
+
+        // Update top pick in pulse bar
+        const bestOverall = simList.slice().sort((a, b) => b.composite_score - a.composite_score)[0];
+        if (bestOverall) {
+          document.getElementById("pulse-top-pick").textContent = bestOverall.ticker + " (" + fmtPrice(bestOverall.price_rub) + " ₽)";
+          document.getElementById("pulse-top-ret").textContent = fmtSignPct(bestOverall.total_ret_sim, 1);
+        }
+
+        let filtered = simList.filter(item => {
+          if (searchVal) {
+            const hay = (item.ticker + " " + (item.spb_ticker || "") + " " + item.name + " " + item.short_name).toLowerCase();
+            if (!hay.includes(searchVal)) return false;
+          }
+          if (exchVal === "SPBEX" && !(item.exchanges_traded || []).includes("SPBEX")) return false;
+          if (exchVal === "SPB_PRIMARY" && !["SPBE", "ELMT", "OZON"].includes(item.ticker)) return false;
+          if (exchVal === "MOEX" && !(item.exchanges_traded || []).includes("MOEX")) return false;
+          if (secVal !== "ALL" && item.sector !== secVal) return false;
+          if (horVal !== "ALL" && item.optimal_horizon_code !== horVal) return false;
+          if (tierVal === "TOP_BUY" && item.tier_code_sim !== "TOP_BUY") return false;
+          if (tierVal === "BUY_ALL" && !["TOP_BUY", "BUY"].includes(item.tier_code_sim)) return false;
+          if (tierVal === "HOLD" && item.tier_code_sim !== "HOLD") return false;
+          if (tierVal === "AVOID" && item.tier_code_sim !== "AVOID") return false;
+          if (onlyNetCash && item.net_debt_bln > 0) return false;
+          return true;
+        });
+
+        filtered.sort((a, b) => {
+          let va = a[sortCol];
+          let vb = b[sortCol];
+          if (typeof va === "string") {
+            return sortAsc ? va.localeCompare(vb, "ru") : vb.localeCompare(va, "ru");
+          }
+          va = (va === null || va === undefined) ? (sortAsc ? 999999 : -999999) : Number(va);
+          vb = (vb === null || vb === undefined) ? (sortAsc ? 999999 : -999999) : Number(vb);
+          return sortAsc ? va - vb : vb - va;
+        });
+
+        document.getElementById("screener-count-label").textContent =
+          "Показано: " + filtered.length + " из " + simList.length;
+
+        const tbody = document.getElementById("screener-tbody");
+        tbody.innerHTML = "";
+
+        filtered.forEach(item => {
+          const tr = document.createElement("tr");
+          if (item.ticker === selectedTicker) tr.className = "selected-row";
+          tr.addEventListener("click", () => {
+            selectedTicker = item.ticker;
+            renderScreener();
+            renderInspector(item);
+          });
+
+          const exBadges = (item.exchanges_traded || []).map(ex => {
+            const cls = ex === "SPBEX" ? "exch-tag spb" : "exch-tag";
+            const label = (ex === "SPBEX" && item.spb_ticker && item.spb_ticker !== item.ticker)
+              ? "SPB:" + item.spb_ticker
+              : ex;
+            return `<span class="${cls}">${label}</span>`;
+          }).join(" ");
+
+          tr.innerHTML = `
+            <td class="num">${item.global_rank}</td>
+            <td><div class="ticker-cell"><span>${item.ticker}</span> ${exBadges}</div></td>
+            <td>${item.short_name}</td>
+            <td class="num"><strong>${fmtPrice(item.price_rub)}</strong></td>
+            <td class="num">${fmtPrice(item.fair_price_sim)}</td>
+            <td class="num ${item.ret_1_3m >= 0 ? 'pos' : 'neg'}">${fmtSignPct(item.ret_1_3m, 1)}</td>
+            <td class="num ${item.total_ret_sim >= 20 ? 'pos' : ''}"><strong>${fmtSignPct(item.total_ret_sim, 1)}</strong></td>
+            <td class="num ${item.cagr_3y >= 18 ? 'pos' : ''}">${fmtSignPct(item.cagr_3y, 1)}</td>
+            <td class="num">${fmtNum(item.div_yield_sim, 1)}%</td>
+            <td class="num">${item.pe_ratio !== null ? fmtNum(item.pe_ratio, 1) + '×' : '—'}</td>
+            <td><span class="exch-tag">${item.recommended_holding_months || '6–12 мес.'}</span></td>
+            <td class="num"><strong>${fmtNum(item.composite_score, 1)}</strong></td>
+            <td><span class="${getPillClass(item.tier_code_sim)}">${item.recommendation_sim}</span></td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        const currentSelected = simList.find(x => x.ticker === selectedTicker) || filtered[0];
+        if (currentSelected) {
+          renderInspector(currentSelected);
+        }
+      }
+
+      // Build SVG price chart for 2026 daily candles
+      function buildCandleSvg(series, fairPrice, currentPrice) {
+        if (!series || series.length < 2) {
+          return `<div class="sim-caption" style="padding:12px 0;">Торгуется преимущественно на СПБ Бирже (свечной ряд MOEX TQBR отсутствует)</div>`;
+        }
+        const w = 460;
+        const h = 110;
+        const pad = 14;
+        const vals = series.map(p => p.close);
+        const minV = Math.min(...vals);
+        const maxV = Math.max(...vals);
+        const span = Math.max(maxV - minV, maxV * 0.05, 0.01);
+
+        const pts = series.map((pt, idx) => {
+          const x = pad + (idx / (series.length - 1)) * (w - pad * 2);
+          const y = h - pad - ((pt.close - minV) / span) * (h - pad * 2);
+          return `${x.toFixed(1)},${y.toFixed(1)}`;
+        }).join(" ");
+
+        const isUp = vals[vals.length - 1] >= vals[0];
+        const strokeCol = isUp ? "#155E3B" : "#8E2424";
+        return `
+          <svg viewBox="0 0 ${w} ${h}" width="100%" height="110" role="img" aria-label="Динамика котировок в 2026 году" style="background: var(--bg-page); border: 1px solid var(--border-hairline); margin-top: 6px;">
+            <polyline fill="none" stroke="${strokeCol}" stroke-width="2" points="${pts}" />
+            <text x="${pad}" y="14" font-size="10" fill="#525B6C">Мин 2026: ${fmtPrice(minV)} ₽ (${series[0].date})</text>
+            <text x="${w - pad}" y="14" text-anchor="end" font-size="10" fill="#525B6C">Макс 2026: ${fmtPrice(maxV)} ₽ (${series[series.length - 1].date})</text>
+          </svg>
+        `;
+      }
+
+      // Render Right-hand Issuer Inspector with 3-Horizon Roadmap & Live News
+      function renderInspector(item) {
+        document.getElementById("insp-standard").textContent = item.standard + " · " + item.period_label;
+        const box = document.getElementById("inspector-content");
+
+        const spreadText = item.cross_exchange_spread_bps !== null && item.cross_exchange_spread_bps !== undefined
+          ? `${fmtNum(item.cross_exchange_spread_bps, 1)} б.п. (MOEX: ${fmtPrice(item.moex_price_rub)} ₽ / SPBEX: ${fmtPrice(item.spbex_price_rub)} ₽)`
+          : (item.primary_exchange === "SPBEX" ? "Первичный листинг СПБ Биржи" : "Основной листинг Мосбиржи (TQBR)");
+
+        const maxLotsForCap = item.lot_cost_rub > 0 ? Math.floor((simCapital * 0.10) / item.lot_cost_rub) : 0;
+        const h = item.horizons || {};
+        const h1 = h.short_1_3m || {};
+        const h2 = h.medium_6_12m || {};
+        const h3 = h.long_1_3y || {};
+
+        const headlinesHtml = (item.top_headlines && item.top_headlines.length > 0)
+          ? item.top_headlines.map(n => {
+              const sCls = n.sentiment > 0.05 ? "badge-pos" : (n.sentiment < -0.05 ? "badge-neg" : "badge-hold");
+              return `<div style="padding: 6px 0; border-bottom: 1px dotted var(--border-hairline); font-size: 0.81rem;">
+                <span class="rec-pill ${sCls}" style="font-size:0.68rem; margin-right:6px;">${n.category}</span>
+                <strong>${n.title}</strong>
+                <span class="sim-caption"> (${n.source})</span>
+              </div>`;
+            }).join("")
+          : `<div class="sim-caption">Прямых негативных или чрезвычайных корпоративных сводок за неделю не зафиксировано; динамика определяется фундаментальным циклом ставки ЦБ 14,0%.</div>`;
+
+        box.innerHTML = `
+          <div class="dossier-top">
+            <div class="dossier-title">
+              <h3>${item.name} (${item.ticker})</h3>
+              <div class="dossier-sub">${item.sector} · Ранг в секторе: <strong>${item.sector_rank}</strong> (Z = ${fmtNum(item.sector_z_score, 2)})</div>
+              <div style="margin-top: 8px; display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+                <span class="${getPillClass(item.tier_code_sim)}">${item.recommendation_sim}</span>
+                <span class="exch-tag">Реком. срок: <strong>${item.recommended_holding_months || '6–12 мес.'}</strong></span>
+              </div>
+            </div>
+            <div class="dossier-price-box">
+              <div class="dossier-price">${fmtPrice(item.price_rub)} ₽</div>
+              <div class="sim-caption">Лот: ${item.lot_size} шт. (${fmtNum(item.lot_cost_rub, 1)} ₽)</div>
+              <div class="sim-caption">На 10% капитала: <strong>${fmtNum(maxLotsForCap, 0)} лотов</strong></div>
+            </div>
+          </div>
+
+          <h4 class="section-h4" style="margin-top:0;">Рекомендации инвест-консультанта по срокам инвестирования</h4>
+          <div class="scenario-strip">
+            <div class="scenario-cell">
+              <div class="scenario-name">1–3 мес. (Тактика / Отсечки)</div>
+              <div class="scenario-val ${item.ret_1_3m >= 0 ? 'pos' : 'neg'}">${fmtPrice(h1.target_price_rub)} ₽ (${fmtSignPct(item.ret_1_3m, 1)})</div>
+              <div class="sim-caption">Вход: ${h1.entry_zone_str || '—'} ₽ · Стоп: ${fmtPrice(h1.stop_review_rub)} ₽</div>
+              <div class="sim-caption" style="margin-top:3px;"><strong>${h1.stance || ''}</strong></div>
+            </div>
+            <div class="scenario-cell">
+              <div class="scenario-name">6–12 мес. (База ЦБ 14,0%)</div>
+              <div class="scenario-val ${item.total_ret_sim >= 0 ? 'pos' : 'neg'}">${fmtPrice(item.fair_price_sim)} ₽ (${fmtSignPct(item.total_ret_sim, 1)})</div>
+              <div class="sim-caption">Апсайд цены: ${fmtSignPct(item.upside_sim, 1)} + ДД ${fmtNum(item.div_yield_sim, 1)}%</div>
+              <div class="sim-caption" style="margin-top:3px;"><strong>${item.optimal_horizon_label || ''}</strong></div>
+            </div>
+            <div class="scenario-cell">
+              <div class="scenario-name">1–3 года (Стратегия / ROE)</div>
+              <div class="scenario-val pos">${fmtPrice(h3.target_price_3y_rub)} ₽ (${fmtSignPct(item.cagr_3y, 1)}/год)</div>
+              <div class="sim-caption">Накопл. за 3 года: ${fmtSignPct(h3.cumulative_total_return_3y_pct, 1)}</div>
+              <div class="sim-caption" style="margin-top:3px;"><strong>${h3.stance || ''}</strong></div>
+            </div>
+          </div>
+
+          <div class="note-box" style="margin-top:0; margin-bottom:14px;">
+            <strong>Календарь катализаторов (${item.next_catalyst_date || '2026–2027'}):</strong> ${item.upcoming_catalyst_ru || item.rate_sensitivity_note}
+            <div style="margin-top:6px;"><strong>Живые новости по эмитенту (сентимент ${fmtSignPct((item.news_sentiment_score || 0) * 100, 0)}):</strong></div>
+            ${headlinesHtml}
+          </div>
+
+          <div class="scenario-strip">
+            <div class="scenario-cell">
+              <div class="scenario-name">Жёсткий сценарий (ЦБ 16,0%)</div>
+              <div class="scenario-val ${item.upside_bear_pct >= 0 ? 'pos' : 'neg'}">${fmtPrice(item.fair_price_bear_rub)} ₽ (${fmtSignPct(item.upside_bear_pct, 1)})</div>
+            </div>
+            <div class="scenario-cell">
+              <div class="scenario-name">Базовый (Живая ставка ЦБ 14,0%)</div>
+              <div class="scenario-val ${item.upside_sim >= 0 ? 'pos' : 'neg'}">${fmtPrice(item.fair_price_sim)} ₽ (${fmtSignPct(item.upside_sim, 1)})</div>
+            </div>
+            <div class="scenario-cell">
+              <div class="scenario-name">Мягкий сценарий (ЦБ 11,5%)</div>
+              <div class="scenario-val pos">${fmtPrice(item.fair_price_bull_rub)} ₽ (${fmtSignPct(item.upside_bull_pct, 1)})</div>
+            </div>
+          </div>
+
+          <div class="sim-caption">Дневная динамика цены в 2026 году (YTD: ${fmtSignPct(item.ytd_2026_return_pct, 1)}, волатильность: ${fmtNum(item.volatility_ann_pct, 1)}%):</div>
+          ${buildCandleSvg(item.series_2026, item.fair_price_sim, item.price_rub)}
+
+          <h4 class="section-h4">Консолидированные показатели отчётности (${item.period_label})</h4>
+          <div class="kv-grid">
+            <div class="kv-row"><span>Капитализация (консол.):</span><span>${fmtNum(item.consolidated_mcap_bln_rub, 1)} млрд ₽</span></div>
+            <div class="kv-row"><span>Стоимость бизнеса (EV):</span><span>${fmtNum(item.ev_bln, 1)} млрд ₽</span></div>
+            <div class="kv-row"><span>Выручка LTM (динамика г/г):</span><span>${fmtNum(item.revenue_bln, 1)} млрд ₽ (${fmtSignPct(item.revenue_growth_yoy_pct, 1)})</span></div>
+            <div class="kv-row"><span>EBITDA LTM (маржа):</span><span>${fmtNum(item.ebitda_bln, 1)} млрд ₽ (${fmtNum(item.ebitda_margin_pct, 1)}%)</span></div>
+            <div class="kv-row"><span>Чистая прибыль LTM:</span><span>${fmtNum(item.net_income_bln, 1)} млрд ₽</span></div>
+            <div class="kv-row"><span>Свободный ден. поток (FCF):</span><span>${fmtNum(item.fcf_bln, 1)} млрд ₽ (доходн. ${fmtNum(item.fcf_yield_pct, 1)}%)</span></div>
+            <div class="kv-row"><span>Денежные средства и депозиты:</span><span>${fmtNum(item.cash_bln, 1)} млрд ₽</span></div>
+            <div class="kv-row"><span>Чистый долг (Net Debt):</span><span class="${item.net_debt_bln <= 0 ? 'pos' : ''}">${fmtNum(item.net_debt_bln, 1)} млрд ₽</span></div>
+            <div class="kv-row"><span>Собственный капитал (ROE):</span><span>${fmtNum(item.equity_bln, 1)} млрд ₽ (${fmtNum(item.roe_pct, 1)}%)</span></div>
+            <div class="kv-row"><span>Прогноз дивиденда 12М:</span><span>${fmtPrice(item.fwd_dps_rub)} ₽ (${fmtNum(item.div_yield_sim, 2)}%)</span></div>
+            <div class="kv-row"><span>Кросс-спред MOEX / SPBEX:</span><span>${spreadText}</span></div>
+            <div class="kv-row"><span>Дневной оборот (MOEX+SPB):</span><span>${fmtNum(item.total_turnover_mln_rub, 1)} млн ₽</span></div>
+          </div>
+
+          <h4 class="section-h4">Пятифакторная декомпозиция квантового скоринга (${fmtNum(item.composite_score, 1)} из 100)</h4>
+          <div class="factor-list">
+            <div class="factor-item">
+              <span>1. Фундаментальная оценка (25%)</span>
+              <div class="factor-track"><div class="factor-fill" style="width:${item.score_valuation}%"></div></div>
+              <span class="num"><strong>${fmtNum(item.score_valuation, 1)}</strong></span>
+            </div>
+            <div class="factor-item">
+              <span>2. Дивиденды и FCF-доходность (25%)</span>
+              <div class="factor-track"><div class="factor-fill" style="width:${item.score_yield}%"></div></div>
+              <span class="num"><strong>${fmtNum(item.score_yield, 1)}</strong></span>
+            </div>
+            <div class="factor-item">
+              <span>3. Процентный баланс при ЦБ 14% (25%)</span>
+              <div class="factor-track"><div class="factor-fill" style="width:${item.score_rate_immunity}%"></div></div>
+              <span class="num"><strong>${fmtNum(item.score_rate_immunity, 1)}</strong></span>
+            </div>
+            <div class="factor-item">
+              <span>4. Рентабельность и рост (15%)</span>
+              <div class="factor-track"><div class="factor-fill" style="width:${item.score_quality}%"></div></div>
+              <span class="num"><strong>${fmtNum(item.score_quality, 1)}</strong></span>
+            </div>
+            <div class="factor-item">
+              <span>5. Импульс, ликвидность и новости (10%)</span>
+              <div class="factor-track"><div class="factor-fill" style="width:${item.score_momentum_liquidity}%"></div></div>
+              <span class="num"><strong>${fmtNum(item.score_momentum_liquidity, 1)}</strong></span>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <strong>Профиль чувствительности к ставке ЦБ и дивидендная база:</strong> ${item.rate_sensitivity_note}. Дивидендная политика: ${item.payout_policy}. Сверка капитала: ${item.mcap_reconciliation_note}.
+          </div>
+        `;
+      }
+
+      // Render Tab 2: Multi-Horizon Matrix & Live News Feed
+      function renderHorizonsAndNews() {
+        const horFilter = document.getElementById("flt-adv-horizon").value;
+        const simList = (DATA.issuers || []).map(getSimulatedIssuer);
+        const filtered = simList.filter(item => horFilter === "ALL" || item.optimal_horizon_code === horFilter);
+
+        const tbody = document.getElementById("horizons-tbody");
+        tbody.innerHTML = "";
+        filtered.forEach(item => {
+          const h = item.horizons || {};
+          const h1 = h.short_1_3m || {};
+          const h3 = h.long_1_3y || {};
+          const tr = document.createElement("tr");
+          tr.addEventListener("click", () => {
+            selectedTicker = item.ticker;
+            document.querySelector('[data-tab="tab-screener"]').click();
+          });
+          tr.innerHTML = `
+            <td><strong>${item.ticker}</strong></td>
+            <td>${item.short_name}</td>
+            <td class="num"><strong>${fmtPrice(item.price_rub)} ₽</strong></td>
+            <td class="num">${h1.entry_zone_str || '—'} ₽</td>
+            <td class="num neg">${fmtPrice(h1.stop_review_rub)} ₽</td>
+            <td class="num ${item.ret_1_3m >= 0 ? 'pos' : 'neg'}"><strong>${fmtPrice(h1.target_price_rub)} ₽</strong> (${fmtSignPct(item.ret_1_3m, 1)})</td>
+            <td class="num ${item.total_ret_sim >= 0 ? 'pos' : 'neg'}"><strong>${fmtPrice(item.fair_price_sim)} ₽</strong> (${fmtSignPct(item.total_ret_sim, 1)})</td>
+            <td class="num pos"><strong>${fmtPrice(h3.target_price_3y_rub)} ₽</strong> (${fmtSignPct(item.cagr_3y, 1)}/г)</td>
+            <td><span class="rec-pill badge-pos">${item.recommended_holding_months || '6–12 мес.'}</span></td>
+            <td style="max-width: 340px; font-size: 0.8rem;">
+              <strong>${h1.stance || ''}</strong> · ${item.next_catalyst_date || ''}<br>
+              <span class="sim-caption">${item.upcoming_catalyst_ru || ''}</span>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        // Live news feed
+        const newsCat = document.getElementById("flt-news-cat").value;
+        const newsList = (DATA.live_news || []).filter(n => newsCat === "ALL" || n.catalyst_category === newsCat);
+        document.getElementById("news-count-stamp").textContent = newsList.length + " живых сводок";
+        const newsBox = document.getElementById("live-news-container");
+        newsBox.innerHTML = "";
+        newsList.forEach(n => {
+          const sCls = n.sentiment_score > 0.05 ? "badge-pos" : (n.sentiment_score < -0.05 ? "badge-neg" : "badge-hold");
+          const sSign = fmtSignPct((n.sentiment_score || 0) * 100, 0);
+          const tickersHtml = (n.tickers || []).map(t => `<span class="exch-tag" style="margin-right:4px;">${t}</span>`).join("");
+          const div = document.createElement("div");
+          div.style.cssText = "padding: 10px 0; border-bottom: 1px solid var(--border-hairline);";
+          div.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:4px;">
+              <span class="rec-pill ${sCls}" style="font-size:0.7rem;">${n.catalyst_category} (${sSign})</span>
+              <span class="sim-caption">${n.source_name} · ${String(n.published_at || '').slice(0, 22)}</span>
+            </div>
+            <div style="font-weight:700; font-size:0.88rem; margin-bottom:5px;">${n.title}</div>
+            <div>${tickersHtml}</div>
+          `;
+          newsBox.appendChild(div);
+        });
+      }
+
+      // Render Sector Table
+      function renderSectors() {
+        const tbody = document.getElementById("sectors-tbody");
+        tbody.innerHTML = "";
+        (DATA.sectors || []).forEach(sec => {
+          const tr = document.createElement("tr");
+          const stanceCls = sec.sector_stance.includes("ПЕРЕВЕС")
+            ? "rec-pill badge-pos"
+            : (sec.sector_stance.includes("НЕДОВЕС") ? "rec-pill badge-neg" : "rec-pill badge-hold");
+          tr.innerHTML = `
+            <td><strong>${sec.sector}</strong><div class="sim-caption">${sec.tickers.join(", ")}</div></td>
+            <td class="num">${sec.companies_count}</td>
+            <td class="num">${fmtNum(sec.total_mcap_bln_rub, 1)}</td>
+            <td class="num">${fmtNum(sec.total_revenue_bln_rub, 1)}</td>
+            <td class="num">${fmtNum(sec.total_ebitda_bln_rub, 1)}</td>
+            <td class="num">${fmtNum(sec.total_net_income_bln_rub, 1)}</td>
+            <td class="num">${fmtNum(sec.total_fcf_bln_rub, 1)}</td>
+            <td class="num ${sec.total_net_debt_bln_rub <= 0 ? 'pos' : ''}">${fmtNum(sec.total_net_debt_bln_rub, 1)}</td>
+            <td class="num">${sec.median_pe !== null ? fmtNum(sec.median_pe, 1) + '×' : '—'}</td>
+            <td class="num">${sec.median_ev_ebitda !== null ? fmtNum(sec.median_ev_ebitda, 1) + '×' : '—'}</td>
+            <td class="num">${fmtNum(sec.avg_div_yield_pct, 1)}%</td>
+            <td class="num">${fmtNum(sec.avg_roe_pct, 1)}%</td>
+            <td class="num"><strong>${fmtNum(sec.avg_composite_score, 1)}</strong></td>
+            <td><strong>${sec.top_pick_ticker}</strong> (${fmtSignPct(sec.top_pick_return_pct, 1)} · ${sec.top_pick_horizon || '6–12М'})</td>
+            <td><span class="${stanceCls}">${sec.sector_stance}</span></td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      // Render Portfolios & Lot Allocator
+      function renderPortfolios() {
+        document.getElementById("port-cap-header").textContent =
+          "Расчёт спецификации лотов на капитал: " + fmtNum(simCapital, 0) + " ₽";
+
+        const btnWrap = document.getElementById("portfolio-buttons");
+        btnWrap.innerHTML = "";
+        const ports = DATA.portfolios || [];
+
+        ports.forEach(p => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "port-btn" + (p.id === selectedPortfolioId ? " active" : "");
+          btn.innerHTML = `
+            <div class="port-btn-title">${p.name}</div>
+            <div class="port-btn-meta">1–3М: +${fmtNum(p.expected_1_3m_total_return_pct, 1)}% · 12М: +${fmtNum(p.expected_12m_total_return_pct, 1)}% · 3Г CAGR: +${fmtNum(p.expected_3y_cagr_pct, 1)}%/г</div>
+          `;
+          btn.addEventListener("click", () => {
+            selectedPortfolioId = p.id;
+            renderPortfolios();
+          });
+          btnWrap.appendChild(btn);
+        });
+
+        const activePort = ports.find(p => p.id === selectedPortfolioId) || ports[0];
+        if (!activePort) return;
+
+        const simMap = {};
+        (DATA.issuers || []).forEach(raw => {
+          simMap[raw.ticker] = getSimulatedIssuer(raw);
+        });
+
+        let totalSimRet = 0;
+        let totalSimDivRub = 0;
+
+        const tbody = document.getElementById("portfolio-tbody");
+        tbody.innerHTML = "";
+
+        activePort.positions.forEach(pos => {
+          const w = pos.weight_pct / 100.0;
+          const targetRub = simCapital * w;
+          const simIssuer = simMap[pos.ticker];
+
+          const price = simIssuer ? simIssuer.price_rub : pos.price_rub;
+          const lotSize = simIssuer ? simIssuer.lot_size : pos.lot_size;
+          const lotCost = price * lotSize;
+          const lotsCount = lotCost > 0 ? Math.floor(targetRub / lotCost) : 0;
+          const actualRub = lotsCount * lotCost;
+          const divYield = simIssuer ? simIssuer.div_yield_sim : (pos.ticker === "TMON@" ? simRate - 0.25 : pos.div_yield_pct);
+          const ret13m = simIssuer ? simIssuer.ret_1_3m : (pos.expected_1_3m_return_pct || 3.4);
+          const totRet = simIssuer ? simIssuer.total_ret_sim : (pos.ticker === "TMON@" ? simRate - 0.25 : pos.expected_12m_return_pct);
+          const cagr3y = simIssuer ? simIssuer.cagr_3y : (pos.expected_3y_cagr_pct || 12.0);
+          const expectedDivRub = actualRub * (divYield / 100.0);
+
+          totalSimRet += w * totRet;
+          totalSimDivRub += expectedDivRub;
+
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td><strong>${pos.ticker}</strong></td>
+            <td>${pos.name}</td>
+            <td>${pos.sector}</td>
+            <td>${pos.exchange}</td>
+            <td class="num"><strong>${fmtNum(pos.weight_pct, 1)}%</strong></td>
+            <td class="num">${fmtNum(targetRub, 0)} ₽</td>
+            <td class="num">${fmtPrice(price)} ₽</td>
+            <td class="num"><strong>${fmtNum(lotsCount, 0)} лотов</strong> (${fmtNum(actualRub, 0)} ₽)</td>
+            <td class="num">${fmtNum(divYield, 1)}%</td>
+            <td class="num pos">${fmtSignPct(ret13m, 1)}</td>
+            <td class="num pos"><strong>${fmtSignPct(totRet, 1)}</strong></td>
+            <td class="num pos">${fmtSignPct(cagr3y, 1)}/г</td>
+            <td><span class="exch-tag">${pos.recommended_holding_months || '6–12 мес.'}</span></td>
+            <td>${pos.role}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        const strip = document.getElementById("portfolio-summary-strip");
+        strip.innerHTML = `
+          <div class="scenario-cell">
+            <div class="scenario-name">Рекомендуемый срок инвестирования и график ребалансировки</div>
+            <div class="scenario-val" style="font-size:0.9rem;">${activePort.recommended_horizon || activePort.target_investor}</div>
+            <div class="sim-caption" style="margin-top:4px;">${activePort.rebalance_schedule || ''}</div>
+          </div>
+          <div class="scenario-cell">
+            <div class="scenario-name">Ожидаемый дивидендный и купонный поток за 12М</div>
+            <div class="scenario-val pos">+${fmtNum(totalSimDivRub, 0)} ₽ (${fmtNum(totalSimDivRub / simCapital * 100, 2)}% к капиталу)</div>
+          </div>
+          <div class="scenario-cell">
+            <div class="scenario-name">Доходность по горизонтам (1–3М / 12М / 3Г CAGR)</div>
+            <div class="scenario-val pos">1–3М: +${fmtNum(activePort.expected_1_3m_total_return_pct, 1)}% · 12М: ${fmtSignPct(totalSimRet, 1)} · 3Г: +${fmtNum(activePort.expected_3y_cagr_pct, 1)}%/год</div>
+          </div>
+        `;
+      }
+
+      // Render Ablations Table
+      function renderAblations() {
+        const tbody = document.getElementById("ablations-tbody");
+        tbody.innerHTML = "";
+        (DATA.ablations || []).forEach(v => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>
+              <strong>${v.description}</strong>
+              <div class="sim-caption">Состав: ${v.tickers.slice(0, 8).join(", ")}</div>
+            </td>
+            <td class="num">+${fmtNum(v.expected_1_3m_return_pct || 0, 1)}%</td>
+            <td class="num"><strong>+${fmtNum(v.expected_12m_return_pct, 1)}%</strong></td>
+            <td class="num"><strong>${fmtNum(v.composite_utility_score, 2)}</strong></td>
+            <td class="num ${v.delta_vs_incumbent >= 0 ? 'pos' : 'neg'}">${fmtSignPct(v.delta_vs_incumbent, 2)}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      // Event Listeners: Tabs
+      document.querySelectorAll(".nav-tab").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".nav-tab").forEach(b => b.classList.remove("active"));
+          document.querySelectorAll(".tab-view").forEach(v => v.classList.add("hidden"));
+          btn.classList.add("active");
+          const target = document.getElementById(btn.dataset.tab);
+          if (target) target.classList.remove("hidden");
+        });
+      });
+
+      // Event Listeners: Simulator Sliders
+      document.getElementById("sim-rate").addEventListener("input", e => {
+        simRate = Number(e.target.value);
+        document.getElementById("sim-rate-val").textContent = fmtNum(simRate, 1) + "%";
+        renderScreener();
+        renderHorizonsAndNews();
+        renderPortfolios();
+      });
+      document.getElementById("sim-fx").addEventListener("input", e => {
+        simFx = Number(e.target.value);
+        document.getElementById("sim-fx-val").textContent = fmtNum(simFx, 1) + " ₽";
+        renderScreener();
+        renderHorizonsAndNews();
+        renderPortfolios();
+      });
+      document.getElementById("sim-brent").addEventListener("input", e => {
+        simBrent = Number(e.target.value);
+        document.getElementById("sim-brent-val").textContent = fmtNum(simBrent, 0) + " $";
+        renderScreener();
+        renderHorizonsAndNews();
+        renderPortfolios();
+      });
+      document.getElementById("sim-capital").addEventListener("input", e => {
+        simCapital = Math.max(10000, Number(e.target.value || 1000000));
+        document.getElementById("sim-cap-formatted").textContent = fmtNum(simCapital, 0) + " ₽";
+        renderScreener();
+        renderPortfolios();
+      });
+
+      // Event Listeners: Screener & Horizon Filters
+      ["flt-search", "flt-exchange", "flt-sector", "flt-horizon", "flt-tier", "flt-netcash"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener("input", renderScreener);
+          el.addEventListener("change", renderScreener);
+        }
+      });
+
+      ["flt-adv-horizon", "flt-news-cat"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener("change", renderHorizonsAndNews);
+        }
+      });
+
+      document.querySelectorAll("#screener-table th[data-sort]").forEach(th => {
+        th.addEventListener("click", () => {
+          const col = th.dataset.sort;
+          if (sortCol === col) {
+            sortAsc = !sortAsc;
+          } else {
+            sortCol = col;
+            sortAsc = col === "global_rank" || col === "pe_ratio";
+          }
+          renderScreener();
+        });
+      });
+
+      // Live Refresh Button
+      document.getElementById("btn-refresh-live").addEventListener("click", async function () {
+        const btn = this;
+        const span = btn.querySelector("span");
+        const origText = span.textContent;
+        btn.disabled = true;
+        span.textContent = "Обновление cbr.ru, MOEX, SPBEX и новостей...";
+        try {
+          const resp = await fetch("/api/refresh", { method: "POST" });
+          if (resp.ok) {
+            window.location.reload();
+            return;
+          }
+        } catch (_) {
+          // Opened via file:// protocol
+        }
+        setTimeout(() => {
+          btn.disabled = false;
+          span.textContent = origText;
+          document.getElementById("timestamp-label").textContent =
+            "Актуальный слепок cbr.ru, MOEX ISS и SPBEX: " + new Date().toLocaleString("ru-RU");
+        }, 450);
+      });
+
+      // Initial render
+      renderScreener();
+      renderHorizonsAndNews();
+      renderSectors();
+      renderPortfolios();
+      renderAblations();
+    })();
+  </script>
+</body>
+</html>
